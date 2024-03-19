@@ -43,8 +43,8 @@ class _SplashPageState extends State<SplashPage> {
               children: [
                 Image.asset(
                   'assets/logo_splash_screen.png',
-                  width: 200,
-                  height: 200,
+                  width: 400,
+                  height: 400,
                   fit: BoxFit.fill,
                 ),
                 const SizedBox(

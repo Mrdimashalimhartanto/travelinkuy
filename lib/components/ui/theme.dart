@@ -4,7 +4,7 @@ Color travelinkuy = const Color(0xff023770);
 Color splashcolor = const Color(0xffFAFAFA);
 Color travelinbackground = const Color(0xffEAEAEA);
 Color travelincomponent = const Color(0xffF29811);
-
+Color navigationBaru = const Color(0xffD9D9D9);
 
 final kTitleStyle = const TextStyle(
   color: Colors.white,
