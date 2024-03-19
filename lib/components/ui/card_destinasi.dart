@@ -11,6 +11,7 @@ class CardDestinasiTravelin extends StatelessWidget {
       return Expanded(
         child: SingleChildScrollView(
           child: Container(
+            // ignore: prefer_const_constructors
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const <Widget>[
@@ -95,6 +96,7 @@ class CardDestinasiTravelin extends StatelessWidget {
       );
     }
 
+    // ignore: no_leading_underscores_for_local_identifiers
     Widget _dialogtravelin(BuildContext context) {
       return AlertDialog(
         backgroundColor: travelinbackground,
@@ -135,11 +137,11 @@ class CardDestinasiTravelin extends StatelessWidget {
     }
 
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+      margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
       height: 300,
       width: 190,
       decoration: BoxDecoration(
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Colors.grey,
             blurRadius: 9,
@@ -152,7 +154,7 @@ class CardDestinasiTravelin extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(10), topRight: Radius.circular(10)),
             child: Container(
               height: 130,
@@ -178,7 +180,7 @@ class CardDestinasiTravelin extends StatelessWidget {
                     padding: const EdgeInsets.all(3.0),
                     child: Text(
                       "puma evo speed".toUpperCase(),
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 8,
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
@@ -188,7 +190,7 @@ class CardDestinasiTravelin extends StatelessWidget {
                 const SizedBox(
                   width: 6,
                 ),
-                Text(
+                const Text(
                   "Rp 39.000",
                   style: TextStyle(
                       fontSize: 10,
@@ -198,7 +200,7 @@ class CardDestinasiTravelin extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 2,
           ),
           Padding(
@@ -213,7 +215,7 @@ class CardDestinasiTravelin extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 4,
           ),
           Padding(
@@ -224,11 +226,11 @@ class CardDestinasiTravelin extends StatelessWidget {
               color: Colors.grey[400],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 8.0),
+          const Padding(
+            padding: EdgeInsets.only(left: 8.0),
             child: Text(
               "Denpasar Bali",
               overflow: TextOverflow.ellipsis,
@@ -260,7 +262,7 @@ class CardDestinasiTravelin extends StatelessWidget {
                       padding: const EdgeInsets.all(3.0),
                       child: Text(
                         "tap to detail".toUpperCase(),
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 9,
                             color: Colors.white,
                             fontWeight: FontWeight.bold),
@@ -268,8 +270,8 @@ class CardDestinasiTravelin extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(width: 40),
-                Image(
+                const SizedBox(width: 40),
+                const Image(
                   image: AssetImage(
                     'assets/logo_splash_screen.png',
                   ),
