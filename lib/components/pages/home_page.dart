@@ -1,12 +1,12 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 part of 'pages.dart';
 
 final List<String> imgList = [
-  "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-  "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80",
-  "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
-  'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80',
+  "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1421&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://plus.unsplash.com/premium_photo-1668883189361-9c754861dbd6?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1476158085676-e67f57ed9ed7?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  'https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 ];
 
 class HomePage extends StatefulWidget {
@@ -21,8 +21,416 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    Widget judultravel() {
+      return Padding(
+        padding: const EdgeInsets.only(
+          left: 16,
+          right: 16,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Citilink Online Travel Fair',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 4),
+                Text(
+                  'Serbu hargahematnya, diskon hingga IDR 1,5 Juta !',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.grey[800],
+                    fontSize: 12,
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+
     Widget categories() {
-      return Container();
+      return Container(
+        margin: EdgeInsets.only(
+          top: 12.0,
+          // top: defaultMargin,
+        ),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: defaultMargin,
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
+                margin: EdgeInsets.only(right: 16),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: Colors.grey,
+                  ),
+                ),
+                child: Text(
+                  'Semua',
+                  style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
+                margin: EdgeInsets.only(right: 16),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: Colors.grey,
+                  ),
+                ),
+                child: Text(
+                  'Pesawat',
+                  style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
+                margin: EdgeInsets.only(right: 16),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: Colors.grey,
+                  ),
+                ),
+                child: Text(
+                  'Hotel',
+                  style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
+                margin: EdgeInsets.only(right: 16),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: Colors.grey,
+                  ),
+                ),
+                child: Text(
+                  'Villa & Apt.',
+                  style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
+                margin: EdgeInsets.only(right: 16),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: Colors.grey,
+                  ),
+                ),
+                child: Text(
+                  'To Do',
+                  style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
+                margin: EdgeInsets.only(right: 16),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: Colors.grey,
+                  ),
+                ),
+                child: Text(
+                  'Kereta Api',
+                  style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
+                margin: EdgeInsets.only(right: 16),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: Colors.grey,
+                  ),
+                ),
+                child: Text(
+                  'Sewa mobil',
+                  style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
+                margin: EdgeInsets.only(right: 16),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: Colors.grey,
+                  ),
+                ),
+                child: Text(
+                  'Jemputan Bandara',
+                  style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget kontentravel() {
+      return SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Padding(
+          padding: const EdgeInsets.only(top: 24, left: 16),
+          child: Row(
+            children: [
+              Container(
+                width: 294,
+                height: 148,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(17),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 27.0, left: 24),
+                  child: Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'New Arrival \nItem up to 30%',
+                            style: GoogleFonts.montserrat(
+                              color: Color(0xffF8F7FD),
+                              fontSize: 19,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          OutlinedButton(
+                            style: OutlinedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(17),
+                              ),
+                              side: BorderSide(
+                                color: Colors.white,
+                              ),
+                            ),
+                            onPressed: () {},
+                            child: Text(
+                              'Grab it now',
+                              style: GoogleFonts.montserrat(
+                                color: Color(0xffF8F7FD),
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      // Padding(
+                      //   padding: const EdgeInsets.only(bottom: 16.0, right: 24),
+                      //   child: Image.asset(
+                      //     'assets/product_one.png',
+                      //   ),
+                      // ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 16,
+              ),
+              Container(
+                width: 294,
+                height: 148,
+                decoration: BoxDecoration(
+                  color: Color(0xff21AE7B),
+                  borderRadius: BorderRadius.circular(17),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 27.0, left: 24),
+                  child: Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Flash sales \n12.12',
+                            style: GoogleFonts.montserrat(
+                              color: Color(0xffF8F7FD),
+                              fontSize: 19,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          OutlinedButton(
+                            style: OutlinedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(17),
+                              ),
+                              side: BorderSide(
+                                color: Color(0xffF8F7FD),
+                              ),
+                            ),
+                            onPressed: () {},
+                            child: Text(
+                              'Grab it now',
+                              style: GoogleFonts.montserrat(
+                                color: Color(0xffF8F7FD),
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      // Padding(
+                      //   padding: const EdgeInsets.only(
+                      //     right: 20.0,
+                      //     left: 20,
+                      //   ),
+                      //   child: Image.asset(
+                      //     'assets/man_icon.png',
+                      //   ),
+                      // ),
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget mainmenu() {
+      return Container(
+        padding: EdgeInsets.all(15),
+        child: Column(
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                TravelinIconMenu(
+                  image:
+                      "https://cdn-icons-png.flaticon.com/128/3127/3127363.png",
+                  title: "Pesawat",
+                ),
+                TravelinIconMenu(
+                  image:
+                      "https://cdn-icons-png.flaticon.com/128/3378/3378741.png",
+                  title: "Hotel",
+                ),
+                TravelinIconMenu(
+                  image:
+                      "https://cdn-icons-png.flaticon.com/128/8315/8315136.png",
+                  title: "Event",
+                ),
+                TravelinIconMenu(
+                  image:
+                      "https://cdn-icons-png.flaticon.com/128/2169/2169416.png",
+                  title: "Atraksi",
+                ),
+              ],
+            ),
+            SizedBox(height: 15),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                TravelinIconMenu(
+                  image:
+                      "https://cdn-icons-png.flaticon.com/128/1314/1314576.png",
+                  title: "JR Pass",
+                ),
+                TravelinIconMenu(
+                  image:
+                      "https://cdn-icons-png.flaticon.com/128/1841/1841602.png",
+                  title: "Bus",
+                ),
+                TravelinIconMenu(
+                  image:
+                      "https://cdn-icons-png.flaticon.com/128/620/620765.png",
+                  title: "Travel",
+                ),
+                TravelinIconMenu(
+                  image:
+                      "https://cdn-icons-png.flaticon.com/128/11781/11781149.png",
+                  title: "More",
+                ),
+              ],
+            ),
+          ],
+        ),
+      );
     }
 
     return SingleChildScrollView(
@@ -37,7 +445,7 @@ class _HomePageState extends State<HomePage> {
                   options: CarouselOptions(
                     autoPlay: true,
                     enableInfiniteScroll: true,
-                    height: 290 + MediaQuery.of(context).viewPadding.top,
+                    height: 300 + MediaQuery.of(context).viewPadding.top,
                     enlargeCenterPage: false,
                     viewportFraction: 1,
                     onPageChanged: (index, reason) {
@@ -86,23 +494,22 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Card(
                       color: Colors.white,
-                      elevation: 1,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.all(18.0),
+                        padding: const EdgeInsets.all(20.0),
                         child: Column(
                           children: <Widget>[
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Travelin tiket point",
+                                  "Travelinkuy Point",
                                   style: GoogleFonts.poppins(
-                                    color: Colors.grey.shade800,
+                                    color: Colors.grey,
+                                    fontSize: 14,
                                     fontWeight: FontWeight.normal,
-                                    fontSize: 12,
                                   ),
                                 ),
                                 Spacer(),
@@ -111,10 +518,18 @@ class _HomePageState extends State<HomePage> {
                                   child: Text(
                                     "RP",
                                     style: GoogleFonts.poppins(
-                                      color: Colors.grey.shade800,
+                                      color: Colors.grey,
+                                      fontSize: 14,
                                       fontWeight: FontWeight.normal,
-                                      fontSize: 12,
                                     ),
+                                  ),
+                                ),
+                                Text(
+                                  "0",
+                                  style: GoogleFonts.poppins(
+                                    color: Colors.grey,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.normal,
                                   ),
                                 ),
                                 SizedBox(width: 10),
@@ -132,22 +547,27 @@ class _HomePageState extends State<HomePage> {
                                 )
                               ],
                             ),
+                            Divider(
+                              thickness: 1,
+                            ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: <Widget>[
-                                categories(),
-                                // GrabIconMenu(
-                                //   image: "assets/images/pay/pay.png",
-                                //   title: "Pay",
-                                // ),
-                                // GrabIconMenu(
-                                //   image: "assets/images/pay/topu.png",
-                                //   title: "Top Up",
-                                // ),
-                                // GrabIconMenu(
-                                //   image: "assets/images/pay/reward.png",
-                                //   title: "Reward",
-                                // ),
+                                TravelinIconMenu(
+                                  title: "Travelin Point",
+                                  image:
+                                      'https://cdn-icons-png.flaticon.com/512/2071/2071392.png',
+                                ),
+                                TravelinIconMenu(
+                                  title: "PayLater",
+                                  image:
+                                      'https://cdn-icons-png.flaticon.com/128/677/677069.png',
+                                ),
+                                TravelinIconMenu(
+                                  title: "Payment Travelin",
+                                  image:
+                                      'https://cdn-icons-png.flaticon.com/512/2558/2558944.png',
+                                ),
                               ],
                             )
                           ],
@@ -159,54 +579,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-
-          // TODO: MENU MENU DETAIL
-          // Container(
-          //   padding: EdgeInsets.all(15),
-          //   child: Column(
-          //     children: <Widget>[
-          //       Row(
-          //         mainAxisAlignment: MainAxisAlignment.spaceAround,
-          //         children: <Widget>[
-          //           // GrabIconMenu(
-          //           //   image: "assets/images/feature/car.png",
-          //           //   title: "Car",
-          //           // ),
-          //           // GrabIconMenu(
-          //           //   image: "assets/images/feature/bike.png",
-          //           //   title: "Bike",
-          //           // ),
-          //           // GrabIconMenu(
-          //           //   image: "assets/images/feature/food.png",
-          //           //   title: "Food",
-          //           // ),
-          //           // GrabIconMenu(
-          //           //   image: "assets/images/feature/delivery.png",
-          //           //   title: "Delivery",
-          //           // ),
-          //         ],
-          //       ),
-          //       SizedBox(height: 15),
-          //       Row(
-          //         mainAxisAlignment: MainAxisAlignment.spaceAround,
-          //         children: <Widget>[
-          //           // GrabIconMenu(
-          //           //   image: "assets/images/feature/rent.png",
-          //           //   title: "Rent",
-          //           // ),
-          //           // GrabIconMenu(
-          //           //   image: "assets/images/feature/giftcard.png",
-          //           //   title: "Gift Cards",
-          //           // ),
-          //           // GrabIconMenu(
-          //           //   image: "assets/images/feature/subscription.png",
-          //           //   title: "Subscription",
-          //           // ),
-          //         ],
-          //       ),
-          //     ],
-          //   ),
-          // ),
+          mainmenu(),
 
           // item item menu
           Container(
@@ -214,6 +587,13 @@ class _HomePageState extends State<HomePage> {
             height: 8,
             color: Colors.grey[300],
           ),
+
+          ////[DETAIL MENU]
+          SizedBox(height: 20),
+          judultravel(),
+          SizedBox(height: 20),
+          categories(),
+          kontentravel(),
         ],
       ),
     );

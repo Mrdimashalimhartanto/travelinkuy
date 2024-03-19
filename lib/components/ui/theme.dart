@@ -6,6 +6,8 @@ Color travelinbackground = const Color(0xffEAEAEA);
 Color travelincomponent = const Color(0xffF29811);
 Color navigationBaru = const Color(0xffD9D9D9);
 
+double defaultMargin = 30.0;
+
 final kTitleStyle = const TextStyle(
   color: Colors.white,
   fontFamily: 'CM Sans Serif',
