@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         "/onboarding-page": (context) => OnboardingPage(),
         "/welcome-page": (context) => const WelcomePage(),
         "/discover-page": (context) => const DiscoverPage(),
-        // "/main-page": (context) => MainPage();
+        "/main-page": (context) => MainPage(),
       },
     );
   }

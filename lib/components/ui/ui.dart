@@ -6,3 +6,4 @@ import 'package:travelinkuy/components/widget/widget.dart';
 
 part 'theme.dart';
 part 'card_destinasi.dart';
+part 'travelin_menu.dart';
