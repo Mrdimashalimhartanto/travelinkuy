@@ -29,12 +29,16 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   animate_do: ^3.3.4
+  cached_network_image: ^3.3.1
+  carousel_slider: ^4.0.0
   cupertino_icons: ^1.0.2
   custom_navigation_bar: ^0.8.2
-  carousel_slider: ^4.0.0
   flutter:
     sdk: flutter
+  flutter_map: ^6.1.0
   google_fonts: ^4.0.3
+  latlong2: ^0.9.0
+  sliding_up_panel: ^2.0.0+1
 
 dev_dependencies:
   flutter_lints: ^2.0.0
