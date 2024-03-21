@@ -73,13 +73,13 @@ class _MainPageState extends State<MainPage> {
             ),
           ),
           CustomNavigationBarItem(
-            icon: Image.asset(
-              'assets/navbar_notif.png',
-              color: Colors.grey.shade900,
+            icon: Image.network(
+              'https://cdn-icons-png.flaticon.com/128/847/847969.png',
+              // color: Colors.grey.shade900,
             ),
             title: Center(
               child: Text(
-                "Akun",
+                "Profile",
                 style: GoogleFonts.poppins(
                   color: Colors.grey.shade600,
                   fontWeight: FontWeight.normal,
