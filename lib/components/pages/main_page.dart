@@ -46,7 +46,7 @@ class _MainPageState extends State<MainPage> {
               color: Colors.grey.shade900,
             ),
             title: Text(
-              'Home',
+              'Beranda',
               style: GoogleFonts.poppins(
                 color: Colors.grey.shade600,
                 fontSize: 9,
@@ -56,13 +56,13 @@ class _MainPageState extends State<MainPage> {
             ),
           ),
           CustomNavigationBarItem(
-            icon: Image.asset(
-              'assets/navbar_product.png',
+            icon: Image.network(
+              'https://cdn-icons-png.flaticon.com/128/3702/3702886.png',
               color: Colors.grey.shade900,
             ),
             title: Center(
               child: Text(
-                'Product',
+                'Your Order',
                 style: GoogleFonts.poppins(
                   color: Colors.grey.shade600,
                   fontWeight: FontWeight.normal,
@@ -79,7 +79,7 @@ class _MainPageState extends State<MainPage> {
             ),
             title: Center(
               child: Text(
-                "Notification",
+                "Akun",
                 style: GoogleFonts.poppins(
                   color: Colors.grey.shade600,
                   fontWeight: FontWeight.normal,

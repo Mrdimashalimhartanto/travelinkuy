@@ -2,13 +2,6 @@
 
 part of 'pages.dart';
 
-final List<String> imgList = [
-  "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1421&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://plus.unsplash.com/premium_photo-1668883189361-9c754861dbd6?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1476158085676-e67f57ed9ed7?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  'https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-];
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -21,6 +14,47 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    Widget ideliburan() {
+      return SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 16,
+            right: 16,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Ide liburan yang wajib dicatat',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 4),
+                    Text(
+                      // overflow: TextOverflow.ellipsis,
+                      'inspirasi liburan serta rekomendasi tiket, penginapan, transportasi dan info lain untukmu',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.grey[800],
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     Widget judultravel() {
       return Padding(
         padding: const EdgeInsets.only(
@@ -57,12 +91,9 @@ class _HomePageState extends State<HomePage> {
       );
     }
 
-    Widget categories() {
+    Widget cardcategories() {
       return Container(
-        margin: EdgeInsets.only(
-          top: 12.0,
-          // top: defaultMargin,
-        ),
+        margin: EdgeInsets.only(top: 12.0),
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
@@ -421,10 +452,111 @@ class _HomePageState extends State<HomePage> {
                       "https://cdn-icons-png.flaticon.com/128/620/620765.png",
                   title: "Travel",
                 ),
-                TravelinIconMenu(
-                  image:
-                      "https://cdn-icons-png.flaticon.com/128/11781/11781149.png",
-                  title: "More",
+                GestureDetector(
+                  onTap: () {
+                    showModalBottomSheet(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return Container(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                GestureDetector(
+                                  child: Center(
+                                    child: Container(
+                                        margin: EdgeInsets.only(top: 15),
+                                        height: 20,
+                                        width: 60,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                            color: Colors.grey.shade300)),
+                                  ),
+                                ),
+                                Container(
+                                  padding: EdgeInsets.all(25),
+                                  child: Text(
+                                    'Layanan Teratas',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.black,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: <Widget>[
+                                    TravelinIconMenu(
+                                      image:
+                                          "https://cdn-icons-png.flaticon.com/128/3127/3127363.png",
+                                      title: "Pesawat",
+                                    ),
+                                    TravelinIconMenu(
+                                      image:
+                                          "https://cdn-icons-png.flaticon.com/128/3378/3378741.png",
+                                      title: "Hotel",
+                                    ),
+                                    TravelinIconMenu(
+                                      image:
+                                          "https://cdn-icons-png.flaticon.com/128/8315/8315136.png",
+                                      title: "Event",
+                                    ),
+                                    TravelinIconMenu(
+                                      image:
+                                          "https://cdn-icons-png.flaticon.com/128/2169/2169416.png",
+                                      title: "Atraksi",
+                                    ),
+                                  ],
+                                ),
+                                Container(
+                                  padding: EdgeInsets.all(25),
+                                  child: Text(
+                                    'Layanan Lainnya',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.black,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: <Widget>[
+                                    TravelinIconMenu(
+                                      image:
+                                          "https://cdn-icons-png.flaticon.com/128/3127/3127363.png",
+                                      title: "Pesawat",
+                                    ),
+                                    TravelinIconMenu(
+                                      image:
+                                          "https://cdn-icons-png.flaticon.com/128/3378/3378741.png",
+                                      title: "Hotel",
+                                    ),
+                                    TravelinIconMenu(
+                                      image:
+                                          "https://cdn-icons-png.flaticon.com/128/8315/8315136.png",
+                                      title: "Event",
+                                    ),
+                                    TravelinIconMenu(
+                                      image:
+                                          "https://cdn-icons-png.flaticon.com/128/2169/2169416.png",
+                                      title: "Atraksi",
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          );
+                        });
+                  },
+                  child: TravelinIconMenu(
+                    image:
+                        "https://cdn-icons-png.flaticon.com/128/11781/11781149.png",
+                    title: "More",
+                  ),
                 ),
               ],
             ),
@@ -559,7 +691,7 @@ class _HomePageState extends State<HomePage> {
                                       'https://cdn-icons-png.flaticon.com/512/2071/2071392.png',
                                 ),
                                 TravelinIconMenu(
-                                  title: "PayLater",
+                                  title: "History",
                                   image:
                                       'https://cdn-icons-png.flaticon.com/128/677/677069.png',
                                 ),
@@ -580,20 +712,79 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
           mainmenu(),
-
           // item item menu
-          Container(
-            width: double.infinity,
-            height: 8,
-            color: Colors.grey[300],
-          ),
-
+          BorderAbuAbu(),
           ////[DETAIL MENU]
           SizedBox(height: 20),
           judultravel(),
-          SizedBox(height: 20),
-          categories(),
           kontentravel(),
+          SizedBox(height: 20),
+          RencanaPerjalanan(),
+          cardcategories(),
+          SizedBox(height: 10),
+          SlideCardPerjalanan(),
+          SizedBox(height: 20),
+          BorderAbuAbu(),
+          SizedBox(height: 20),
+          ideliburan(),
+          cardcategories(),
+          SizedBox(height: 10),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 24, left: 16),
+              child: Row(
+                children: [
+                  CardLiburanSingapura(),
+                  SizedBox(
+                    width: 16,
+                  ),
+                  CardIdeLiburanMalaysia(),
+                  SizedBox(
+                    width: 16,
+                  ),
+                  CardIdeLiburanThailand(),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 20),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LihatSemuaIdePerjalanan(),
+                  ),
+                );
+              },
+              child: Container(
+                height: 50,
+                margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                decoration: BoxDecoration(
+                  color: travelincomponent,
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      child: Text(
+                        'Lihat Semua',
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

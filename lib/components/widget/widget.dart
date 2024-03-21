@@ -8,3 +8,5 @@ part 'footer.dart';
 part 'juduldiscover.dart';
 part 'carddestinasi.dart';
 part 'button_home.dart';
+part 'slide_card_perjalanan.dart';
+part 'rencana_perjalanan.dart';

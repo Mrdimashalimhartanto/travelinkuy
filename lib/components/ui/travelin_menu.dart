@@ -24,8 +24,8 @@ class TravelinIconMenu extends StatelessWidget {
               //   color: travelinbackground,
               //   borderRadius: BorderRadius.circular(10),
               // ),
-              height: 50,
-              width: 50,
+              height: 40,
+              width: 40,
               child: Image(
                 height: size,
                 image: NetworkImage(image),

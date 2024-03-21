@@ -218,7 +218,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
               color: Colors.white,
               child: GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, '/welcome-page');
+                  Navigator.pushNamed(context, '/discover-page');
                 },
                 child: Center(
                   child: Padding(
