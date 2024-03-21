@@ -104,6 +104,12 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "floating_bottom_navigation_bar",
+      "rootUri": "file:///C:/Users/dimas.hartanto/AppData/Local/Pub/Cache/hosted/pub.dev/floating_bottom_navigation_bar-1.5.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///C:/Users/dimas.hartanto/Downloads/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -434,7 +440,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-03-21T07:41:17.936279Z",
+  "generated": "2024-03-21T16:46:23.209198Z",
   "generator": "pub",
   "generatorVersion": "3.3.1"
 }
