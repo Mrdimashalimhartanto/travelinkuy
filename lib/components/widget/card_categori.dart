@@ -13,7 +13,7 @@ class CardCategori extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(
-              width: defaultMargin,
+              width: 16,
             ),
             Container(
               padding: EdgeInsets.symmetric(

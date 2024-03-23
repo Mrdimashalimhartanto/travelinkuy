@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travelinkuy/components/menu/menu.dart';
 import 'package:travelinkuy/components/pages/pages.dart';
 
 void main() {
@@ -18,7 +19,10 @@ class MyApp extends StatelessWidget {
         "/onboarding-page": (context) => OnboardingPage(),
         "/welcome-page": (context) => const WelcomePage(),
         "/discover-page": (context) => const DiscoverPage(),
-        "/main-page": (context) => MainPage(),
+        "/main-page": (context) => const MainPage(),
+
+        // PAGE MENU
+        "/pesawat-page": (context) => const MenuPesawat(),
       },
     );
   }

@@ -11,6 +11,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
+
   Widget body() {
     switch (currentIndex) {
       case 0:
@@ -35,6 +36,7 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: CustomNavigationBar(
         elevation: 10.0,
         iconSize: 20.0,
+        scaleCurve: Curves.bounceIn,
         selectedColor: Colors.grey.shade600,
         strokeColor: Colors.white,
         unSelectedColor: Colors.grey.shade800,

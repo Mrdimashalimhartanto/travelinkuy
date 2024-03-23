@@ -17,3 +17,6 @@ part 'konten_travel.dart';
 part 'main_menu.dart';
 part 'traveling_kuy_card.dart';
 part 'card_ide_liburan.dart';
+part 'travel_history_card.dart';
+part 'judul_pesawat.dart';
+part 'card_terbang.dart';
