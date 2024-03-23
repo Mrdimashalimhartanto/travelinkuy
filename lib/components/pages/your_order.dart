@@ -8,138 +8,83 @@ class YourOrder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(
-        slivers: <Widget>[
-          SliverAppBar(
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Your Order',
-                  style: GoogleFonts.poppins(
-                    color: Colors.white,
-                  ),
-                ),
-                Icon(
-                  Icons.shopping_cart_outlined,
-                  color: Colors.white,
-                ),
-              ],
-            ),
-            backgroundColor: travelinkuy,
-            automaticallyImplyLeading: false,
-            expandedHeight: 300,
-            floating: false,
-            pinned: true,
-            flexibleSpace: FlexibleSpaceBar(
-              centerTitle: true,
-              // title: Text(
-              //   'Sliver App Bar',
-              //   style: GoogleFonts.poppins(
-              //     color: Colors.white,
-              //   ),
-              // ),
-              background: Stack(
-                fit: StackFit.expand,
-                children: <Widget>[
-                  Image.network(
-                    'https://images.unsplash.com/photo-1647427017067-8f33ccbae493?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3JkZXIlMjB0aWNrZXR8ZW58MHx8MHx8fDA%3D',
-                    fit: BoxFit.cover,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(20),
-                        topRight: Radius.circular(20),
-                      ),
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: <Color>[
-                          Colors.black.withAlpha(0),
-                          Colors.black12,
-                          Colors.black45
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          SliverToBoxAdapter(
-            child: Text(
-                'is simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make is simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeis simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeis simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeis simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeis simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeis simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeis simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeis simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeis simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeis simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make'),
-          ),
-          // SliverList(
-          //   delegate: SliverChildBuilderDelegate(
-          //     (BuildContext context, int index) {
-          //       return ListTile(
-          //         title: Text(items[index]),
-          //       );
-          //     },
-          //     childCount: items.length,
-          //   ),
-          // ),
-        ],
+      backgroundColor: Colors.white,
+      body: Container(
+        child: NestedScrollView(
+          headerSliverBuilder: (BuildContext context, bool innerBoxScrolled) {
+            return <Widget>[
+              createSilverAppBar1(),
+              createSilverAppBar2(),
+            ];
+          },
+          body: Container(),
+        ),
       ),
     );
-    // return Scaffold(
-    //   body: CustomScrollView(
-    //     slivers: [
-    //       SliverAppBar(
-    //         automaticallyImplyLeading: false,
-    //         title: Row(
-    //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    //           children: [
-    //             Icon(
-    //               Icons.clear,
-    //               color: Colors.white,
-    //             ),
-    //             Icon(
-    //               Icons.shopping_cart_outlined,
-    //               color: Colors.white,
-    //             ),
-    //           ],
-    //         ),
-    //         bottom: PreferredSize(
-    //           preferredSize: Size.fromHeight(40),
-    //           child: Container(
-    //             color: Colors.white,
-    //             child: Center(
-    //                 child: Text(
-    //               'Sliver App bar',
-    //               style: GoogleFonts.poppins(
-    //                 color: Colors.black,
-    //                 fontWeight: FontWeight.bold,
-    //                 fontSize: 24,
-    //               ),
-    //             )),
-    //             width: double.maxFinite,
-    //             padding: EdgeInsets.only(top: 5, bottom: 10),
-    //             decoration: BoxDecoration(
-    //                 borderRadius: BorderRadius.only(
-    //                     topLeft: Radius.circular(20),
-    //                     topRight: Radius.circular(20))),
-    //           ),
-    //         ),
-    //         pinned: true,
-    //         backgroundColor: travelinkuy,
-    //         expandedHeight: 300,
-    //         flexibleSpace: FlexibleSpaceBar(
-    //           background: Image.network(
-    //               'https://onesolution.pertamina.com/uploads/insight/20211228070438ind_Bahan%20Bakar%20Pesawat%20Pertamina%20Go%20Global.jpg',
-    //               width: double.maxFinite,
-    //               fit: BoxFit.cover),
-    //         ),
-    //       ),
-    //       SliverToBoxAdapter(
-    //         child: Text(
-    //             'is simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make is simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeis simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeis simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeis simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeis simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeis simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeis simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeis simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeis simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makeis simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make'),
-    //       ),
-    //       // buat konten
-    //     ],
-    //   ),
-    // );
+  }
+
+  SliverAppBar createSilverAppBar1() {
+    return SliverAppBar(
+      automaticallyImplyLeading: false,
+      backgroundColor: Colors.redAccent,
+      expandedHeight: 300,
+      floating: false,
+      elevation: 0,
+      flexibleSpace: LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constraints) {
+        return FlexibleSpaceBar(
+          collapseMode: CollapseMode.parallax,
+          background: Container(
+            color: Colors.white,
+            child: Image.network(
+              'https://images.unsplash.com/photo-1619467416348-6a782839e95f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              fit: BoxFit.cover,
+            ),
+          ),
+        );
+      }),
+    );
+  }
+
+  Widget createSilverAppBar2() {
+    return SliverAppBar(
+      automaticallyImplyLeading: false,
+      backgroundColor: Colors.redAccent,
+      pinned: true,
+      title: Container(
+        margin: EdgeInsets.symmetric(horizontal: 10),
+        height: 40,
+        decoration: BoxDecoration(
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+                color: Colors.grey.withOpacity(0.6),
+                offset: const Offset(1.1, 1.1),
+                blurRadius: 5.0),
+          ],
+        ),
+        child: CupertinoTextField(
+          // controller: _filter,
+          keyboardType: TextInputType.text,
+          placeholder: 'Search',
+          placeholderStyle: TextStyle(
+            color: Color(0xffC4C6CC),
+            fontSize: 14.0,
+            fontFamily: 'Brutal',
+          ),
+          prefix: Padding(
+            padding: const EdgeInsets.fromLTRB(5.0, 5.0, 0.0, 5.0),
+            child: Icon(
+              Icons.search,
+              size: 18,
+              color: Colors.black,
+            ),
+          ),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8.0),
+            color: Colors.white,
+          ),
+        ),
+      ),
+    );
   }
 }
