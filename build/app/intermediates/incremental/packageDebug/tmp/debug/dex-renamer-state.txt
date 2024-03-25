@@ -1,4 +1,4 @@
-#Sat Mar 23 23:44:07 WIB 2024
+#Mon Mar 25 23:43:35 WIB 2024
 base.0=D\:\\2023\\GITHUB\\travelinkuy\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

@@ -1,1 +1,0 @@
- D:\\2023\\GITHUB\\travelinkuy\\.dart_tool\\flutter_build\\f4dad962a75feda33fc4c0ba34032d3a\\native_assets.yaml: 

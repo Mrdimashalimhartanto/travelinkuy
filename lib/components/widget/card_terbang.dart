@@ -7,17 +7,17 @@ class CardTerbang extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
-      height: 300,
-      width: 190,
+      height: 380,
+      width: 200,
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.shade300,
+            color: Colors.grey.shade400,
             blurRadius: 9,
-            offset: Offset(4, 10),
+            offset: Offset(4, 1),
           ),
         ],
-        color: travelinkuy,
+        color: Color(0xfff4f4f4),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
@@ -25,118 +25,114 @@ class CardTerbang extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(10),
-              topRight: Radius.circular(10),
-            ),
+                topLeft: Radius.circular(10), topRight: Radius.circular(10)),
             child: Container(
-              height: 130,
+              height: 180,
               width: double.infinity,
               color: Colors.transparent,
               child: Image.network(
-                "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/10/17/fdd57d42-027d-436a-b8b8-51b84eba401a.jpg",
+                'https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit19201280gsm/assets/2022/02/09/8dbc88a3-54f7-472e-a5f1-5c0b87831ea8-1644420700870-0f09c511d519b71a5314b523c9252acc.png',
                 fit: BoxFit.cover,
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(4),
-                    color: Colors.blue[400],
-                  ),
-                  // ignore: prefer_const_constructors
-                  child: Padding(
-                    padding: const EdgeInsets.all(3.0),
-                    child: const Text(
-                      "NIKE AIR JORDAN",
-                      style: TextStyle(
-                          fontSize: 8,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  width: 5,
-                ),
-                // Text(
-                //   "Rp 39.000",
-                //   style: TextStyle(
-                //       fontSize: 10,
-                //       decoration: TextDecoration.lineThrough,
-                //       color: Colors.grey),
-                // )
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 2,
-          ),
+          SizedBox(height: 10),
           Padding(
             padding: const EdgeInsets.only(left: 8.0),
             child: Text(
-              "Sacai x Nike Cortez 4.0 White University Red Blue ",
+              'Jakarta -> Singapore',
               style: GoogleFonts.poppins(
-                color: Colors.white,
+                color: Colors.black,
                 fontWeight: FontWeight.bold,
                 fontSize: 12,
               ),
             ),
           ),
-          SizedBox(
-            height: 4,
-          ),
-          Divider(
-            color: Colors.grey.shade200,
-            indent: 10,
-            endIndent: 10,
-            thickness: 1,
-          ),
-          SizedBox(
-            height: 16,
-          ),
+          SizedBox(height: 8),
           Padding(
             padding: const EdgeInsets.only(left: 8.0),
             child: Text(
-              "this is a limited product".toUpperCase(),
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 9,
-                fontWeight: FontWeight.bold,
+              '01 Jun 2024',
+              style: GoogleFonts.poppins(
+                color: Colors.grey.shade900,
+                fontWeight: FontWeight.normal,
+                fontSize: 12,
+              ),
+            ),
+          ),
+          SizedBox(height: 8),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: IntrinsicHeight(
+              child: Row(
+                children: [
+                  Container(
+                    width: 18,
+                    height: 18,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      image: DecorationImage(
+                        image: NetworkImage(
+                          'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 6),
+                  Text(
+                    'AirAsia Indonesia',
+                    style: GoogleFonts.poppins(
+                      color: Colors.grey.shade900,
+                      fontWeight: FontWeight.normal,
+                      fontSize: 12,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Text(
+              'Ekonomi',
+              style: GoogleFonts.poppins(
+                color: Colors.black,
+                fontWeight: FontWeight.normal,
+                fontSize: 12,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 40,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(1),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(4),
-                    color: Colors.red[400],
-                  ),
-                  // ignore: prefer_const_constructors
-                  child: Padding(
-                    padding: const EdgeInsets.all(3.0),
-                    child: Text(
-                      "tap to detail".toUpperCase(),
-                      style: TextStyle(
-                          fontSize: 8,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
+                Padding(
+                  padding: const EdgeInsets.only(left: 6),
+                  child: Text(
+                    'Mulai dari',
+                    style: GoogleFonts.poppins(
+                      color: Colors.grey.shade900,
+                      fontWeight: FontWeight.normal,
+                      // fontStyle: FontStyle.italic,
+                      fontSize: 12,
                     ),
                   ),
                 ),
-                // Text(
-                //   "Rp 39.000",
-                //   style: TextStyle(
-                //       fontSize: 10,
-                //       decoration: TextDecoration.lineThrough,
-                //       color: Colors.grey),
-                // )
+                Padding(
+                  padding: const EdgeInsets.only(left: 6),
+                  child: Text(
+                    'IDR 393.000',
+                    style: GoogleFonts.poppins(
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

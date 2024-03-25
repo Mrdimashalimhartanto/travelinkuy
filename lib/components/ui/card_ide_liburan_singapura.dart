@@ -6,8 +6,8 @@ class CardLiburanSingapura extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 294,
-      height: 148,
+      width: 390,
+      height: 200,
       decoration: BoxDecoration(
         image: const DecorationImage(
           image: NetworkImage(
@@ -41,9 +41,7 @@ class CardLiburanSingapura extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  onPressed: () {
-                    
-                  }, // Text('info selengkap singapura'),
+                  onPressed: () {}, // Text('info selengkap singapura'),
                   child: Text(
                     'Info selengkapnya',
                     style: GoogleFonts.montserrat(

@@ -65,102 +65,103 @@ class MainMenu extends StatelessWidget {
                 GestureDetector(
                   onTap: () {
                     showModalBottomSheet(
-                        context: context,
-                        builder: (BuildContext context) {
-                          return Container(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                GestureDetector(
-                                  child: Center(
-                                    child: Container(
-                                        margin: EdgeInsets.only(top: 15),
-                                        height: 20,
-                                        width: 60,
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(10),
-                                            color: Colors.grey.shade300)),
+                      context: context,
+                      builder: (BuildContext context) {
+                        return Container(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              GestureDetector(
+                                child: Center(
+                                  child: Container(
+                                      margin: EdgeInsets.only(top: 15),
+                                      height: 20,
+                                      width: 60,
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          color: Colors.grey.shade300)),
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.all(25),
+                                child: Text(
+                                  'Layanan Teratas',
+                                  style: GoogleFonts.poppins(
+                                    color: Colors.black,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                Container(
-                                  padding: EdgeInsets.all(25),
-                                  child: Text(
-                                    'Layanan Teratas',
-                                    style: GoogleFonts.poppins(
-                                      color: Colors.black,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: <Widget>[
+                                  TravelinIconMenu(
+                                    image:
+                                        "https://cdn-icons-png.flaticon.com/128/3127/3127363.png",
+                                    title: "Fery",
+                                  ),
+                                  TravelinIconMenu(
+                                    image:
+                                        "https://cdn-icons-png.flaticon.com/128/3378/3378741.png",
+                                    title: "Atraksi",
+                                  ),
+                                  TravelinIconMenu(
+                                    image:
+                                        "https://cdn-icons-png.flaticon.com/128/8315/8315136.png",
+                                    title: "Sewa Mobil",
+                                  ),
+                                  TravelinIconMenu(
+                                    image:
+                                        "https://cdn-icons-png.flaticon.com/128/2169/2169416.png",
+                                    title: "Tempat Bermain",
+                                  ),
+                                ],
+                              ),
+                              Container(
+                                padding: EdgeInsets.all(25),
+                                child: Text(
+                                  'Layanan Lainnya',
+                                  style: GoogleFonts.poppins(
+                                    color: Colors.black,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: <Widget>[
-                                    TravelinIconMenu(
-                                      image:
-                                          "https://cdn-icons-png.flaticon.com/128/3127/3127363.png",
-                                      title: "Fery",
-                                    ),
-                                    TravelinIconMenu(
-                                      image:
-                                          "https://cdn-icons-png.flaticon.com/128/3378/3378741.png",
-                                      title: "Atraksi",
-                                    ),
-                                    TravelinIconMenu(
-                                      image:
-                                          "https://cdn-icons-png.flaticon.com/128/8315/8315136.png",
-                                      title: "Sewa Mobil",
-                                    ),
-                                    TravelinIconMenu(
-                                      image:
-                                          "https://cdn-icons-png.flaticon.com/128/2169/2169416.png",
-                                      title: "Tempat Bermain",
-                                    ),
-                                  ],
-                                ),
-                                Container(
-                                  padding: EdgeInsets.all(25),
-                                  child: Text(
-                                    'Layanan Lainnya',
-                                    style: GoogleFonts.poppins(
-                                      color: Colors.black,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: <Widget>[
+                                  TravelinIconMenu(
+                                    image:
+                                        "https://cdn-icons-png.flaticon.com/128/3127/3127363.png",
+                                    title: "Fery",
                                   ),
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: <Widget>[
-                                    TravelinIconMenu(
-                                      image:
-                                          "https://cdn-icons-png.flaticon.com/128/3127/3127363.png",
-                                      title: "Fery",
-                                    ),
-                                    TravelinIconMenu(
-                                      image:
-                                          "https://cdn-icons-png.flaticon.com/128/3378/3378741.png",
-                                      title: "Atraksi",
-                                    ),
-                                    TravelinIconMenu(
-                                      image:
-                                          "https://cdn-icons-png.flaticon.com/128/8315/8315136.png",
-                                      title: "Sewa Mobil",
-                                    ),
-                                    TravelinIconMenu(
-                                      image:
-                                          "https://cdn-icons-png.flaticon.com/128/2169/2169416.png",
-                                      title: "Tempat Bermain",
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          );
-                        });
+                                  TravelinIconMenu(
+                                    image:
+                                        "https://cdn-icons-png.flaticon.com/128/3378/3378741.png",
+                                    title: "Atraksi",
+                                  ),
+                                  TravelinIconMenu(
+                                    image:
+                                        "https://cdn-icons-png.flaticon.com/128/8315/8315136.png",
+                                    title: "Sewa Mobil",
+                                  ),
+                                  TravelinIconMenu(
+                                    image:
+                                        "https://cdn-icons-png.flaticon.com/128/2169/2169416.png",
+                                    title: "Tempat Bermain",
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                    );
                   },
                   child: TravelinIconMenu(
                     image:
