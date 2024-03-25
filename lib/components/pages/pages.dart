@@ -21,7 +21,6 @@ import 'package:travelinkuy/data/imgList.dart';
 
 part 'splash_screen.dart';
 part 'welcome_page.dart';
-part 'onboarding_page.dart';
 part 'discover_page.dart';
 part 'main_page.dart';
 part 'home_page.dart';

@@ -14,6 +14,41 @@ class _MenuPesawatState extends State<MenuPesawat> {
 
   @override
   Widget build(BuildContext context) {
+    Widget buttonContinue() {
+      return Padding(
+        padding: const EdgeInsets.only(bottom: 20),
+        child: GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(context, '/main-page');
+          },
+          child: Container(
+            height: 50,
+            margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+            decoration: BoxDecoration(
+              color: travelincomponent,
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  child: Text(
+                    'Lihat semua',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.poppins(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+
     Widget judulpenerbangan() {
       return Padding(
         padding: const EdgeInsets.only(
@@ -94,6 +129,64 @@ class _MenuPesawatState extends State<MenuPesawat> {
                       color: Colors.grey[800],
                       fontSize: 12,
                       fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget judulupdate() {
+      return Padding(
+        padding: const EdgeInsets.only(
+          left: 16,
+          right: 16,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'UPDATE tentang bandara Bandung',
+                    style: GoogleFonts.montserrat(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget informasipenerbangan() {
+      return Padding(
+        padding: const EdgeInsets.only(
+          left: 16,
+          right: 16,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Penting untuk Penerbanganmu',
+                    style: GoogleFonts.montserrat(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
@@ -368,7 +461,7 @@ class _MenuPesawatState extends State<MenuPesawat> {
                       borderRadius: BorderRadius.vertical(
                         top: Radius.circular(18),
                       ),
-                      color: travelinbackground,
+                      color: Color(0xffEDEEEF),
                     ),
                     child: Container(
                       margin: EdgeInsets.only(
@@ -510,12 +603,11 @@ class _MenuPesawatState extends State<MenuPesawat> {
                                     ),
                                     GestureDetector(
                                       onTap: () {
-                                        // Navigator.of(context).push(
-                                        //   MaterialPageRoute(
-                                        //     builder: (context) =>
-                                        //         const FlightBookingSelectPage(),
-                                        //   ),
-                                        // );
+                                        Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                            builder: (context) => TujuanPergi(),
+                                          ),
+                                        );
                                       },
                                       child: Container(
                                         height: 48,
@@ -532,7 +624,7 @@ class _MenuPesawatState extends State<MenuPesawat> {
                                             style: TextStyle(
                                               color: Colors.white,
                                               fontWeight: FontWeight.bold,
-                                              fontSize: 18,
+                                              fontSize: 14,
                                             ),
                                           ),
                                         ),
@@ -567,6 +659,235 @@ class _MenuPesawatState extends State<MenuPesawat> {
                               SizedBox(height: 20),
                               judulterbang(),
                               slidercardterbang(),
+                              buttonContinue(),
+                              judulupdate(),
+                              SizedBox(height: 20),
+                              Container(
+                                width: 390,
+                                height: 200,
+                                decoration: BoxDecoration(
+                                  image: const DecorationImage(
+                                    image: NetworkImage(
+                                        'https://images.unsplash.com/photo-1591571683379-6bc5afc71df0?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius: BorderRadius.circular(17),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 27.0, left: 24),
+                                  child: Row(
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Perjalanan \nLiburan ke Bandung',
+                                            style: GoogleFonts.montserrat(
+                                              color: Color(0xffF8F7FD),
+                                              fontSize: 19,
+                                              fontWeight: FontWeight.w800,
+                                            ),
+                                          ),
+                                          SizedBox(height: 8),
+                                          OutlinedButton(
+                                            style: OutlinedButton.styleFrom(
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(17),
+                                              ),
+                                              side: BorderSide(
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                            onPressed:
+                                                () {}, // Text('info selengkap singapura'),
+                                            child: Text(
+                                              'Info selengkapnya',
+                                              style: GoogleFonts.montserrat(
+                                                color: Color(0xffF8F7FD),
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: 40),
+                              informasipenerbangan(),
+                              SizedBox(height: 20),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 16.0, right: 16.0),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      crossAxisAlignment: CrossAxisAlignment
+                                          .start, // Align children along the start of the cross axis
+                                      children: [
+                                        Image.network(
+                                          'https://cdn-icons-png.flaticon.com/128/2424/2424710.png',
+                                          height: 40,
+                                          width: 40,
+                                        ),
+                                        SizedBox(
+                                          width: 20,
+                                        ),
+                                        Expanded(
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment
+                                                .start, // Align children along the start of the cross axis
+                                            children: [
+                                              Text(
+                                                'Cara Refund Tiket Pesawat',
+                                                style: GoogleFonts.poppins(
+                                                  color: Colors.black,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                              Text(
+                                                'Yang perlu kamu tau tentang pengembalian uang tiket',
+                                                style: GoogleFonts.poppins(
+                                                  color: Colors.grey.shade500,
+                                                  fontSize: 12,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.grey,
+                                          size: 24.0,
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const Divider(
+                                height: 40,
+                                thickness: 1,
+                                indent: 20,
+                                endIndent: 22,
+                                color: Colors.grey,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 16.0, right: 16.0),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      crossAxisAlignment: CrossAxisAlignment
+                                          .start, // Align children along the start of the cross axis
+                                      children: [
+                                        Image.network(
+                                          'https://cdn-icons-png.flaticon.com/128/3652/3652191.png',
+                                          height: 40,
+                                          width: 40,
+                                        ),
+                                        SizedBox(
+                                          width: 20,
+                                        ),
+                                        Expanded(
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment
+                                                .start, // Align children along the start of the cross axis
+                                            children: [
+                                              Text(
+                                                'Cara Reschedule Penerbangan',
+                                                style: GoogleFonts.poppins(
+                                                  color: Colors.black,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                              Text(
+                                                'Cek di sini untuk mengubah jadwal penerbanganmu',
+                                                style: GoogleFonts.poppins(
+                                                  color: Colors.grey.shade500,
+                                                  fontSize: 12,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.grey,
+                                          size: 24.0,
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const Divider(
+                                height: 40,
+                                thickness: 1,
+                                indent: 20,
+                                endIndent: 22,
+                                color: Colors.grey,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 16.0, right: 16.0),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      crossAxisAlignment: CrossAxisAlignment
+                                          .start, // Align children along the start of the cross axis
+                                      children: [
+                                        Image.network(
+                                          'https://cdn-icons-png.flaticon.com/128/3652/3652191.png',
+                                          height: 40,
+                                          width: 40,
+                                        ),
+                                        SizedBox(
+                                          width: 20,
+                                        ),
+                                        Expanded(
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment
+                                                .start, // Align children along the start of the cross axis
+                                            children: [
+                                              Text(
+                                                'Persyaratan Penerbangan',
+                                                style: GoogleFonts.poppins(
+                                                  color: Colors.black,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                              Text(
+                                                'Cek protokol dan syarat selama pandemi',
+                                                style: GoogleFonts.poppins(
+                                                  color: Colors.grey.shade500,
+                                                  fontSize: 12,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        Icon(
+                                          Icons.arrow_forward_ios,
+                                          color: Colors.grey,
+                                          size: 24.0,
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
                               SizedBox(height: 40),
                             ],
                           ),
@@ -636,7 +957,7 @@ class _MenuPesawatState extends State<MenuPesawat> {
     }
 
     return Scaffold(
-      backgroundColor: splashcolor,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Container(
           child: Row(
@@ -653,7 +974,7 @@ class _MenuPesawatState extends State<MenuPesawat> {
                 ),
               ),
               SizedBox(
-                width: 26,
+                width: 30,
               ),
               Text(
                 'Pesawat',
