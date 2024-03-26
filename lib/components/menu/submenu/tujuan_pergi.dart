@@ -15,7 +15,66 @@ class _TujuanPergiState extends State<TujuanPergi> {
   @override
   Widget build(BuildContext context) {
     Widget body() {
-      return Container();
+      return Container(
+        child: Padding(
+          padding: const EdgeInsets.all(0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              DefaultTabController(
+                length: 12,
+                child: TabBar(
+                  isScrollable: true,
+                  tabs: [
+                    Tab(
+                      text: 'Tab 1',
+                    ),
+                    Tab(
+                      text: 'Tab 2',
+                    ),
+                    Tab(
+                      text: 'Tab 3',
+                    ),
+                    Tab(
+                      text: 'Tab 4',
+                    ),
+                    Tab(
+                      text: 'Tab 5',
+                    ),
+                    Tab(
+                      text: 'Tab 6',
+                    ),
+                    Tab(
+                      text: 'Tab 7',
+                    ),
+                    Tab(
+                      text: 'Tab 8',
+                    ),
+                    Tab(
+                      text: 'Tab 9',
+                    ),
+                    Tab(
+                      text: 'Tab 10',
+                    ),
+                    Tab(
+                      text: 'Tab 11',
+                    ),
+                    Tab(
+                      text: 'Tab 12',
+                    ),
+                  ],
+                ),
+              ),
+              Text(
+                'card banner color gradient',
+              ),
+              Text(
+                'card harga',
+              ),
+            ],
+          ),
+        ),
+      );
     }
 
     return Scaffold(
@@ -39,7 +98,7 @@ class _TujuanPergiState extends State<TujuanPergi> {
                   Text(
                     '1 Penumpang - Ekonomi',
                     style: GoogleFonts.poppins(
-                      color: Colors.black,
+                      color: const Color.fromARGB(255, 61, 29, 29),
                       fontWeight: FontWeight.normal,
                       fontSize: 14,
                     ),
@@ -53,7 +112,7 @@ class _TujuanPergiState extends State<TujuanPergi> {
           color: Colors.black,
         ),
         automaticallyImplyLeading: false,
-        backgroundColor: const Color(0xfff4f4f4),
+        backgroundColor: Colors.white,
         elevation: 4,
         actions: [
           TextButton(
