@@ -26,10 +26,20 @@ class MainMenu extends StatelessWidget {
                     title: "Pesawat",
                   ),
                 ),
-                TravelinIconMenu(
-                  image:
-                      "https://cdn-icons-png.flaticon.com/128/3378/3378741.png",
-                  title: "Hotel",
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => TabButtonCustom(),
+                      ),
+                    );
+                  },
+                  child: TravelinIconMenu(
+                    image:
+                        "https://cdn-icons-png.flaticon.com/128/3378/3378741.png",
+                    title: "Hotel",
+                  ),
                 ),
                 TravelinIconMenu(
                   image:

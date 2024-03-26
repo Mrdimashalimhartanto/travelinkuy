@@ -14,6 +14,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:travelinkuy/components/menu/menu.dart';
 import 'package:travelinkuy/components/ui/ui.dart';
+import 'package:travelinkuy/components/widget/testing.dart';
 
 // component widget
 import 'package:travelinkuy/components/widget/widget.dart';

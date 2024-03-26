@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travelinkuy/components/ui/ui.dart';
+import 'package:travelinkuy/components/widget/testing.dart';
 
 part 'buttonnextpage.dart';
 part 'buttondetailtravelinkuy.dart';
@@ -20,3 +21,4 @@ part 'card_ide_liburan.dart';
 part 'travel_history_card.dart';
 part 'judul_pesawat.dart';
 part 'card_terbang.dart';
+part 'tabbar_menu_global.dart';
