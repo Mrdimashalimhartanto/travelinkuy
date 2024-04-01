@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 part of 'ui.dart';
 
 class CardLiburanSingapura extends StatelessWidget {

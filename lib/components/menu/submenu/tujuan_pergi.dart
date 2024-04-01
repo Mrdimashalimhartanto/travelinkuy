@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_unnecessary_containers
 
 part of 'submenu.dart';
 
@@ -67,6 +67,11 @@ class _TujuanPergiState extends State<TujuanPergi> {
               ),
               Text(
                 'card banner color gradient',
+                style: GoogleFonts.poppins(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                ),
               ),
               Text(
                 'card harga',

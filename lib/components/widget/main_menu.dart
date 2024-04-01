@@ -28,12 +28,7 @@ class MainMenu extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => TabButtonCustom(),
-                      ),
-                    );
+                    Navigator.pushNamed(context, '/hotel-page');
                   },
                   child: TravelinIconMenu(
                     image:

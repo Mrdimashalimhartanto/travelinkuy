@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
 
         // PAGE MENU
         "/pesawat-page": (context) => const MenuPesawat(),
+        "/hotel-page": (context) => const HotelPage(),
       },
     );
   }

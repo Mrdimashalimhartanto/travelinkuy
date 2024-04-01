@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 part of 'ui.dart';
 
 class CardIdeLiburanThailand extends StatelessWidget {
@@ -6,8 +8,8 @@ class CardIdeLiburanThailand extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 294,
-      height: 148,
+      width: 390,
+      height: 200,
       decoration: BoxDecoration(
         image: const DecorationImage(
           image: NetworkImage(

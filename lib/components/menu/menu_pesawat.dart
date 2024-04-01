@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, unused_element
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, unused_element, sized_box_for_whitespace
 
 part of 'menu.dart';
 
@@ -959,37 +959,41 @@ class _MenuPesawatState extends State<MenuPesawat> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Container(
-          child: Row(
-            children: [
-              GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: Image.asset(
-                  "assets/back-button.png",
-                  width: 30,
-                  height: 30,
-                  fit: BoxFit.cover,
-                ),
+        title: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.all(2.0), // Adjust the value as needed
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Pesawat ',
+                    style: GoogleFonts.poppins(
+                      color: Colors.black,
+                      fontWeight: FontWeight.normal,
+                      fontSize: 20,
+                    ),
+                  ),
+                ],
               ),
-              SizedBox(
-                width: 30,
-              ),
-              Text(
-                'Pesawat',
-                style: GoogleFonts.poppins(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 22,
-                ),
-              )
-            ],
+            ),
+          ],
+        ),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(
+            Icons.arrow_back_ios_new_rounded,
+            size: 20,
           ),
         ),
         automaticallyImplyLeading: false,
-        backgroundColor: travelinkuy,
-        elevation: 0,
+        backgroundColor: Colors.white,
+        elevation: 4,
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.notifications))
+        ],
       ),
       body: Stack(
         children: [
