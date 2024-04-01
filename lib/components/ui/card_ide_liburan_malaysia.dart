@@ -6,8 +6,8 @@ class CardIdeLiburanMalaysia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 294,
-      height: 148,
+      width: 390,
+      height: 200,
       decoration: BoxDecoration(
         image: const DecorationImage(
           image: NetworkImage(

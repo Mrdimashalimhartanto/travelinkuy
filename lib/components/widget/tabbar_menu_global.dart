@@ -32,6 +32,7 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
     Icons.settings,
     Icons.person
   ];
+
   int current = 0;
   PageController pageController = PageController();
   @override
@@ -127,31 +128,30 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
           Container(
             margin: const EdgeInsets.only(top: 30),
             width: double.infinity,
-            height: 550,
+            height: 200,
             child: PageView.builder(
               itemCount: icons.length,
               controller: pageController,
               physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) {
-                return Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      icons[current],
-                      size: 200,
-                      color: Colors.deepPurpleAccent,
+                return SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 24, left: 16),
+                    child: Row(
+                      children: [
+                        CardLiburanSingapura(),
+                        SizedBox(
+                          width: 16,
+                        ),
+                        CardIdeLiburanMalaysia(),
+                        SizedBox(
+                          width: 16,
+                        ),
+                        CardIdeLiburanThailand(),
+                      ],
                     ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      "${items[current]} Tab Content",
-                      style: GoogleFonts.ubuntu(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 30,
-                          color: Colors.deepPurpleAccent),
-                    ),
-                  ],
+                  ),
                 );
               },
             ),
