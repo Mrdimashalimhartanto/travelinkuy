@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
           RencanaPerjalanan(),
           SizedBox(height: 20),
           TabbarMenuGlobal(),
-
+          BorderAbuAbu(),
           SizedBox(height: 20),
           RencanaPerjalanan(),
           SlideCardPerjalanan(),

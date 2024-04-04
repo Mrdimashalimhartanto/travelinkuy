@@ -957,7 +957,7 @@ class _MenuPesawatState extends State<MenuPesawat> {
     }
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: travelinbackground,
       appBar: AppBar(
         title: Column(
           children: [
@@ -973,6 +973,7 @@ class _MenuPesawatState extends State<MenuPesawat> {
                       fontWeight: FontWeight.normal,
                       fontSize: 20,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                 ],
               ),

@@ -19,8 +19,6 @@ class _MainPageState extends State<MainPage> {
       case 1:
         return YourOrder();
       case 2:
-        return const Text('Home page');
-      case 3:
         return const Text('Profile');
       default:
         return HomePage();
