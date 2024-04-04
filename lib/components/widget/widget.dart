@@ -1,8 +1,11 @@
+// ignore_for_file: unnecessary_import
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travelinkuy/components/ui/ui.dart';
-import 'package:travelinkuy/components/widget/testing.dart';
 
 part 'buttonnextpage.dart';
 part 'buttondetailtravelinkuy.dart';

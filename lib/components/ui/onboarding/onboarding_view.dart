@@ -21,7 +21,7 @@ class _OnboardingViewState extends State<OnboardingView> {
     return Scaffold(
       bottomSheet: Container(
         color: Colors.white,
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
         child: isLastPage
             ? getStarted()
             : Row(
@@ -57,7 +57,7 @@ class _OnboardingViewState extends State<OnboardingView> {
               ),
       ),
       body: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 15),
+        margin: const EdgeInsets.symmetric(horizontal: 20),
         child: PageView.builder(
             onPageChanged: (index) => setState(
                 () => isLastPage = controller.items.length - 1 == index),
@@ -92,25 +92,29 @@ class _OnboardingViewState extends State<OnboardingView> {
   //Get started button
 
   Widget getStarted() {
-    return Container(
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8), color: Color(0xff023770)),
-      width: MediaQuery.of(context).size.width * .9,
-      height: 55,
-      child: TextButton(
-          onPressed: () async {
-            final pres = await SharedPreferences.getInstance();
-            pres.setBool("onboarding", true);
+    return GestureDetector(
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+          color: Color(0xff023770),
+        ),
+        width: MediaQuery.of(context).size.width * .9,
+        height: 55,
+        child: TextButton(
+            onPressed: () async {
+              final pres = await SharedPreferences.getInstance();
+              pres.setBool("onboarding", true);
 
-            //After we press get started button this onboarding value become true
-            // same key
-            if (!mounted) return;
-            Navigator.pushNamed(context, '/discover-page');
-          },
-          child: const Text(
-            "Get started",
-            style: TextStyle(color: Colors.white),
-          )),
+              //After we press get started button this onboarding value become true
+              // same key
+              if (!mounted) return;
+              Navigator.pushNamed(context, '/discover-page');
+            },
+            child: const Text(
+              "Get started",
+              style: TextStyle(color: Colors.white),
+            )),
+      ),
     );
   }
 }

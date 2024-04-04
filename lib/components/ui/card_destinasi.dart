@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_unnecessary_containers
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
 part of 'ui.dart';
 
@@ -261,7 +261,7 @@ class CardDestinasiTravelin extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(3.0),
                       child: Text(
-                        "tap to detail".toUpperCase(),
+                        "tap to detail",
                         style: const TextStyle(
                             fontSize: 9,
                             color: Colors.white,
@@ -271,12 +271,12 @@ class CardDestinasiTravelin extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 40),
-                const Image(
-                  image: AssetImage(
-                    'assets/logo_splash_screen.png',
-                  ),
-                  height: 60,
-                ),
+                // const Image(
+                //   image: AssetImage(
+                //     'assets/logo_splash_screen.png',
+                //   ),
+                //   height: 60,
+                // ),
               ],
             ),
           ),
