@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, duplicate_ignore
+
 part of 'widget.dart';
 
 class JudulDiscover extends StatelessWidget {
@@ -5,16 +7,17 @@ class JudulDiscover extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: prefer_const_constructors
     return Column(
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            Center(
+            Expanded(
               child: Text(
                 'Discover best \nplace to vacation',
                 style: TextStyle(
-                  fontSize: 40,
+                  fontSize: 30,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),

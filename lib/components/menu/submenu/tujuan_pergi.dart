@@ -22,48 +22,39 @@ class _TujuanPergiState extends State<TujuanPergi> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               DefaultTabController(
-                length: 12,
-                child: TabBar(
-                  isScrollable: true,
-                  tabs: [
-                    Tab(
-                      text: 'Tab 1',
-                    ),
-                    Tab(
-                      text: 'Tab 2',
-                    ),
-                    Tab(
-                      text: 'Tab 3',
-                    ),
-                    Tab(
-                      text: 'Tab 4',
-                    ),
-                    Tab(
-                      text: 'Tab 5',
-                    ),
-                    Tab(
-                      text: 'Tab 6',
-                    ),
-                    Tab(
-                      text: 'Tab 7',
-                    ),
-                    Tab(
-                      text: 'Tab 8',
-                    ),
-                    Tab(
-                      text: 'Tab 9',
-                    ),
-                    Tab(
-                      text: 'Tab 10',
-                    ),
-                    Tab(
-                      text: 'Tab 11',
-                    ),
-                    Tab(
-                      text: 'Tab 12',
-                    ),
-                  ],
-                ),
+                length: 5,
+                child: Scaffold(
+                    body: NestedScrollView(
+                  headerSliverBuilder:
+                      (BuildContext context, bool innerBoxIsScrolled) {
+                    return <Widget>[
+                      new SliverAppBar(
+                        title: Text('Tabs Demo'),
+                        pinned: true,
+                        floating: true,
+                        bottom: TabBar(
+                          isScrollable: true,
+                          tabs: [
+                            Tab(child: Text('Flight')),
+                            Tab(child: Text('Train')),
+                            Tab(child: Text('Car')),
+                            Tab(child: Text('Cycle')),
+                            Tab(child: Text('Boat')),
+                          ],
+                        ),
+                      ),
+                    ];
+                  },
+                  body: TabBarView(
+                    children: <Widget>[
+                      Icon(Icons.flight, size: 350),
+                      Icon(Icons.directions_transit, size: 350),
+                      Icon(Icons.directions_car, size: 350),
+                      Icon(Icons.directions_bike, size: 350),
+                      Icon(Icons.directions_boat, size: 350),
+                    ],
+                  ),
+                )),
               ),
               Text(
                 'card banner color gradient',

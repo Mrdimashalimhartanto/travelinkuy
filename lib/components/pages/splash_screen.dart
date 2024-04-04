@@ -55,14 +55,6 @@ class _SplashPageState extends State<SplashPage> {
                     Colors.white,
                   ),
                 ),
-                const SizedBox(height: 20),
-                Text(
-                  'Please wait ...',
-                  style: GoogleFonts.poppins(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 14),
-                ),
               ],
             ),
           ],
