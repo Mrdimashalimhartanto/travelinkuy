@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -26,3 +27,6 @@ part 'travel_history_card.dart';
 part 'judul_pesawat.dart';
 part 'card_terbang.dart';
 part 'tabbar_menu_global.dart';
+part 'custom_button_navbar.dart';
+part 'tab_bar_menu_pesawat.dart';
+part 'tiket_perjalanan.dart';

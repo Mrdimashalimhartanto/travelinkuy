@@ -14,6 +14,292 @@ class _MenuPesawatState extends State<MenuPesawat> {
 
   @override
   Widget build(BuildContext context) {
+    Widget cardperjalananthailand() {
+      return GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, '/perjalanan-thailand');
+        },
+        child: Container(
+          margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+          height: 380,
+          width: 200,
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.shade400,
+                blurRadius: 9,
+                offset: Offset(4, 1),
+              ),
+            ],
+            color: Color(0xfff4f4f4),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10),
+                    topRight: Radius.circular(10)),
+                child: Container(
+                  height: 180,
+                  width: double.infinity,
+                  color: Colors.transparent,
+                  child: Image.network(
+                    'https://images.unsplash.com/photo-1583491470869-ca0b9fa90216?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.only(left: 8.0),
+                child: Text(
+                  'Jakarta -> Bangkok',
+                  style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+              SizedBox(height: 8),
+              Padding(
+                padding: const EdgeInsets.only(left: 8.0),
+                child: Text(
+                  '20 April 2024',
+                  style: GoogleFonts.poppins(
+                    color: Colors.grey.shade900,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+              SizedBox(height: 8),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: IntrinsicHeight(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 18,
+                        height: 18,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 6),
+                      Text(
+                        'AirAsia Indonesia',
+                        style: GoogleFonts.poppins(
+                          color: Colors.grey.shade900,
+                          fontWeight: FontWeight.normal,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 8.0),
+                child: Text(
+                  'Ekonomi',
+                  style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(1),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 6),
+                      child: Text(
+                        'Mulai dari',
+                        style: GoogleFonts.poppins(
+                          color: Colors.grey.shade900,
+                          fontWeight: FontWeight.normal,
+                          // fontStyle: FontStyle.italic,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 6),
+                      child: Text(
+                        'IDR 895.000',
+                        style: GoogleFonts.poppins(
+                          color: Colors.red,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget cardperjalananmalaysia() {
+      return GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, '/perjalanan-malaysia');
+        },
+        child: Container(
+          margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+          height: 380,
+          width: 200,
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.shade400,
+                blurRadius: 9,
+                offset: Offset(4, 1),
+              ),
+            ],
+            color: Color(0xfff4f4f4),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10),
+                    topRight: Radius.circular(10)),
+                child: Container(
+                  height: 180,
+                  width: double.infinity,
+                  color: Colors.transparent,
+                  child: Image.network(
+                    'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=1464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.only(left: 8.0),
+                child: Text(
+                  'Jakarta -> Kuala Lumpur',
+                  style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+              SizedBox(height: 8),
+              Padding(
+                padding: const EdgeInsets.only(left: 8.0),
+                child: Text(
+                  '11 April 2024',
+                  style: GoogleFonts.poppins(
+                    color: Colors.grey.shade900,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+              SizedBox(height: 8),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: IntrinsicHeight(
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 18,
+                        height: 18,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 6),
+                      Text(
+                        'AirAsia Indonesia',
+                        style: GoogleFonts.poppins(
+                          color: Colors.grey.shade900,
+                          fontWeight: FontWeight.normal,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 8.0),
+                child: Text(
+                  'Ekonomi',
+                  style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(1),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 6),
+                      child: Text(
+                        'Mulai dari',
+                        style: GoogleFonts.poppins(
+                          color: Colors.grey.shade900,
+                          fontWeight: FontWeight.normal,
+                          // fontStyle: FontStyle.italic,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 6),
+                      child: Text(
+                        'IDR 895.000',
+                        style: GoogleFonts.poppins(
+                          color: Colors.red,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     Widget buttonContinue() {
       return Padding(
         padding: const EdgeInsets.only(bottom: 20),
@@ -89,9 +375,14 @@ class _MenuPesawatState extends State<MenuPesawat> {
                 padding: const EdgeInsets.only(top: 24, left: 16),
                 child: Row(
                   children: [
-                    CardTerbang(),
-                    CardTerbang(),
-                    CardTerbang(),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/perjalanan-singapura');
+                      },
+                      child: CardTerbang(),
+                    ),
+                    cardperjalananmalaysia(),
+                    cardperjalananthailand(),
                   ],
                 ),
               ),
@@ -957,7 +1248,7 @@ class _MenuPesawatState extends State<MenuPesawat> {
     }
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: travelinbackground,
       appBar: AppBar(
         title: Column(
           children: [
@@ -973,6 +1264,7 @@ class _MenuPesawatState extends State<MenuPesawat> {
                       fontWeight: FontWeight.normal,
                       fontSize: 20,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                 ],
               ),
@@ -1001,6 +1293,9 @@ class _MenuPesawatState extends State<MenuPesawat> {
             child: Column(
               children: [
                 content(),
+                SizedBox(
+                  height: 90,
+                ),
               ],
             ),
           ),

@@ -21,6 +21,28 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
     "Profile",
   ];
 
+  List<Container> cards = [
+    Container(
+      width: 390,
+      height: 200,
+      decoration: BoxDecoration(
+        image: const DecorationImage(
+          image: NetworkImage(
+              'https://images.unsplash.com/photo-1565967511849-76a60a516170?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+          fit: BoxFit.cover,
+        ),
+        borderRadius: BorderRadius.circular(17),
+      ),
+    ),
+    Container(),
+    Container(),
+    Container(),
+    Container(),
+    Container(),
+    Container(),
+    Container(),
+  ];
+
   int current = 0;
   PageController pageController = PageController();
   @override
@@ -32,7 +54,8 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
           children: [
             /// Tab bar
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              // padding: EdgeInsets.all(10),
+              padding: EdgeInsets.symmetric(vertical: 10),
               child: SizedBox(
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height * 0.06,
@@ -63,7 +86,7 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
                             decoration: BoxDecoration(
                               color: current == index
                                   ? travelinkuy
-                                  : travelinbackground,
+                                  : travelincomponent,
                               borderRadius: BorderRadius.circular(20),
                               border: current == index
                                   ? Border.all(
@@ -76,20 +99,13 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  // Icon(
-                                  //   icons[index],
-                                  //   size: current == index ? 23 : 20,
-                                  //   color: current == index
-                                  //       ? Colors.black
-                                  //       : Colors.grey.shade400,
-                                  // ),
                                   Text(
                                     items[index],
                                     style: GoogleFonts.poppins(
                                       fontWeight: FontWeight.bold,
                                       color: current == index
                                           ? Colors.white
-                                          : Colors.grey.shade400,
+                                          : Colors.white,
                                     ),
                                   ),
                                 ],
@@ -106,36 +122,33 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
 
             /// MAIN BODY
             Container(
-              // margin: defaultMargin,
-              // margin: const EdgeInsets.only(top: 0),
+              margin: const EdgeInsets.only(top: 30),
               width: double.infinity,
-              height: 240,
+              height: 200,
               child: PageView.builder(
-                // itemCount: icons.length,
+                itemCount: cards.length,
                 controller: pageController,
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
-                  return SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Container(
-                      margin: EdgeInsets.only(right: 10, left: 16),
-                      child: Row(
-                        children: [
-                          CardLiburanSingapura(),
-                          SizedBox(
-                            width: 16,
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 16),
+                          child: Row(
+                            children: [cards[current]],
                           ),
-                          CardIdeLiburanMalaysia(),
-                          SizedBox(
-                            width: 16,
-                          ),
-                          CardIdeLiburanThailand(),
-                        ],
+                        ),
                       ),
-                    ),
+                    ],
                   );
                 },
               ),
+            ),
+            SizedBox(
+              height: 20,
             ),
           ],
         ),
