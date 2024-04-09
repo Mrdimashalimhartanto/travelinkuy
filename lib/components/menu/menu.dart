@@ -13,8 +13,8 @@ import 'package:travelinkuy/components/menu/submenu/submenu.dart';
 import 'package:travelinkuy/components/ui/ui.dart';
 import 'package:travelinkuy/components/widget/testing.dart';
 import 'package:travelinkuy/components/widget/widget.dart';
-import 'package:travelinkuy/data/list_image.dart';
 import 'package:babstrap_settings_screen/babstrap_settings_screen.dart';
+import 'package:travelinkuy/data/data_dummy.dart';
 
 part 'menu_pesawat.dart';
 part 'travel.dart';

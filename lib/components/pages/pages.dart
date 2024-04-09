@@ -18,7 +18,7 @@ import 'package:travelinkuy/components/widget/testing.dart';
 
 // component widget
 import 'package:travelinkuy/components/widget/widget.dart';
-import 'package:travelinkuy/data/imgList.dart';
+import 'package:travelinkuy/data/data_dummy.dart';
 
 part 'splash_screen.dart';
 part 'welcome_page.dart';
