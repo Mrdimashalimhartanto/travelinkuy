@@ -10,39 +10,6 @@ class TabbarMenuGlobal extends StatefulWidget {
 }
 
 class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
-  List<String> items = [
-    "Semua",
-    "Pesawat",
-    "Search",
-    "Feed",
-    "Posts",
-    "Activity",
-    "Setting",
-    "Profile",
-  ];
-
-  List<Container> cards = [
-    Container(
-      width: 390,
-      height: 200,
-      decoration: BoxDecoration(
-        image: const DecorationImage(
-          image: NetworkImage(
-              'https://images.unsplash.com/photo-1565967511849-76a60a516170?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
-          fit: BoxFit.cover,
-        ),
-        borderRadius: BorderRadius.circular(17),
-      ),
-    ),
-    Container(),
-    Container(),
-    Container(),
-    Container(),
-    Container(),
-    Container(),
-    Container(),
-  ];
-
   int current = 0;
   PageController pageController = PageController();
   @override
@@ -126,7 +93,7 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
               width: double.infinity,
               height: 200,
               child: PageView.builder(
-                itemCount: cards.length,
+                itemCount: cardscontainer.length,
                 controller: pageController,
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
@@ -138,7 +105,7 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
                         child: Padding(
                           padding: const EdgeInsets.only(left: 16),
                           child: Row(
-                            children: [cards[current]],
+                            children: [cardscontainer[current]],
                           ),
                         ),
                       ),
