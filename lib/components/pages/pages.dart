@@ -28,3 +28,6 @@ part 'home_page.dart';
 part 'your_order.dart';
 part 'home_page2.dart';
 part 'lihat_semua_ide_perjalanan.dart';
+part 'perjalanan_singapura.dart';
+part 'perjalanan_malaysia.dart';
+part 'perjalanan_thailand.dart';

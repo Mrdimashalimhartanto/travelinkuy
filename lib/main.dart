@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:travelinkuy/components/menu/menu.dart';
 import 'package:travelinkuy/components/pages/pages.dart';
 import 'package:travelinkuy/components/ui/onboarding/onboarding_view.dart';
+import 'package:travelinkuy/components/widget/widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,6 +26,10 @@ class MyApp extends StatelessWidget {
         // PAGE MENU
         "/pesawat-page": (context) => const MenuPesawat(),
         "/hotel-page": (context) => const HotelPage(),
+
+        "/perjalanan-singapura": (context) => const PerjalananSingapura(),
+        "/perjalanan-malaysia": (context) => const PerjalananMalaysia(),
+        "/perjalanan-thailand": (context) => const PerjalananThailand(),
       },
     );
   }

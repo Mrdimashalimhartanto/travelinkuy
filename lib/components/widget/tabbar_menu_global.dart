@@ -54,7 +54,8 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
           children: [
             /// Tab bar
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              // padding: EdgeInsets.all(10),
+              padding: EdgeInsets.symmetric(vertical: 10),
               child: SizedBox(
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height * 0.06,
@@ -85,7 +86,7 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
                             decoration: BoxDecoration(
                               color: current == index
                                   ? travelinkuy
-                                  : travelinbackground,
+                                  : travelincomponent,
                               borderRadius: BorderRadius.circular(20),
                               border: current == index
                                   ? Border.all(
@@ -104,7 +105,7 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
                                       fontWeight: FontWeight.bold,
                                       color: current == index
                                           ? Colors.white
-                                          : Colors.grey.shade400,
+                                          : Colors.white,
                                     ),
                                   ),
                                 ],
