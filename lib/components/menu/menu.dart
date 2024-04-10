@@ -10,6 +10,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 import 'package:slideparallax/slideparallax.dart';
 import 'package:travelinkuy/components/menu/submenu/submenu.dart';
+import 'package:travelinkuy/components/pages/pages.dart';
 import 'package:travelinkuy/components/ui/ui.dart';
 import 'package:travelinkuy/components/widget/testing.dart';
 import 'package:travelinkuy/components/widget/widget.dart';
