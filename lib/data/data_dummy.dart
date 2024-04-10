@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:travelinkuy/components/ui/ui.dart';
 import 'package:travelinkuy/components/widget/widget.dart';
 
 class TabData {
@@ -350,4 +351,40 @@ List<Container> cardscontainer = [
   Container(),
   Container(),
   Container(),
+];
+
+// data hotel
+List<Container> cardshotel = [
+  Container(
+    child: Column(
+      children: [
+        Row(
+          children: [
+            CardLiburanSingapura(),
+            SizedBox(width: 16),
+            CardIdeLiburanMalaysia(),
+            SizedBox(width: 16),
+          ],
+        ),
+      ],
+    ),
+  ),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+];
+// list nama hotel
+List<String> namahotel = [
+  "Chiang Mai",
+  "Kuching",
+  "Singapura",
+  "Osaka",
+  "Phu Quoc",
+  "Phuket",
+  "Selangor",
+  "Orchard",
 ];

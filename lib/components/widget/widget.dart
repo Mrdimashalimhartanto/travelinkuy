@@ -31,3 +31,4 @@ part 'tabbar_menu_global.dart';
 part 'custom_button_navbar.dart';
 part 'tab_bar_menu_pesawat.dart';
 part 'tiket_perjalanan.dart';
+part 'tab_bar_hotel.dart';
