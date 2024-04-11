@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
 
 part of 'menu.dart';
 
@@ -171,6 +171,89 @@ class HotelPage extends StatelessWidget {
       );
     }
 
+    Widget promohotelthr() {
+      return SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 16,
+            right: 16,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Image.asset(
+                          'assets/logo_splash_screen.png',
+                          width: 40,
+                          height: 40,
+                        ),
+                        Text(
+                          'THR Pol-polan buat Lebaran',
+                          style: GoogleFonts.montserrat(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 4),
+                    Text(
+                      // overflow: TextOverflow.ellipsis,
+                      'Cek hotel pilihan dengan harga terbaik, hematnya dobel dengan diskon hingga 45% + cashback 5%!',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.grey[800],
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget lihatsemua() {
+      return Padding(
+        padding: const EdgeInsets.only(top: 10),
+        child: GestureDetector(
+          onTap: () {},
+          child: Container(
+            height: 50,
+            margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            decoration: BoxDecoration(
+              color: Colors.blueAccent[100],
+              borderRadius: BorderRadius.all(Radius.circular(8)),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  child: Text(
+                    'Lihat Semua',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.poppins(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+
     return Material(
       child: SingleChildScrollView(
         child: Column(
@@ -279,7 +362,14 @@ class HotelPage extends StatelessWidget {
             destinasihotel(),
             SizedBox(height: 10),
             TabBarHotel(),
+            lihatsemua(),
+            BorderAbuAbu(),
             SizedBox(height: 20),
+            promohotelthr(),
+            SizedBox(height: 10),
+            TabBarThr(),
+            lihatsemua(),
+            BorderAbuAbu(),
           ],
         ),
       ),

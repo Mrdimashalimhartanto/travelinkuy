@@ -13,3 +13,4 @@ part 'card_ide_liburan_malaysia.dart';
 part 'card_ide_liburan_thailand.dart';
 part 'border_abuabu.dart';
 part 'text_style.dart';
+part 'card_hotel_internasional.dart';
