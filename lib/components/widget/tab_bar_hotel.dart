@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_unnecessary_containers
+// ignore_for_file: avoid_unnecessary_containers, sized_box_for_whitespace
 
 part of 'widget.dart';
 
@@ -87,9 +87,8 @@ class _TabBarHotelState extends State<TabBarHotel> {
             /// MAIN BODY
 
             Container(
-              margin: const EdgeInsets.only(top: 30),
               width: double.infinity,
-              height: 200,
+              height: 390,
               child: PageView.builder(
                 itemCount: cardshotel.length,
                 controller: pageController,

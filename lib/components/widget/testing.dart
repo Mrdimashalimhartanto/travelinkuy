@@ -1,466 +1,170 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class FlightBookingHomePage extends StatefulWidget {
-  const FlightBookingHomePage({Key? key}) : super(key: key);
+void main() => runApp(
+    MaterialApp(debugShowCheckedModeBanner: false, home: TestingGridView()));
 
+class TestingGridView extends StatefulWidget {
   @override
-  State<FlightBookingHomePage> createState() => _FlightBookingHomePageState();
+  _TestingGridViewState createState() => _TestingGridViewState();
 }
 
-class _FlightBookingHomePageState extends State<FlightBookingHomePage> {
+class _TestingGridViewState extends State<TestingGridView> {
+  final List<Map<String, dynamic>> _listItem = [
+    {"image": 'assets/images/two.jpg', "isSaved": false},
+    {"image": 'assets/images/three.jpg', "isSaved": false},
+    {"image": 'assets/images/four.jpg', "isSaved": true},
+    {"image": 'assets/images/five.jpg', "isSaved": true},
+    {"image": 'assets/images/one.jpg', "isSaved": false},
+    {"image": 'assets/images/two.jpg', "isSaved": false},
+    {"image": 'assets/images/three.jpg', "isSaved": false},
+    {"image": 'assets/images/four.jpg', "isSaved": false},
+    {"image": 'assets/images/five.jpg', "isSaved": false},
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Positioned(
-            left: 0,
-            right: 0,
-            bottom: 0,
-            top: 0,
-            child: Column(
-              children: [
-                Expanded(
-                    child: Container(
-                  color: const Color.fromRGBO(13, 23, 44, 1),
-                )),
-                Expanded(
-                  child: Container(
-                    color: Colors.white,
-                  ),
-                ),
-              ],
+      backgroundColor: Colors.grey[600],
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: Icon(Icons.menu),
+        title: Text("Home"),
+        actions: <Widget>[
+          Padding(
+            padding: EdgeInsets.all(10.0),
+            child: Container(
+              width: 36,
+              height: 30,
+              decoration: BoxDecoration(
+                  color: Colors.grey[800],
+                  borderRadius: BorderRadius.circular(10)),
+              child: Center(child: Text("0")),
             ),
-          ),
-          Positioned(
-            left: 16,
-            right: 16,
-            top: 24,
-            bottom: 0,
-            child: SafeArea(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text(
-                            "Good Morning Dream",
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Text(
-                            "Where Are You Going Today?",
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const Spacer(),
-                      Container(
-                        height: 48,
-                        width: 48,
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.white),
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.2)),
-                        child: Center(
-                          child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(Icons.notifications_none),
+          )
+        ],
+      ),
+      body: SafeArea(
+        child: Container(
+          padding: EdgeInsets.all(20.0),
+          child: Column(
+            children: <Widget>[
+              Container(
+                width: double.infinity,
+                height: 250,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/one.jpg'),
+                        fit: BoxFit.cover)),
+                child: Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      gradient:
+                          LinearGradient(begin: Alignment.bottomRight, colors: [
+                        Colors.black.withOpacity(.4),
+                        Colors.black.withOpacity(.2),
+                      ])),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      Text(
+                        "Lifestyle Sale",
+                        style: TextStyle(
                             color: Colors.white,
-                          ),
-                        ),
+                            fontSize: 35,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Container(
+                        height: 50,
+                        margin: EdgeInsets.symmetric(horizontal: 40),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.white),
+                        child: Center(
+                            child: Text(
+                          "Shop Now",
+                          style: TextStyle(
+                              color: Colors.grey[900],
+                              fontWeight: FontWeight.bold),
+                        )),
+                      ),
+                      SizedBox(
+                        height: 30,
                       ),
                     ],
                   ),
-                  Expanded(
-                    child: SingleChildScrollView(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 20),
-                            child: Card(
-                              child: Padding(
-                                padding: const EdgeInsets.all(16.0),
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      height: 48,
-                                      margin: const EdgeInsets.only(bottom: 12),
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                          color: Colors.grey[300]!,
-                                        ),
-                                      ),
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 16),
-                                      child: DropdownButton<String>(
-                                        isExpanded: true,
-                                        value: "One-Way Flight",
-                                        underline: Container(),
-                                        items: const [
-                                          DropdownMenuItem(
-                                            value: "One-Way Flight",
-                                            child: Text("One-Way Flight"),
-                                          )
-                                        ],
-                                        onChanged: (Object? value) {},
-                                      ),
-                                    ),
-                                    Container(
-                                      height: 120,
-                                      margin: const EdgeInsets.only(bottom: 12),
-                                      child: Stack(
-                                        children: [
-                                          Column(
-                                            children: [
-                                              Container(
-                                                height: 48,
-                                                margin: const EdgeInsets.only(
-                                                    bottom: 12),
-                                                decoration: BoxDecoration(
-                                                  border: Border.all(
-                                                    color: Colors.grey[300]!,
-                                                  ),
-                                                ),
-                                                padding:
-                                                    const EdgeInsets.symmetric(
-                                                        horizontal: 8),
-                                                child: const TextField(
-                                                  decoration: InputDecoration(
-                                                    icon: Icon(
-                                                        Icons.flight_takeoff),
-                                                    border: InputBorder.none,
-                                                  ),
-                                                ),
-                                              ),
-                                              Container(
-                                                height: 48,
-                                                margin: const EdgeInsets.only(
-                                                    bottom: 12),
-                                                decoration: BoxDecoration(
-                                                  border: Border.all(
-                                                    color: Colors.grey[300]!,
-                                                  ),
-                                                ),
-                                                padding:
-                                                    const EdgeInsets.symmetric(
-                                                        horizontal: 8),
-                                                child: const TextField(
-                                                  decoration: InputDecoration(
-                                                    icon:
-                                                        Icon(Icons.flight_land),
-                                                    border: InputBorder.none,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Positioned(
-                                            right: 16,
-                                            top: 0,
-                                            bottom: 0,
-                                            child: Container(
-                                              height: 48,
-                                              width: 48,
-                                              decoration: BoxDecoration(
-                                                border: Border.all(
-                                                    color: Colors.blue),
-                                                shape: BoxShape.circle,
-                                                color: Colors.blue[100],
-                                              ),
-                                              child: IconButton(
-                                                icon: const Icon(
-                                                    Icons.import_export),
-                                                onPressed: () {},
-                                              ),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                    Container(
-                                      height: 48,
-                                      margin: const EdgeInsets.only(bottom: 12),
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                          color: Colors.grey[300]!,
-                                        ),
-                                      ),
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 8),
-                                      child: const TextField(
-                                        decoration: InputDecoration(
-                                          icon: Icon(Icons.calendar_month),
-                                          border: InputBorder.none,
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      height: 48,
-                                      margin: const EdgeInsets.only(bottom: 12),
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                          color: Colors.grey[300]!,
-                                        ),
-                                      ),
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 8),
-                                      child: Row(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          const Icon(
-                                              Icons.supervisor_account_rounded),
-                                          const SizedBox(
-                                            width: 16,
-                                          ),
-                                          Expanded(
-                                            child: DropdownButton<String>(
-                                              value: "2 Adult",
-                                              items: const [
-                                                DropdownMenuItem(
-                                                  value: '2 Adult',
-                                                  child: Text("2 Adult"),
-                                                )
-                                              ],
-                                              isExpanded: true,
-                                              onChanged: (v) {},
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Container(
-                                      height: 48,
-                                      margin: const EdgeInsets.only(bottom: 12),
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                          color: Colors.grey[300]!,
-                                        ),
-                                      ),
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 8),
-                                      child: Row(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          const Icon(
-                                              Icons.airline_seat_recline_extra),
-                                          const SizedBox(
-                                            width: 16,
-                                          ),
-                                          Expanded(
-                                            child: DropdownButton<String>(
-                                              value: "Economy",
-                                              items: const [
-                                                DropdownMenuItem(
-                                                  value: 'Economy',
-                                                  child: Text("Economy"),
-                                                )
-                                              ],
-                                              isExpanded: true,
-                                              onChanged: (v) {},
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    GestureDetector(
-                                      onTap: () {
-                                        // Navigator.of(context).push(
-                                        //   MaterialPageRoute(
-                                        //     builder: (context) => const FlightBookingSelectPage(),
-                                        //   ),
-                                        // );
-                                      },
-                                      child: Container(
-                                        height: 48,
-                                        margin:
-                                            const EdgeInsets.only(bottom: 12),
-                                        decoration: BoxDecoration(
-                                          color: Colors.blue,
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                        ),
-                                        child: const Center(
-                                          child: Text(
-                                            "Search",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                          const Text(
-                            "Travel History",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Column(
-                            children: List.generate(
-                              10,
-                              (index) => Container(
-                                margin: const EdgeInsets.symmetric(vertical: 8),
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Colors.grey[300]!,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8),
-                                  color: Colors.white,
-                                ),
-                                padding: const EdgeInsets.all(16),
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      height: 42,
-                                      width: 100,
-                                      color: Colors.blue,
-                                    ),
-                                    Container(
-                                      height: 84,
-                                      // color: Colors.grey,
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 8),
-                                      child: Row(
-                                        children: [
-                                          Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceEvenly,
-                                            children: const [
-                                              Text("SUB"),
-                                              Text("Surabaya"),
-                                              Text("12 : 20"),
-                                            ],
-                                          ),
-                                          const Expanded(
-                                              child: Padding(
-                                            padding: EdgeInsets.symmetric(
-                                                horizontal: 12),
-                                            child: Placeholder(),
-                                          )),
-                                          Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.end,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceEvenly,
-                                            children: const [
-                                              Text("DPS"),
-                                              Text("Denpasar"),
-                                              Text("14 : 15"),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Row(
-                                      children: [
-                                        const Text(
-                                          "\$ 34.92",
-                                        ),
-                                        const Text("/per"),
-                                        const Spacer(),
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            color: Colors.green[100],
-                                            borderRadius:
-                                                BorderRadius.circular(4),
-                                          ),
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 12, vertical: 4),
-                                          child: const Center(
-                                            child: Text(
-                                              "Free Reschedule",
-                                              style: TextStyle(
-                                                color: Colors.green,
-                                              ),
-                                            ),
-                                          ),
-                                        )
-                                      ],
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
-            ),
-          ),
-        ],
-      ),
-      bottomNavigationBar: BottomAppBar(
-        child: Container(
-          height: 80,
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-          child: Row(
-            children: [
+              SizedBox(
+                height: 20,
+              ),
               Expanded(
-                  child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.blue[100],
-                  borderRadius: BorderRadius.circular(24),
-                ),
-                padding: const EdgeInsets.symmetric(vertical: 8),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Icon(
-                      Icons.home_filled,
-                      color: Colors.blue,
-                    ),
-                    SizedBox(
-                      width: 4,
-                    ),
-                    Text(
-                      "Home",
-                      style: TextStyle(
-                        color: Colors.blue,
-                      ),
-                    ),
-                  ],
-                ),
-              )),
-              Expanded(
-                  child: IconButton(
-                icon: const Icon(Icons.airplane_ticket),
-                onPressed: () {},
-                color: Colors.grey,
-              )),
-              Expanded(
-                  child: IconButton(
-                icon: const Icon(Icons.favorite_border),
-                onPressed: () {},
-                color: Colors.grey,
-              )),
-              Expanded(
-                child: IconButton(
-                  icon: const Icon(Icons.person_outline),
-                  onPressed: () {},
-                  color: Colors.grey,
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  children: _listItem
+                      .map((item) => Card(
+                            color: Colors.transparent,
+                            elevation: 0,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  image: DecorationImage(
+                                      image: AssetImage(item["image"]),
+                                      fit: BoxFit.cover)),
+                              child: Transform.translate(
+                                offset: Offset(55, -58),
+                                child: Container(
+                                  width: 30,
+                                  // height: 30,
+                                  clipBehavior: Clip.hardEdge,
+                                  decoration: BoxDecoration(),
+                                  child: Center(
+                                    child: MaterialButton(
+                                      onPressed: () {
+                                        setState(() {
+                                          item["isSaved"] = !item["isSaved"];
+                                        });
+                                      },
+                                      color: Colors.white,
+                                      height: 35,
+                                      minWidth: 40,
+                                      padding: EdgeInsets.all(0),
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(8)),
+                                      child: Icon(
+                                          item["isSaved"]
+                                              ? Icons.bookmark
+                                              : Icons.bookmark_border,
+                                          size: 22,
+                                          color: item["isSaved"]
+                                              ? Colors.yellow[700]
+                                              : Colors.black),
+                                    ),
+                                  ),
+                                ),
+                                // child: InkWell(
+                                //   onLongPress: () {},
+                                //   child: Container(
+                                //     margin: EdgeInsets.symmetric(horizontal:70, vertical: 71),
+                                //     decoration: BoxDecoration(
+                                //       borderRadius: BorderRadius.circular(8),
+                                //       color: Colors.white
+                                //     ),
+                                //     child: Icon(Icons.bookmark_border, size: 22,),
+                                //   ),
+                                // ),
+                              ),
+                            ),
+                          ))
+                      .toList(),
                 ),
               ),
             ],

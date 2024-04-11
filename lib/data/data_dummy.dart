@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travelinkuy/components/ui/ui.dart';
 import 'package:travelinkuy/components/widget/widget.dart';
@@ -358,13 +359,16 @@ List<Container> cardshotel = [
   Container(
     child: Column(
       children: [
-        Row(
-          children: [
-            CardLiburanSingapura(),
-            SizedBox(width: 16),
-            CardIdeLiburanMalaysia(),
-            SizedBox(width: 16),
-          ],
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: const [
+              CardHotelInternasional(),
+              CardHotelInternasional(),
+              CardHotelInternasional(),
+              CardHotelInternasional(),
+            ],
+          ),
         ),
       ],
     ),
@@ -377,6 +381,7 @@ List<Container> cardshotel = [
   Container(),
   Container(),
 ];
+
 // list nama hotel
 List<String> namahotel = [
   "Chiang Mai",
@@ -387,4 +392,45 @@ List<String> namahotel = [
   "Phuket",
   "Selangor",
   "Orchard",
+];
+
+// data thr
+
+// list nama hotel
+List<String> destinasidaerah = [
+  "Bali",
+  "Cirebon",
+  "Surabaya",
+  "Yogyakarta",
+  "Hotel Chain Terbaik",
+  "Vill & Apt",
+  "Singapura",
+  "Bangkok",
+  "Tokyo",
+];
+
+List<Container> cardsdestinasidaerah = [
+  Container(
+    child: Column(
+      children: [
+        SingleChildScrollView(
+          child: Row(
+            children: const [
+              CardHotelInternasional(),
+              CardHotelInternasional(),
+              CardHotelInternasional(),
+              CardHotelInternasional(),
+            ],
+          ),
+        ),
+      ],
+    ),
+  ),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
 ];
