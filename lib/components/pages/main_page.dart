@@ -39,7 +39,7 @@ class _MainPageState extends State<MainPage> {
               child: YourOrder(),
             ),
             Center(
-              child: HomePage(),
+              child: ProfilePage(),
             ),
           ],
         )),

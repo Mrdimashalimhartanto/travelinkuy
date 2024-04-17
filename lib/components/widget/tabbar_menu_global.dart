@@ -20,9 +20,10 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
         child: Column(
           children: [
             /// Tab bar
+
             Container(
               // padding: EdgeInsets.all(10),
-              padding: EdgeInsets.symmetric(vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 12),
               child: SizedBox(
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height * 0.06,
@@ -51,17 +52,19 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
                             width: 80,
                             height: 40,
                             decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
                               color: current == index
                                   ? travelinkuy
-                                  : travelincomponent,
-                              borderRadius: BorderRadius.circular(20),
+                                  : Colors.grey[300],
                               border: current == index
                                   ? Border.all(
-                                      color: travelinkuy,
-                                      width: 2.5,
+                                      color: current == index
+                                          ? Colors.grey
+                                          : travelincomponent,
                                     )
                                   : null,
                             ),
+
                             child: Center(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -69,10 +72,10 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
                                   Text(
                                     items[index],
                                     style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.bold,
+                                      fontWeight: FontWeight.normal,
                                       color: current == index
                                           ? Colors.white
-                                          : Colors.white,
+                                          : Colors.grey[600],
                                     ),
                                   ),
                                 ],

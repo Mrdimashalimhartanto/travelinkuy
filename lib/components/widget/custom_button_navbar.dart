@@ -12,7 +12,7 @@ class CustomButtonNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
+      height: 90,
       width: double.infinity,
       color: Colors.white,
       child: Row(

@@ -369,7 +369,7 @@ class HotelPage extends StatelessWidget {
             SizedBox(height: 10),
             TabBarThr(),
             lihatsemua(),
-            BorderAbuAbu(),
+            SizedBox(height: 40),
           ],
         ),
       ),

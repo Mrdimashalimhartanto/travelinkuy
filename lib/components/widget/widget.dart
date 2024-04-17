@@ -6,6 +6,7 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:travelinkuy/components/models/card_perjalanan_model.dart';
 import 'package:travelinkuy/components/ui/ui.dart';
 import 'package:travelinkuy/data/data_dummy.dart';
 
@@ -33,3 +34,5 @@ part 'tab_bar_menu_pesawat.dart';
 part 'tiket_perjalanan.dart';
 part 'tab_bar_hotel.dart';
 part 'tab_bar_thr_lebaran.dart';
+part 'popular_card.dart';
+part 'product_tile.dart';

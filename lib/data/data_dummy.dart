@@ -6,143 +6,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:travelinkuy/components/ui/ui.dart';
 import 'package:travelinkuy/components/widget/widget.dart';
 
-class TabData {
-  final String date;
-  final String amount;
-  final Container container;
-
-  TabData(this.date, this.amount, this.container);
-}
-
-final List<TabData> tabDataList = [
-  TabData(
-    "Sel, 09 Apr, 2024",
-    "idr. 200.000",
-    Container(
-        child: Column(
-      children: [
-        TiketPerjalanan(),
-        TiketPerjalanan(),
-        TiketPerjalanan(),
-        TiketPerjalanan(),
-        TiketPerjalanan(),
-      ],
-    )),
-  ),
-  TabData(
-    "Sel, 10 Apr, 2024",
-    "idr. 200.000",
-    Container(
-      child: Column(
-        children: [
-          // widget
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-        ],
-      ),
-    ),
-  ),
-  TabData(
-    "Sel, 11 Apr, 2024",
-    "idr. 200.000",
-    Container(
-      child: Column(
-        children: [
-          // widget
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-        ],
-      ),
-    ),
-  ),
-  TabData(
-    "Sel, 12 Apr, 2024",
-    "idr. 200.000",
-    Container(
-      child: Column(
-        children: [
-          // widget
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-        ],
-      ),
-    ),
-  ),
-  TabData(
-    "Sel, 13 Apr, 2024",
-    "idr. 200.000",
-    Container(
-      child: Column(
-        children: [
-          // widget
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-        ],
-      ),
-    ),
-  ),
-  TabData(
-    "Sel, 14 Apr, 2024",
-    "idr. 200.000",
-    Container(
-      child: Column(
-        children: [
-          // widget
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-        ],
-      ),
-    ),
-  ),
-  TabData(
-    "Sel, 15 Apr, 2024",
-    "idr. 200.000",
-    Container(
-      child: Column(
-        children: [
-          // widget
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-        ],
-      ),
-    ),
-  ),
-  TabData(
-    "Sel, 16 Apr, 2024",
-    "idr. 200.000",
-    Container(
-      child: Column(
-        children: [
-          // widget
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-          TiketPerjalanan(),
-        ],
-      ),
-    ),
-  ),
-];
-
 // List Container
 final List<Container> cards = [
   Container(
@@ -332,28 +195,6 @@ List<String> items = [
   "Profile",
 ];
 
-List<Container> cardscontainer = [
-  Container(
-    width: 390,
-    height: 200,
-    decoration: BoxDecoration(
-      image: const DecorationImage(
-        image: NetworkImage(
-            'https://images.unsplash.com/photo-1565967511849-76a60a516170?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
-        fit: BoxFit.cover,
-      ),
-      borderRadius: BorderRadius.circular(17),
-    ),
-  ),
-  Container(),
-  Container(),
-  Container(),
-  Container(),
-  Container(),
-  Container(),
-  Container(),
-];
-
 // data hotel
 List<Container> cardshotel = [
   Container(
@@ -402,7 +243,6 @@ List<String> destinasidaerah = [
   "Cirebon",
   "Surabaya",
   "Yogyakarta",
-  "Hotel Chain Terbaik",
   "Vill & Apt",
   "Singapura",
   "Bangkok",
