@@ -24,8 +24,8 @@ class TravelinIconMenu extends StatelessWidget {
               //   color: travelinbackground,
               //   borderRadius: BorderRadius.circular(10),
               // ),
-              height: 40,
-              width: 40,
+              height: 39,
+              width: 39,
               child: Image(
                 height: size,
                 image: NetworkImage(image),
@@ -38,8 +38,8 @@ class TravelinIconMenu extends StatelessWidget {
           title,
           style: GoogleFonts.poppins(
             color: travelinkuy,
-            fontWeight: FontWeight.normal,
-            fontSize: 12,
+            fontWeight: FontWeight.bold,
+            fontSize: 14,
           ),
           textAlign: TextAlign.center,
         ),

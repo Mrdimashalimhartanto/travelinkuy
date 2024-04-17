@@ -21,7 +21,7 @@ class _OnboardingViewState extends State<OnboardingView> {
     return Scaffold(
       bottomSheet: Container(
         color: Colors.white,
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 40),
         child: isLastPage
             ? getStarted()
             : Row(

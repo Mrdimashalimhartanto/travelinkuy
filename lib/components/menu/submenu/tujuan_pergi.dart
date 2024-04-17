@@ -17,7 +17,8 @@ class _TujuanPergiState extends State<TujuanPergi>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(vsync: this, length: tabDataList.length);
+    _tabController =
+        TabController(vsync: this, length: listTiketPerjalanan.length);
   }
 
   @override
@@ -77,7 +78,7 @@ class _TujuanPergiState extends State<TujuanPergi>
           indicatorColor: travelinkuy,
           controller: _tabController,
           isScrollable: true,
-          tabs: tabDataList.map((tabData) {
+          tabs: listTiketPerjalanan.map((tabData) {
             return Tab(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -106,7 +107,7 @@ class _TujuanPergiState extends State<TujuanPergi>
       ),
       body: TabBarView(
         controller: _tabController,
-        children: tabDataList.map((tabData) {
+        children: listTiketPerjalanan.map((tabData) {
           return Padding(
             padding: const EdgeInsets.only(left: 16),
             child: SingleChildScrollView(

@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 part of 'widget.dart';
 
 class SlideCardPerjalanan extends StatelessWidget {

@@ -46,7 +46,7 @@ class DiscoverPage extends StatelessWidget {
                   const SizedBox(height: 10),
                   const ButtonHome(),
                   const Footer(),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 40),
                 ],
               ),
             ),
