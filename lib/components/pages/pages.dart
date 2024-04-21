@@ -8,6 +8,7 @@ import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/widgets.dart';
@@ -21,6 +22,7 @@ import 'package:travelinkuy/components/ui/ui.dart';
 import 'package:travelinkuy/components/widget/ItemCard.dart';
 import 'package:travelinkuy/components/widget/nearby_place.dart';
 import 'package:travelinkuy/components/widget/recommended.dart';
+import 'package:travelinkuy/components/widget/sliding_up_panel.dart';
 import 'package:travelinkuy/components/widget/testing.dart';
 
 // component widget

@@ -85,22 +85,23 @@ class TravelingKuyCard extends StatelessWidget {
                   const Divider(
                     thickness: 1,
                   ),
+                  SizedBox(height: 20),
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
                       TravelinIconMenu(
-                        title: "Travelin Point",
-                        image:
+                        text: "Travelin Point",
+                        asset:
                             'https://cdn-icons-png.flaticon.com/512/2071/2071392.png',
                       ),
                       TravelinIconMenu(
-                        title: "History",
-                        image:
+                        text: "History",
+                        asset:
                             'https://cdn-icons-png.flaticon.com/128/677/677069.png',
                       ),
                       TravelinIconMenu(
-                        title: "Payment Travelin",
-                        image:
+                        text: "Payment Travelin",
+                        asset:
                             'https://cdn-icons-png.flaticon.com/512/2558/2558944.png',
                       ),
                     ],
