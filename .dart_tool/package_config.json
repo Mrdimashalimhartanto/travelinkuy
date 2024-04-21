@@ -20,6 +20,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "auto_size_text",
+      "rootUri": "file:///Users/dimashalimhartanto/.pub-cache/hosted/pub.dev/auto_size_text-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "boolean_selector",
       "rootUri": "file:///Users/dimashalimhartanto/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1",
       "packageUri": "lib/",
@@ -146,6 +152,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "flutter_screenutil",
+      "rootUri": "file:///Users/dimashalimhartanto/.pub-cache/hosted/pub.dev/flutter_screenutil-5.9.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "flutter_svg",
       "rootUri": "file:///Users/dimashalimhartanto/.pub-cache/hosted/pub.dev/flutter_svg-2.0.10+1",
       "packageUri": "lib/",
@@ -192,6 +204,12 @@
       "rootUri": "file:///Users/dimashalimhartanto/.pub-cache/hosted/pub.dev/intl-0.19.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "latlng",
+      "rootUri": "file:///Users/dimashalimhartanto/.pub-cache/hosted/pub.dev/latlng-2.0.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "latlong2",
@@ -560,7 +578,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-04-17T15:56:05.737348Z",
+  "generated": "2024-04-21T07:57:35.480999Z",
   "generator": "pub",
-  "generatorVersion": "3.3.3"
+  "generatorVersion": "3.3.4"
 }

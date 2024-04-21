@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:travelinkuy/components/menu/menu.dart';
 import 'package:travelinkuy/components/pages/pages.dart';
@@ -22,9 +24,9 @@ class MyApp extends StatelessWidget {
         "/discover-page": (context) => const DiscoverPage(),
         "/main-page": (context) => const MainPage(),
 
-        // PAGE MENU
-        "/pesawat-page": (context) => const MenuPesawat(),
-        "/hotel-page": (context) => const HotelPage(),
+        // Route menu menu
+        "/menu-pesawat": (context) => MenuPesawat(),
+        "/menu-hotel": (context) => HotelPage(),
 
         "/perjalanan-singapura": (context) => const PerjalananSingapura(),
         "/perjalanan-malaysia": (context) => const PerjalananMalaysia(),

@@ -92,9 +92,9 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
 
             /// MAIN BODY
             Container(
-              margin: const EdgeInsets.only(top: 30),
+              margin: const EdgeInsets.only(top: 10),
               width: double.infinity,
-              height: 200,
+              height: 290,
               child: PageView.builder(
                 itemCount: cardscontainer.length,
                 controller: pageController,

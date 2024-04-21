@@ -197,24 +197,24 @@ class _TujuanPergiState extends State<TujuanPergi>
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: <Widget>[
                               TravelinIconMenu(
-                                image:
+                                asset:
                                     "https://cdn-icons-png.flaticon.com/128/3127/3127363.png",
-                                title: "Fery",
+                                text: "Fery",
                               ),
                               TravelinIconMenu(
-                                image:
+                                asset:
                                     "https://cdn-icons-png.flaticon.com/128/3378/3378741.png",
-                                title: "Atraksi",
+                                text: "Atraksi",
                               ),
                               TravelinIconMenu(
-                                image:
+                                asset:
                                     "https://cdn-icons-png.flaticon.com/128/8315/8315136.png",
-                                title: "Sewa Mobil",
+                                text: "Sewa Mobil",
                               ),
                               TravelinIconMenu(
-                                image:
+                                asset:
                                     "https://cdn-icons-png.flaticon.com/128/2169/2169416.png",
-                                title: "Tempat Bermain",
+                                text: "Tempat Bermain",
                               ),
                             ],
                           ),
