@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, sort_child_properties_last
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, sort_child_properties_last, non_constant_identifier_names
 
 part of 'pages.dart';
 
@@ -14,6 +14,338 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    Widget judulrencanaperjalanan() {
+      return SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 16,
+            right: 16,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Cocok buat rencana perjalanan mu',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 4),
+                    Text(
+                      // overflow: TextOverflow.ellipsis,
+                      'Cek rekomendasi yang sesuai dengan persanan terakhirmu atau destinasi yang baru saja kamu lihat !',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.grey[800],
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget kontentravel() {
+      return SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Padding(
+          padding: const EdgeInsets.only(top: 24, left: 16),
+          child: Row(
+            children: [
+              Container(
+                width: 294,
+                height: 148,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(17),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 27.0, left: 24),
+                  child: Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'New Arrival \nItem up to 30%',
+                            style: GoogleFonts.montserrat(
+                              color: Color(0xffF8F7FD),
+                              fontSize: 19,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          OutlinedButton(
+                            style: OutlinedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(17),
+                              ),
+                              side: BorderSide(
+                                color: Colors.white,
+                              ),
+                            ),
+                            onPressed: () {},
+                            child: Text(
+                              'Grab it now',
+                              style: GoogleFonts.montserrat(
+                                color: Color(0xffF8F7FD),
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      // Padding(
+                      //   padding: const EdgeInsets.only(bottom: 16.0, right: 24),
+                      //   child: Image.asset(
+                      //     'assets/product_one.png',
+                      //   ),
+                      // ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 16,
+              ),
+              Container(
+                width: 294,
+                height: 148,
+                decoration: BoxDecoration(
+                  color: Color(0xff21AE7B),
+                  borderRadius: BorderRadius.circular(17),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 27.0, left: 24),
+                  child: Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Flash sales \n12.12',
+                            style: GoogleFonts.montserrat(
+                              color: Color(0xffF8F7FD),
+                              fontSize: 19,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          OutlinedButton(
+                            style: OutlinedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(17),
+                              ),
+                              side: BorderSide(
+                                color: Color(0xffF8F7FD),
+                              ),
+                            ),
+                            onPressed: () {},
+                            child: Text(
+                              'Grab it now',
+                              style: GoogleFonts.montserrat(
+                                color: Color(0xffF8F7FD),
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      // Padding(
+                      //   padding: const EdgeInsets.only(
+                      //     right: 20.0,
+                      //     left: 20,
+                      //   ),
+                      //   child: Image.asset(
+                      //     'assets/man_icon.png',
+                      //   ),
+                      // ),
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget judultravel() {
+      return Padding(
+        padding: const EdgeInsets.only(
+          left: 16,
+          right: 16,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Citilink Online Travel Fair',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 4),
+                Text(
+                  'Serbu hargahematnya, diskon hingga IDR 1,5 Juta !',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.grey[800],
+                    fontSize: 12,
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget MenuTravelin() {
+      return SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Padding(
+          padding: const EdgeInsets.only(top: 24, left: 18, right: 18),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      // cek route di file main
+                      Navigator.pushNamed(context, '/menu-pesawat');
+                    },
+                    child: TravelinIconMenu(
+                      text: "Pesawat",
+                      asset:
+                          "https://cdn-icons-png.flaticon.com/128/1314/1314529.png",
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/menu-hotel');
+                    },
+                    child: TravelinIconMenu(
+                      text: "Hotel",
+                      asset:
+                          "https://cdn-icons-png.flaticon.com/128/1946/1946788.png",
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  TravelinIconMenu(
+                    text: "To Do",
+                    asset:
+                        "https://cdn-icons-png.flaticon.com/128/2387/2387679.png",
+                  ),
+                  SizedBox(width: 10),
+                  TravelinIconMenu(
+                    text: "Kereta Api",
+                    asset:
+                        "https://cdn-icons-png.flaticon.com/128/724/724080.png",
+                  ),
+                  SizedBox(width: 10),
+                  TravelinIconMenu(
+                    text: "Atraksi",
+                    asset:
+                        "https://cdn-icons-png.flaticon.com/128/2169/2169416.png",
+                  ),
+                  SizedBox(width: 10),
+                  TravelinIconMenu(
+                    text: "Sewa Mobil",
+                    asset:
+                        "https://cdn-icons-png.flaticon.com/128/7562/7562539.png",
+                  ),
+                  SizedBox(width: 10),
+                  TravelinIconMenu(
+                    text: "Tempat Bermain",
+                    asset:
+                        "https://cdn-icons-png.flaticon.com/512/2681/2681760.png",
+                  ),
+                  SizedBox(width: 10),
+                  TravelinIconMenu(
+                    text: "Event",
+                    asset:
+                        "https://cdn-icons-png.flaticon.com/512/2681/2681760.png",
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              Row(
+                children: [
+                  TravelinIconMenu(
+                    text: "Villa & Apt.",
+                    asset:
+                        "https://cdn-icons-png.flaticon.com/512/2331/2331716.png",
+                  ),
+                  SizedBox(width: 10),
+                  TravelinIconMenu(
+                    text: "Ferry",
+                    asset:
+                        "https://cdn-icons-png.flaticon.com/512/3258/3258446.png",
+                  ),
+                  SizedBox(width: 10),
+                  TravelinIconMenu(
+                    text: "Bus & Travel",
+                    asset:
+                        "https://cdn-icons-png.flaticon.com/512/2039/2039006.png",
+                  ),
+                  SizedBox(width: 10),
+                  TravelinIconMenu(
+                    text: "JR Pass",
+                    asset:
+                        "https://cdn-icons-png.flaticon.com/512/995/995016.png",
+                  ),
+                  SizedBox(width: 10),
+                  TravelinIconMenu(
+                    text: "Refer & Earn",
+                    asset:
+                        "https://cdn-icons-png.flaticon.com/512/2681/2681760.png",
+                  ),
+                  SizedBox(width: 10),
+                  TravelinIconMenu(
+                    text: "Claim Center",
+                    asset:
+                        "https://cdn-icons-png.flaticon.com/512/2681/2681760.png",
+                  ),
+                  SizedBox(width: 10),
+                  TravelinIconMenu(
+                    text: "Jemputan Bandara",
+                    asset:
+                        "https://cdn-icons-png.flaticon.com/512/2681/2681760.png",
+                  ),
+                  SizedBox(width: 10),
+                  TravelinIconMenu(
+                    text: "Spa & Kecantikan",
+                    asset:
+                        "https://cdn-icons-png.flaticon.com/512/2681/2681760.png",
+                  ),
+                ],
+              ),
+              SizedBox(height: 40),
+            ],
+          ),
+        ),
+      );
+    }
+
     Widget cardDestinasi() {
       return Container(
         margin: EdgeInsets.symmetric(horizontal: 22, vertical: 10),
@@ -345,18 +677,18 @@ class _HomePageState extends State<HomePage> {
           ),
 
           // Detail menu ada di widget
-          MainMenu(),
+          MenuTravelin(),
           BorderAbuAbu(),
           SizedBox(height: 20),
-          JudulTravel(),
-          KontenTravel(),
+          judultravel(),
+          kontentravel(),
           SizedBox(height: 20),
-          RencanaPerjalanan(),
+          judulrencanaperjalanan(),
           SizedBox(height: 20),
           TabbarMenuGlobal(),
           BorderAbuAbu(),
           SizedBox(height: 20),
-          RencanaPerjalanan(),
+          judulrencanaperjalanan(),
           SlideCardPerjalanan(),
           SizedBox(height: 20),
           BorderAbuAbu(),
