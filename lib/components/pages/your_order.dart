@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_const_literals_to_create_immutables
 
 part of 'pages.dart';
 
@@ -7,82 +7,153 @@ class YourOrder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Container(
-        child: NestedScrollView(
-          headerSliverBuilder: (BuildContext context, bool innerBoxScrolled) {
-            return <Widget>[
-              createSilverAppBar1(),
-              createSilverAppBar2(),
-            ];
-          },
-          body: Container(),
-        ),
-      ),
-    );
-  }
-
-  SliverAppBar createSilverAppBar1() {
-    return SliverAppBar(
-      automaticallyImplyLeading: false,
-      backgroundColor: Colors.redAccent,
-      expandedHeight: 300,
-      floating: false,
-      elevation: 0,
-      flexibleSpace: LayoutBuilder(
-          builder: (BuildContext context, BoxConstraints constraints) {
-        return FlexibleSpaceBar(
-          collapseMode: CollapseMode.parallax,
-          background: Container(
-            color: Colors.white,
-            child: Image.network(
-              'https://images.unsplash.com/photo-1619467416348-6a782839e95f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-              fit: BoxFit.cover,
-            ),
-          ),
-        );
-      }),
-    );
-  }
-
-  Widget createSilverAppBar2() {
-    return SliverAppBar(
-      automaticallyImplyLeading: false,
-      backgroundColor: Colors.redAccent,
-      pinned: true,
-      title: Container(
-        margin: EdgeInsets.symmetric(horizontal: 10),
-        height: 40,
+    Widget cardinfopesanan() {
+      return Container(
+        width: 350,
+        height: 190,
         decoration: BoxDecoration(
-          boxShadow: <BoxShadow>[
-            BoxShadow(
-                color: Colors.grey.withOpacity(0.6),
-                offset: const Offset(1.1, 1.1),
-                blurRadius: 5.0),
+          color: travelinkuy,
+          borderRadius: BorderRadius.circular(17),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.only(top: 27.0, left: 24),
+          child: Row(
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Pesananmu bermasalah?',
+                    style: GoogleFonts.montserrat(
+                      color: Color(0xffF8F7FD),
+                      fontSize: 19,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    'Kunjungi Pusat Bantuan untuk temukan \nsolusi buat masalahmu',
+                    style: GoogleFonts.montserrat(
+                      color: Color(0xffF8F7FD),
+                      fontSize: 12,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(17),
+                      ),
+                      side: BorderSide(
+                        color: Colors.white,
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      'Pusat Bantuan',
+                      style: GoogleFonts.montserrat(
+                        color: Color(0xffF8F7FD),
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              // Padding(
+              //   padding: const EdgeInsets.only(bottom: 16.0, right: 24),
+              //   child: Image.asset(
+              //     'assets/product_one.png',
+              //   ),
+              // ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget judulorder() {
+      return Padding(
+        padding: const EdgeInsets.only(
+          left: 16,
+          right: 16,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Citilink Online Travel Fair',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 4),
+                Text(
+                  'Serbu hargahematnya, diskon hingga IDR 1,5 Juta !',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.grey[800],
+                    fontSize: 12,
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
-        child: CupertinoTextField(
-          // controller: _filter,
-          keyboardType: TextInputType.text,
-          placeholder: 'Search',
-          placeholderStyle: TextStyle(
-            color: Color(0xffC4C6CC),
-            fontSize: 14.0,
-            fontFamily: 'Brutal',
-          ),
-          prefix: Padding(
-            padding: const EdgeInsets.fromLTRB(5.0, 5.0, 0.0, 5.0),
-            child: Icon(
-              Icons.search,
-              size: 18,
-              color: Colors.black,
+      );
+    }
+
+    return Scaffold(
+      backgroundColor: travelinbackground,
+      appBar: AppBar(
+        title: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.all(2.0), // Adjust the value as needed
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Your Orders',
+                    style: GoogleFonts.poppins(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
             ),
-          ),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8.0),
-            color: Colors.white,
-          ),
+          ],
+        ),
+        centerTitle: false,
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.white,
+        elevation: 4,
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.notifications))
+        ],
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            SizedBox(height: 20),
+            cardinfopesanan(),
+            SizedBox(height: 20),
+            BorderAbuAbu(),
+            SizedBox(height: 20),
+            judulorder(),
+            SizedBox(height: 10),
+            TabbarMenuGlobal(),
+            BorderAbuAbu(),
+          ],
         ),
       ),
     );

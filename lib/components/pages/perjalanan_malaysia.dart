@@ -113,7 +113,7 @@ class PerjalananMalaysia extends StatelessWidget {
             BorderAbuAbu(),
             SizedBox(height: 20),
             // judulsingapura(),
-            KontenTravel(),
+            // KontenTravel(),
             SizedBox(height: 20),
             BorderAbuAbu(),
             // SizedBox(height: 30),
