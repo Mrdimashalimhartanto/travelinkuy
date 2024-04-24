@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last, prefer_final_fields, library_private_types_in_public_api, unnecessary_import, use_key_in_widget_constructors, avoid_unnecessary_containers, unused_field
 
 part of 'menu.dart';
 
@@ -35,11 +34,7 @@ class _TodoPageState extends State<TodoPage> {
                 children: [
                   Text(
                     'Todo Things',
-                    style: GoogleFonts.poppins(
-                      color: travelinkuy,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
+                    
                     textAlign: TextAlign.center,
                   ),
                 ],
@@ -131,13 +126,7 @@ class _TodoPageState extends State<TodoPage> {
                 ],
               ),
             ),
-            SizedBox(
-              height: 36.0,
-            ),
-            TabBarTodo(),
-            SizedBox(
-              height: 2.0,
-            ),
+            
             Container(
               padding: const EdgeInsets.only(left: 24.0, right: 24.0),
               child: Column(

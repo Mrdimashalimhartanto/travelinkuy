@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-## Getting Started
+## Travelinkuy adalah sebuah aplikasi pemesanan tiket pariwisata baik dari sisi akomodasi transportasi tempat rekomendasi wisata dan juga tempat penyewaan kendaraan
 
 This project is a starting point for a Flutter application.
 
