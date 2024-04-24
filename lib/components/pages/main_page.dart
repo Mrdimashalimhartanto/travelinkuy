@@ -91,7 +91,7 @@ class _MainPageState extends State<MainPage> {
         items: [
           CustomNavigationBarItem(
             icon: Image.asset(
-              'assets/navbar_home.png',
+              'assets/icons/icon_home.png',
               color: Colors.grey.shade900,
             ),
           ),
@@ -102,8 +102,8 @@ class _MainPageState extends State<MainPage> {
             ),
           ),
           CustomNavigationBarItem(
-            icon: Image.network(
-              'https://cdn-icons-png.flaticon.com/128/847/847969.png',
+            icon: Image.asset(
+              'assets/icons/icon_profile.png',
               // color: Colors.grey.shade900,
             ),
           ),

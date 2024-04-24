@@ -52,7 +52,7 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
                             width: 80,
                             height: 40,
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(20),
                               color: current == index
                                   ? travelinkuy
                                   : Colors.grey[300],

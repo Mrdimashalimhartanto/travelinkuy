@@ -12,29 +12,25 @@ class Footer extends StatelessWidget {
           children: [
             Center(
               child: Text(
-                'By continuing you agree to Stepnotes Terms of Service',
+                'Already have account ?',
                 style: TextStyle(
                   fontSize: 12,
-                  color: Colors.black,
+                  color: Colors.grey,
                   fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.center,
               ),
-            )
-          ],
-        ),
-        SizedBox(
-          height: 10,
-        ),
-        Center(
-          child: Text(
-            'and acknowledge that youve read our Privacy Policy',
-            style: TextStyle(
-              fontSize: 12,
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
             ),
-          ),
+            SizedBox(width: 10),
+            Text(
+              'Sign Up',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
         ),
       ],
     );

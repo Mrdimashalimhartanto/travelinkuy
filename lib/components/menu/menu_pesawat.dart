@@ -343,7 +343,7 @@ class _MenuPesawatState extends State<MenuPesawat> {
     Widget judulpenerbangan() {
       return Padding(
         padding: const EdgeInsets.only(
-          left: 16,
+          left: 22,
           right: 16,
         ),
         child: Row(
@@ -400,7 +400,7 @@ class _MenuPesawatState extends State<MenuPesawat> {
     Widget judulterbang() {
       return Padding(
         padding: const EdgeInsets.only(
-          left: 16,
+          left: 22,
           right: 16,
         ),
         child: Row(
@@ -467,7 +467,7 @@ class _MenuPesawatState extends State<MenuPesawat> {
     Widget informasipenerbangan() {
       return Padding(
         padding: const EdgeInsets.only(
-          left: 16,
+          left: 22,
           right: 16,
         ),
         child: Row(
@@ -495,7 +495,7 @@ class _MenuPesawatState extends State<MenuPesawat> {
 
     Widget categorypilihan() {
       return Container(
-        margin: EdgeInsets.only(top: 12.0),
+        margin: EdgeInsets.only(top: 12.0, left: 6),
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
@@ -953,6 +953,8 @@ class _MenuPesawatState extends State<MenuPesawat> {
                                 ),
                               ),
                               SizedBox(height: 20),
+                              BorderAbuAbu(),
+                              SizedBox(height: 20),
                               judulterbang(),
                               slidercardterbang(),
                               buttonContinue(),
@@ -962,8 +964,8 @@ class _MenuPesawatState extends State<MenuPesawat> {
                               SizedBox(height: 20),
                               Padding(
                                 padding: const EdgeInsets.only(
-                                  left: 16.0,
-                                  right: 16.0,
+                                  left: 22.0,
+                                  right: 22.0,
                                 ),
                                 child: Column(
                                   children: [
@@ -1022,7 +1024,9 @@ class _MenuPesawatState extends State<MenuPesawat> {
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(
-                                    left: 16.0, right: 16.0),
+                                  left: 22.0,
+                                  right: 22.0,
+                                ),
                                 child: Column(
                                   children: [
                                     Row(
@@ -1080,7 +1084,9 @@ class _MenuPesawatState extends State<MenuPesawat> {
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(
-                                    left: 16.0, right: 16.0),
+                                  left: 22.0,
+                                  right: 22.0,
+                                ),
                                 child: Column(
                                   children: [
                                     Row(

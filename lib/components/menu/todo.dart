@@ -36,7 +36,7 @@ class _TodoPageState extends State<TodoPage> {
                   Text(
                     'Todo Things',
                     style: GoogleFonts.poppins(
-                      color: Colors.black,
+                      color: travelinkuy,
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
                     ),

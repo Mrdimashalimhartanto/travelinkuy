@@ -12,12 +12,15 @@ class CardDestinasi extends StatelessWidget {
         children: [
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            child: Row(
-              children: const [
-                CardDestinasiTravelin(),
-                CardDestinasiTravelin(),
-                CardDestinasiTravelin(),
-              ],
+            child: Padding(
+              padding: EdgeInsets.only(left: 20, right: 16),
+              child: Row(
+                children: const [
+                  CardDestinasiTravelin(),
+                  CardDestinasiTravelin(),
+                  CardDestinasiTravelin(),
+                ],
+              ),
             ),
           ),
         ],

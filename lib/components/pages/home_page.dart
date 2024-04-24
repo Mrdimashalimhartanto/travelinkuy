@@ -14,11 +14,118 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    Widget travelinkuycard() {
+      return Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+          children: [
+            // ini diganti search
+            Padding(
+              padding: EdgeInsets.all(
+                15.0 + MediaQuery.of(context).viewPadding.top,
+              ),
+              child: Center(
+                child: Text(
+                  "Good Afternoon",
+                  style: GoogleFonts.poppins(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  children: <Widget>[
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Travelinkuy Point",
+                          style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                        const Spacer(),
+                        Align(
+                          alignment: Alignment.topCenter,
+                          child: Text(
+                            "RP",
+                            style: GoogleFonts.poppins(
+                              color: Colors.black,
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 6),
+                        Text(
+                          "0",
+                          style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 5, vertical: 5),
+                            color: Colors.grey[300],
+                            child: const Icon(
+                              Icons.arrow_forward_ios,
+                              size: 15,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    const Divider(
+                      thickness: 1,
+                    ),
+                    SizedBox(height: 20),
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: <Widget>[
+                        TravelinIconMenu(
+                          text: "Travelin Point",
+                          asset: 'assets/icons/icon_travel_point.png',
+                        ),
+                        TravelinIconMenu(
+                          text: "History",
+                          asset: 'assets/icons/icon_history.png',
+                        ),
+                        TravelinIconMenu(
+                          text: "Payment Travelin",
+                          asset: 'assets/icons/icon_payment_travel.png',
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
     Widget borderabu() {
       return Container(
         width: double.infinity,
         height: 8,
-        color: Colors.grey[300],
+        color: Colors.grey[200],
       );
     }
 
@@ -26,7 +133,7 @@ class _HomePageState extends State<HomePage> {
       return SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(
-            left: 16,
+            left: 22,
             right: 16,
           ),
           child: Row(
@@ -48,6 +155,47 @@ class _HomePageState extends State<HomePage> {
                     Text(
                       // overflow: TextOverflow.ellipsis,
                       'Cek rekomendasi yang sesuai dengan persanan terakhirmu atau destinasi yang baru saja kamu lihat !',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.grey[800],
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget juduldiskon() {
+      return SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 22,
+            right: 16,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Diskon hotel luar negeri hingga 30%',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 4),
+                    Text(
+                      // overflow: TextOverflow.ellipsis,
+                      'Plus cashback 5%. Cocok buat kamu yang mau trip ke Malaysia, Singapura, hingga Hong Kong',
                       style: GoogleFonts.montserrat(
                         color: Colors.grey[800],
                         fontSize: 12,
@@ -193,7 +341,7 @@ class _HomePageState extends State<HomePage> {
     Widget judultravel() {
       return Padding(
         padding: const EdgeInsets.only(
-          left: 16,
+          left: 22,
           right: 16,
         ),
         child: Row(
@@ -288,20 +436,17 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(width: 10),
                   TravelinIconMenu(
                     text: "Sewa Mobil",
-                    asset:
-                        "https://cdn-icons-png.flaticon.com/128/7562/7562539.png",
+                    asset: "assets/icons/icon_sewa_mobil.png",
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
                     text: "Tempat Bermain",
-                    asset:
-                        "https://cdn-icons-png.flaticon.com/128/2387/2387553.png",
+                    asset: "assets/icons/icon_tempat_bermain.png",
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
                     text: "Event",
-                    asset:
-                        "https://cdn-icons-png.flaticon.com/128/3656/3656845.png",
+                    asset: "assets/icons/icon_event.png",
                   ),
                 ],
               ),
@@ -310,50 +455,42 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   TravelinIconMenu(
                     text: "Villa & Apt.",
-                    asset:
-                        "https://cdn-icons-png.flaticon.com/128/4565/4565468.png",
+                    asset: "assets/icons/icon_villa_apart.png",
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
                     text: "Ferry",
-                    asset:
-                        "https://cdn-icons-png.flaticon.com/128/1433/1433624.png",
+                    asset: "assets/icons/icon_ferry.png",
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
                     text: "Bus & Travel",
-                    asset:
-                        "https://cdn-icons-png.flaticon.com/128/1841/1841602.png",
+                    asset: "assets/icons/icon_bus_travell.png",
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
                     text: "JR Pass",
-                    asset:
-                        "https://cdn-icons-png.flaticon.com/512/995/995016.png",
+                    asset: "assets/icons/icon_jrpass.png",
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
                     text: "Refer & Earn",
-                    asset:
-                        "https://cdn-icons-png.flaticon.com/128/9318/9318617.png",
+                    asset: "assets/icons/icon_refer_earn.png",
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
                     text: "Claim Center",
-                    asset:
-                        "https://cdn-icons-png.flaticon.com/128/13136/13136201.png",
+                    asset: "assets/icons/icon_claim.png",
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
                     text: "Jemputan Bandara",
-                    asset:
-                        "https://cdn-icons-png.flaticon.com/128/8382/8382449.png",
+                    asset: "assets/icons/icon_jemputan_bandara.png",
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
                     text: "Spa & Kecantikan",
-                    asset:
-                        "https://cdn-icons-png.flaticon.com/128/1329/1329088.png",
+                    asset: "assets/icons/icon_spa.png",
                   ),
                 ],
               ),
@@ -385,7 +522,7 @@ class _HomePageState extends State<HomePage> {
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 5.0),
                 child: Text(
-                  'Starfit Mall Paragon',
+                  'Loremipsum dolor amet',
                   style: TextStyle(
                     fontSize: 19,
                     color: Colors.white,
@@ -431,65 +568,6 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            Align(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(4),
-                            color: travelinkuy,
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(3.0),
-                            child: Text(
-                              "Lorem ipsum dolor amet samasat",
-                              style: TextStyle(
-                                  fontSize: 8,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        // Text(
-                        //   "Rp 39.000",
-                        //   style: TextStyle(
-                        //       fontSize: 10,
-                        //       decoration: TextDecoration.lineThrough,
-                        //       color: Colors.grey),
-                        // )
-                      ],
-                    ),
-                  ),
-                  // Container(
-                  //   padding: EdgeInsets.all(5),
-                  //   margin: EdgeInsets.all(10),
-                  //   decoration: BoxDecoration(
-                  //       color: Colors.black.withOpacity(0.4),
-                  //       borderRadius: BorderRadius.circular(15)),
-                  //   child: Row(
-                  //     children: [
-                  //       Icon(
-                  //         Icons.star,
-                  //         color: Colors.yellow,
-                  //         size: 18,
-                  //       ),
-                  //       SizedBox(width: 7),
-                  //       Text('4.9')
-                  //     ],
-                  //   ),
-                  // ),
-                ],
-              ),
-              alignment: Alignment.bottomLeft,
-            ),
           ],
         ),
       );
@@ -499,8 +577,8 @@ class _HomePageState extends State<HomePage> {
       return SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(
-            left: 16,
-            right: 16,
+            left: 22,
+            right: 22,
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -573,7 +651,7 @@ class _HomePageState extends State<HomePage> {
       return SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(
-            left: 16,
+            left: 22,
             right: 16,
           ),
           child: Row(
@@ -595,6 +673,47 @@ class _HomePageState extends State<HomePage> {
                     Text(
                       // overflow: TextOverflow.ellipsis,
                       'Cek pilihan tempat bermain yang seru untuk anak! Ssst, ada yang bisa buat orang dewasa juga',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.grey[800],
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget judulakomodasipilihan() {
+      return SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 22,
+            right: 16,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Nginep di akomodasi pilihan!',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 4),
+                    Text(
+                      // overflow: TextOverflow.ellipsis,
+                      'Mau nginep di tempat popular, terpecaya dan punya review kece ? Cek Prefered Partner Plus aja!',
                       style: GoogleFonts.montserrat(
                         color: Colors.grey[800],
                         fontSize: 12,
@@ -658,7 +777,7 @@ class _HomePageState extends State<HomePage> {
             children: <Widget>[
               Container(
                 width: double.infinity,
-                height: 200 + MediaQuery.of(context).viewPadding.top,
+                height: 250 + MediaQuery.of(context).viewPadding.top,
                 child: CarouselSlider(
                   options: CarouselOptions(
                     autoPlay: true,
@@ -690,7 +809,7 @@ class _HomePageState extends State<HomePage> {
                       .toList(),
                 ),
               ),
-              TravelingKuyCard(),
+              travelinkuycard(),
             ],
           ),
 
@@ -701,17 +820,20 @@ class _HomePageState extends State<HomePage> {
           judultravel(),
           kontentravel(),
           SizedBox(height: 20),
+          borderabu(),
+          SizedBox(height: 20),
           judulrencanaperjalanan(),
           SizedBox(height: 20),
           TabbarMenuGlobal(),
           borderabu(),
           SizedBox(height: 20),
-          judulrencanaperjalanan(),
+          juduldiskon(),
           SlideCardPerjalanan(),
           SizedBox(height: 20),
           borderabu(),
           SizedBox(height: 20),
           IdeLiburan(),
+          SizedBox(height: 20),
           TabBarIdeLiburan(),
           borderabu(),
           SizedBox(height: 20),
@@ -719,17 +841,17 @@ class _HomePageState extends State<HomePage> {
           popularmainbareng(),
           SizedBox(height: 20),
           borderabu(),
-          SizedBox(height: 40),
+          SizedBox(height: 20),
           judulrekomendasiperjalanan(),
           SizedBox(height: 20),
-          Padding(
-            padding: EdgeInsets.only(top: 4, left: 10),
-            child: Column(
-              children: [
-                // NearbyPlaces(),
-              ],
-            ),
-          ),
+          // Padding(
+          //   padding: EdgeInsets.only(top: 4, left: 10),
+          //   child: Column(
+          //     children: [
+          //       NearbyPlaces(),
+          //     ],
+          //   ),
+          // ),
           // SizedBox(height: 40),
           // RecommendedPlaces(),
           SingleChildScrollView(
@@ -746,6 +868,22 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   height: 40,
                 ),
+              ],
+            ),
+          ),
+          SizedBox(height: 20),
+          borderabu(),
+          SizedBox(height: 20),
+          judulakomodasipilihan(),
+          SizedBox(height: 20),
+          Padding(
+            padding: const EdgeInsets.only(
+              left: 22,
+              right: 16,
+            ),
+            child: Column(
+              children: [
+                NearbyPlaces(),
               ],
             ),
           ),

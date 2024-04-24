@@ -8,7 +8,7 @@ class IdeLiburan extends StatelessWidget {
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.only(
-          left: 16,
+          left: 22,
           right: 16,
         ),
         child: Row(
