@@ -65,65 +65,6 @@ List<Container> cardscontainer = [
                       ],
                     ),
                   ),
-                  Align(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Row(
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(4),
-                                  color: travelinkuy,
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(3.0),
-                                  child: Text(
-                                    "Lorem ipsum dolor amet samasat",
-                                    style: TextStyle(
-                                        fontSize: 8,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              // Text(
-                              //   "Rp 39.000",
-                              //   style: TextStyle(
-                              //       fontSize: 10,
-                              //       decoration: TextDecoration.lineThrough,
-                              //       color: Colors.grey),
-                              // )
-                            ],
-                          ),
-                        ),
-                        // Container(
-                        //   padding: EdgeInsets.all(5),
-                        //   margin: EdgeInsets.all(10),
-                        //   decoration: BoxDecoration(
-                        //       color: Colors.black.withOpacity(0.4),
-                        //       borderRadius: BorderRadius.circular(15)),
-                        //   child: Row(
-                        //     children: [
-                        //       Icon(
-                        //         Icons.star,
-                        //         color: Colors.yellow,
-                        //         size: 18,
-                        //       ),
-                        //       SizedBox(width: 7),
-                        //       Text('4.9')
-                        //     ],
-                        //   ),
-                        // ),
-                      ],
-                    ),
-                    alignment: Alignment.bottomLeft,
-                  ),
                 ],
               ),
             ),
@@ -192,65 +133,6 @@ List<Container> cardscontainer = [
                         // )
                       ],
                     ),
-                  ),
-                  Align(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Row(
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(4),
-                                  color: travelinkuy,
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(3.0),
-                                  child: Text(
-                                    "Lorem ipsum dolor amet samasat",
-                                    style: TextStyle(
-                                        fontSize: 8,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              // Text(
-                              //   "Rp 39.000",
-                              //   style: TextStyle(
-                              //       fontSize: 10,
-                              //       decoration: TextDecoration.lineThrough,
-                              //       color: Colors.grey),
-                              // )
-                            ],
-                          ),
-                        ),
-                        // Container(
-                        //   padding: EdgeInsets.all(5),
-                        //   margin: EdgeInsets.all(10),
-                        //   decoration: BoxDecoration(
-                        //       color: Colors.black.withOpacity(0.4),
-                        //       borderRadius: BorderRadius.circular(15)),
-                        //   child: Row(
-                        //     children: [
-                        //       Icon(
-                        //         Icons.star,
-                        //         color: Colors.yellow,
-                        //         size: 18,
-                        //       ),
-                        //       SizedBox(width: 7),
-                        //       Text('4.9')
-                        //     ],
-                        //   ),
-                        // ),
-                      ],
-                    ),
-                    alignment: Alignment.bottomLeft,
                   ),
                 ],
               ),

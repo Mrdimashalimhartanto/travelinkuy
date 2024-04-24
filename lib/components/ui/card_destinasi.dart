@@ -148,7 +148,7 @@ class CardDestinasiTravelin extends StatelessWidget {
           ),
         ],
         color: splashcolor,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(8),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -166,43 +166,7 @@ class CardDestinasiTravelin extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(4),
-                    color: travelinkuy,
-                  ),
-                  // ignore: prefer_const_constructors
-                  child: Padding(
-                    padding: const EdgeInsets.all(3.0),
-                    child: Text(
-                      "puma evo speed".toUpperCase(),
-                      style: const TextStyle(
-                          fontSize: 8,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  width: 6,
-                ),
-                const Text(
-                  "Rp 39.000",
-                  style: TextStyle(
-                      fontSize: 10,
-                      decoration: TextDecoration.lineThrough,
-                      color: Colors.grey),
-                )
-              ],
-            ),
-          ),
-          const SizedBox(
-            height: 2,
-          ),
+          SizedBox(height: 12),
           Padding(
             padding: const EdgeInsets.only(left: 8.0),
             child: Text(

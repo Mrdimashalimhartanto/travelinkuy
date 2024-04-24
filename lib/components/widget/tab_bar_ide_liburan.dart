@@ -93,7 +93,7 @@ class _TabBarIdeLiburanState extends State<TabBarIdeLiburan> {
 
             /// MAIN BODY
             Container(
-              margin: const EdgeInsets.only(top: 10),
+              margin: const EdgeInsets.only(top: 2),
               width: double.infinity,
               height: 290,
               child: PageView.builder(
@@ -107,7 +107,7 @@ class _TabBarIdeLiburanState extends State<TabBarIdeLiburan> {
                       SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
+                          padding: EdgeInsets.all(1),
                           child: Row(
                             children: [cardscontainer[current]],
                           ),

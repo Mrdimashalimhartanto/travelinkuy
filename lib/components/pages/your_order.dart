@@ -76,8 +76,8 @@ class YourOrder extends StatelessWidget {
     Widget judulorder() {
       return Padding(
         padding: const EdgeInsets.only(
-          left: 16,
-          right: 16,
+          left: 22,
+          right: 22,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -153,6 +153,7 @@ class YourOrder extends StatelessWidget {
             SizedBox(height: 10),
             TabbarMenuGlobal(),
             BorderAbuAbu(),
+            // RecommendedPlaces(),
           ],
         ),
       ),

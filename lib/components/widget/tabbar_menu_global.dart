@@ -52,7 +52,7 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
                             width: 80,
                             height: 40,
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(20),
                               color: current == index
                                   ? travelinkuy
                                   : Colors.grey[300],
@@ -92,7 +92,7 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
 
             /// MAIN BODY
             Container(
-              margin: const EdgeInsets.only(top: 10),
+              margin: const EdgeInsets.only(top: 2),
               width: double.infinity,
               height: 290,
               child: PageView.builder(
@@ -101,12 +101,11 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
                   return Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
+                          padding: EdgeInsets.all(1),
                           child: Row(
                             children: [cardscontainer[current]],
                           ),

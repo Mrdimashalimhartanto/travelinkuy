@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, equal_keys_in_map
 
 import 'package:flutter/material.dart';
 import 'package:travelinkuy/components/menu/menu.dart';
@@ -28,9 +28,17 @@ class MyApp extends StatelessWidget {
         "/menu-pesawat": (context) => MenuPesawat(),
         "/menu-hotel": (context) => HotelPage(),
 
+        // route perjalanan
         "/perjalanan-singapura": (context) => const PerjalananSingapura(),
         "/perjalanan-malaysia": (context) => const PerjalananMalaysia(),
         "/perjalanan-thailand": (context) => const PerjalananThailand(),
+
+        // route menu
+        "/page-pesawat": (context) => MenuPesawat(),
+        "/page-hotel": (context) => HotelPage(),
+        "/page-todo": (context) => TodoPage(),
+        "/page-kereta": (context) => KeretaPage(),
+        "/page-atraksi": (context) => AtraksiPage(),
       },
     );
   }

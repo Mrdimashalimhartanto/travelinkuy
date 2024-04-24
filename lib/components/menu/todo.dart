@@ -1,3 +1,4 @@
+
 part of 'menu.dart';
 
 class TodoPage extends StatefulWidget {
@@ -33,11 +34,7 @@ class _TodoPageState extends State<TodoPage> {
                 children: [
                   Text(
                     'Todo Things',
-                    style: GoogleFonts.poppins(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
+                    
                     textAlign: TextAlign.center,
                   ),
                 ],
@@ -129,13 +126,7 @@ class _TodoPageState extends State<TodoPage> {
                 ],
               ),
             ),
-            SizedBox(
-              height: 36.0,
-            ),
-            // TabBarTodo(),
-            SizedBox(
-              height: 2.0,
-            ),
+            
             Container(
               padding: const EdgeInsets.only(left: 24.0, right: 24.0),
               child: Column(

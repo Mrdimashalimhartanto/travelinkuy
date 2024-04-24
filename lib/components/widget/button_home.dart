@@ -15,10 +15,10 @@ class ButtonHome extends StatelessWidget {
         },
         child: Container(
           height: 50,
-          margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+          margin: EdgeInsets.symmetric(vertical: 10, horizontal: 40),
           decoration: BoxDecoration(
             color: travelinkuy,
-            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderRadius: BorderRadius.all(Radius.circular(4)),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
