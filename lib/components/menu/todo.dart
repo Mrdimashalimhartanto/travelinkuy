@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last, prefer_final_fields, library_private_types_in_public_api, unnecessary_import, use_key_in_widget_constructors, avoid_unnecessary_containers
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last, prefer_final_fields, library_private_types_in_public_api, unnecessary_import, use_key_in_widget_constructors, avoid_unnecessary_containers, unused_field
 
 part of 'menu.dart';
 
