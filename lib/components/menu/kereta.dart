@@ -2,14 +2,14 @@
 
 part of 'menu.dart';
 
-class AtraksiPage extends StatefulWidget {
-  const AtraksiPage({super.key});
+class KeretaPage extends StatefulWidget {
+  const KeretaPage({super.key});
 
   @override
-  State<AtraksiPage> createState() => _AtraksiPageState();
+  State<KeretaPage> createState() => _KeretaPageState();
 }
 
-class _AtraksiPageState extends State<AtraksiPage> {
+class _KeretaPageState extends State<KeretaPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class _AtraksiPageState extends State<AtraksiPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Atraksi',
+                    'Kereta',
                     style: GoogleFonts.poppins(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,

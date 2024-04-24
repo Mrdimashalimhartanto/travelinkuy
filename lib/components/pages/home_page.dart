@@ -14,6 +14,14 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    Widget borderabu() {
+      return Container(
+        width: double.infinity,
+        height: 8,
+        color: Colors.grey[300],
+      );
+    }
+
     Widget judulrencanaperjalanan() {
       return SingleChildScrollView(
         child: Padding(
@@ -218,7 +226,7 @@ class _HomePageState extends State<HomePage> {
       );
     }
 
-    Widget MenuTravelin() {
+    Widget menutravelin() {
       return SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Padding(
@@ -230,7 +238,7 @@ class _HomePageState extends State<HomePage> {
                   GestureDetector(
                     onTap: () {
                       // cek route di file main
-                      Navigator.pushNamed(context, '/menu-pesawat');
+                      Navigator.pushNamed(context, '/page-pesawat');
                     },
                     child: TravelinIconMenu(
                       text: "Pesawat",
@@ -240,7 +248,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(width: 10),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/menu-hotel');
+                      Navigator.pushNamed(context, '/page-hotel');
                     },
                     child: TravelinIconMenu(
                       text: "Hotel",
@@ -250,8 +258,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(width: 10),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => TodoPage()));
+                      Navigator.pushNamed(context, '/page-todo');
                     },
                     child: TravelinIconMenu(
                       text: "To Do",
@@ -259,16 +266,24 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   SizedBox(width: 10),
-                  TravelinIconMenu(
-                    text: "Kereta Api",
-                    asset:
-                        "https://cdn-icons-png.flaticon.com/128/724/724080.png",
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/page-kereta');
+                    },
+                    child: TravelinIconMenu(
+                      text: "Kereta Api",
+                      asset: "assets/icons/icon_kereta.png",
+                    ),
                   ),
                   SizedBox(width: 10),
-                  TravelinIconMenu(
-                    text: "Atraksi",
-                    asset:
-                        "https://cdn-icons-png.flaticon.com/128/2169/2169416.png",
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/page-atraksi');
+                    },
+                    child: TravelinIconMenu(
+                      text: "Atraksi",
+                      asset: "assets/icons/icon_atraksi.png",
+                    ),
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
@@ -680,8 +695,8 @@ class _HomePageState extends State<HomePage> {
           ),
 
           // Detail menu ada di widget
-          MenuTravelin(),
-          BorderAbuAbu(),
+          menutravelin(),
+          borderabu(),
           SizedBox(height: 20),
           judultravel(),
           kontentravel(),
@@ -689,21 +704,21 @@ class _HomePageState extends State<HomePage> {
           judulrencanaperjalanan(),
           SizedBox(height: 20),
           TabbarMenuGlobal(),
-          BorderAbuAbu(),
+          borderabu(),
           SizedBox(height: 20),
           judulrencanaperjalanan(),
           SlideCardPerjalanan(),
           SizedBox(height: 20),
-          BorderAbuAbu(),
+          borderabu(),
           SizedBox(height: 20),
           IdeLiburan(),
           TabBarIdeLiburan(),
-          BorderAbuAbu(),
+          borderabu(),
           SizedBox(height: 20),
           judulmainbareng(),
           popularmainbareng(),
           SizedBox(height: 20),
-          BorderAbuAbu(),
+          borderabu(),
           SizedBox(height: 40),
           judulrekomendasiperjalanan(),
           SizedBox(height: 20),

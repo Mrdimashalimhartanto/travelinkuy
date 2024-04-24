@@ -23,7 +23,6 @@ import 'package:travelinkuy/components/widget/ItemCard.dart';
 import 'package:travelinkuy/components/widget/detail_screen.dart';
 import 'package:travelinkuy/components/widget/testing.dart';
 import 'package:travelinkuy/components/widget/widget.dart';
-// import 'package:babstrap_settings_screen/babstrap_settings_screen.dart';
 import 'package:travelinkuy/data/data_dummy.dart';
 
 part 'menu_pesawat.dart';
@@ -34,3 +33,4 @@ part 'event.dart';
 part 'bus.dart';
 part 'atraksi.dart';
 part 'todo.dart';
+part 'kereta.dart';
