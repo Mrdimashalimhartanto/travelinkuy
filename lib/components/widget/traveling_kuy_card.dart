@@ -92,7 +92,7 @@ class TravelingKuyCard extends StatelessWidget {
                       TravelinIconMenu(
                         text: "Travelin Point",
                         asset:
-                            'https://cdn-icons-png.flaticon.com/512/2071/2071392.png',
+                            'https://cdn-icons-png.flaticon.com/128/744/744922.png',
                       ),
                       TravelinIconMenu(
                         text: "History",

@@ -234,8 +234,7 @@ class _HomePageState extends State<HomePage> {
                     },
                     child: TravelinIconMenu(
                       text: "Pesawat",
-                      asset:
-                          "https://cdn-icons-png.flaticon.com/128/1314/1314529.png",
+                      asset: "assets/icons/icon_pesawat.png",
                     ),
                   ),
                   SizedBox(width: 10),
@@ -245,15 +244,19 @@ class _HomePageState extends State<HomePage> {
                     },
                     child: TravelinIconMenu(
                       text: "Hotel",
-                      asset:
-                          "https://cdn-icons-png.flaticon.com/128/1946/1946788.png",
+                      asset: "assets/icons/icon_hotel.png",
                     ),
                   ),
                   SizedBox(width: 10),
-                  TravelinIconMenu(
-                    text: "To Do",
-                    asset:
-                        "https://cdn-icons-png.flaticon.com/128/2387/2387679.png",
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => TodoPage()));
+                    },
+                    child: TravelinIconMenu(
+                      text: "To Do",
+                      asset: "assets/icons/icon_todo.png",
+                    ),
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
@@ -277,13 +280,13 @@ class _HomePageState extends State<HomePage> {
                   TravelinIconMenu(
                     text: "Tempat Bermain",
                     asset:
-                        "https://cdn-icons-png.flaticon.com/512/2681/2681760.png",
+                        "https://cdn-icons-png.flaticon.com/128/2387/2387553.png",
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
                     text: "Event",
                     asset:
-                        "https://cdn-icons-png.flaticon.com/512/2681/2681760.png",
+                        "https://cdn-icons-png.flaticon.com/128/3656/3656845.png",
                   ),
                 ],
               ),
@@ -293,19 +296,19 @@ class _HomePageState extends State<HomePage> {
                   TravelinIconMenu(
                     text: "Villa & Apt.",
                     asset:
-                        "https://cdn-icons-png.flaticon.com/512/2331/2331716.png",
+                        "https://cdn-icons-png.flaticon.com/128/4565/4565468.png",
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
                     text: "Ferry",
                     asset:
-                        "https://cdn-icons-png.flaticon.com/512/3258/3258446.png",
+                        "https://cdn-icons-png.flaticon.com/128/1433/1433624.png",
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
                     text: "Bus & Travel",
                     asset:
-                        "https://cdn-icons-png.flaticon.com/512/2039/2039006.png",
+                        "https://cdn-icons-png.flaticon.com/128/1841/1841602.png",
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
@@ -317,25 +320,25 @@ class _HomePageState extends State<HomePage> {
                   TravelinIconMenu(
                     text: "Refer & Earn",
                     asset:
-                        "https://cdn-icons-png.flaticon.com/512/2681/2681760.png",
+                        "https://cdn-icons-png.flaticon.com/128/9318/9318617.png",
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
                     text: "Claim Center",
                     asset:
-                        "https://cdn-icons-png.flaticon.com/512/2681/2681760.png",
+                        "https://cdn-icons-png.flaticon.com/128/13136/13136201.png",
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
                     text: "Jemputan Bandara",
                     asset:
-                        "https://cdn-icons-png.flaticon.com/512/2681/2681760.png",
+                        "https://cdn-icons-png.flaticon.com/128/8382/8382449.png",
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
                     text: "Spa & Kecantikan",
                     asset:
-                        "https://cdn-icons-png.flaticon.com/512/2681/2681760.png",
+                        "https://cdn-icons-png.flaticon.com/128/1329/1329088.png",
                   ),
                 ],
               ),
@@ -695,12 +698,12 @@ class _HomePageState extends State<HomePage> {
           SizedBox(height: 20),
           IdeLiburan(),
           TabBarIdeLiburan(),
-          // buttonlanjutkan(),
-          // SizedBox(height: 20),
           BorderAbuAbu(),
           SizedBox(height: 20),
           judulmainbareng(),
           popularmainbareng(),
+          SizedBox(height: 20),
+          BorderAbuAbu(),
           SizedBox(height: 40),
           judulrekomendasiperjalanan(),
           SizedBox(height: 20),

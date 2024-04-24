@@ -1208,11 +1208,11 @@ class _MenuPesawatState extends State<MenuPesawat> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Pesawat ',
+                    'Pesawat',
                     style: GoogleFonts.poppins(
-                      color: Colors.black,
-                      fontWeight: FontWeight.normal,
-                      fontSize: 20,
+                      color: travelinkuy,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -1230,6 +1230,7 @@ class _MenuPesawatState extends State<MenuPesawat> {
             size: 20,
           ),
         ),
+        centerTitle: false,
         automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         elevation: 4,

@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace
+
 part of 'ui.dart';
 
 class TravelinIconMenu extends StatelessWidget {
@@ -12,7 +14,7 @@ class TravelinIconMenu extends StatelessWidget {
       height: 60,
       child: Column(
         children: [
-          Image.network(
+          Image.asset(
             asset!,
             width: 40,
             height: 40,

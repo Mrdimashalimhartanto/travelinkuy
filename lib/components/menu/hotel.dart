@@ -254,8 +254,47 @@ class HotelPage extends StatelessWidget {
       );
     }
 
-    return Material(
-      child: SingleChildScrollView(
+    return Scaffold(
+      appBar: AppBar(
+        title: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.all(2.0), // Adjust the value as needed
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Hotel',
+                    style: GoogleFonts.poppins(
+                      color: travelinkuy,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(
+            Icons.arrow_back_ios_new_rounded,
+            size: 20,
+          ),
+        ),
+        centerTitle: false,
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.white,
+        elevation: 4,
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.notifications))
+        ],
+      ),
+      body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
@@ -284,70 +323,6 @@ class HotelPage extends StatelessWidget {
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
                   ),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(top: 30, left: 10, right: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          InkWell(
-                            onTap: () {
-                              Navigator.pop(context);
-                            },
-                            child: Container(
-                              margin: EdgeInsets.all(0),
-                              height: 38,
-                              width: 38,
-                              decoration: BoxDecoration(
-                                color: Color(0xFFF2F8FF),
-                                borderRadius: BorderRadius.circular(10),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: travelincomponent,
-                                    blurRadius: 4,
-                                    spreadRadius: 2,
-                                  ),
-                                ],
-                              ),
-                              child: Center(
-                                child: Icon(
-                                  Icons.arrow_back,
-                                  color: travelinkuy,
-                                  size: 20,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.all(8),
-                            height: 38,
-                            width: 38,
-                            decoration: BoxDecoration(
-                              color: Color(0xFFF2F8FF),
-                              borderRadius: BorderRadius.circular(10),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: travelinkuy,
-                                  blurRadius: 4,
-                                  spreadRadius: 2,
-                                ),
-                              ],
-                            ),
-                            child: Center(
-                              child: Icon(
-                                Icons.favorite_outline,
-                                color: travelinkuy,
-                                size: 20,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
                 ),
               ),
             ),
