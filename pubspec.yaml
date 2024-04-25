@@ -49,11 +49,22 @@ dependencies:
   sliding_up_panel: ^2.0.0+1
   smooth_page_indicator: ^1.1.0
   flutter_screenutil: ^5.9.0
+  google_maps_flutter: ^2.2.1
+  riverpod_annotation: ^1.0.6
+  hooks_riverpod: ^2.1.1
+  flutter_riverpod: ^2.2.0
+  flutter_config: ^2.0.2
+  # riverpod_generator: ^1.1.1
+  # flutter_gen_runner: ^5.1.0+1
+  provider: ^6.1.2
 
 dev_dependencies:
+  flutter_gen_runner: ^5.4.0
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
+  riverpod_generator: ^1.1.1
+  # riverpod_generator: ^1.0.6
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -68,6 +79,7 @@ flutter:
   assets:
     - assets/
     - assets/icons/
+    - assets/hotels/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

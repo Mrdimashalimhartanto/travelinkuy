@@ -225,7 +225,14 @@ class HotelPage extends StatelessWidget {
       return Padding(
         padding: const EdgeInsets.only(top: 10),
         child: GestureDetector(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => MainHotelApp(),
+              ),
+            );
+          },
           child: Container(
             height: 50,
             margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),

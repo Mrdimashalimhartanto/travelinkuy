@@ -28,25 +28,25 @@ class _TujuanPergiState extends State<TujuanPergi>
         title: Column(
           children: [
             Padding(
-              padding: EdgeInsets.all(10.0), // Adjust the value as needed
+              padding: EdgeInsets.all(0), // Adjust the value as needed
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     'Padang ke Jakarta',
                     style: GoogleFonts.poppins(
-                      color: Colors.black,
+                      color: travelinkuy,
                       fontWeight: FontWeight.w600,
-                      fontSize: 14,
+                      fontSize: 16,
                     ),
                   ),
                   SizedBox(height: 4),
                   Text(
                     '1 Penumpang - Ekonomi',
                     style: GoogleFonts.poppins(
-                      color: const Color.fromARGB(255, 61, 29, 29),
+                      color: Colors.black,
                       fontWeight: FontWeight.normal,
-                      fontSize: 14,
+                      fontSize: 16,
                     ),
                   ),
                 ],
@@ -58,6 +58,7 @@ class _TujuanPergiState extends State<TujuanPergi>
         leading: BackButton(
           color: Colors.black,
         ),
+        centerTitle: false,
         automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         elevation: 4,
@@ -68,7 +69,7 @@ class _TujuanPergiState extends State<TujuanPergi>
               'Ubah',
               style: GoogleFonts.poppins(
                 color: Colors.blue,
-                fontSize: 12,
+                fontSize: 16,
                 fontWeight: FontWeight.w800,
               ),
             ),
