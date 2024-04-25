@@ -1,0 +1,271 @@
+/// GENERATED CODE - DO NOT MODIFY BY HAND
+/// *****************************************************
+///  FlutterGen
+/// *****************************************************
+
+// coverage:ignore-file
+// ignore_for_file: type=lint
+// ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal
+
+import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/services.dart';
+
+class $AssetsIconGen {
+  const $AssetsIconGen();
+
+  $AssetsIconAmenitiesGen get amenities => const $AssetsIconAmenitiesGen();
+
+  /// File path: assets/icon/booking.svg
+  SvgGenImage get booking => const SvgGenImage('assets/icons/booking.svg');
+
+  /// File path: assets/icons/calendar.svg
+  SvgGenImage get calendar => const SvgGenImage('assets/icons/calendar.svg');
+
+  /// File path: assets/icons/chevron-down.svg
+  SvgGenImage get chevronDown =>
+      const SvgGenImage('assets/icons/chevron-down.svg');
+
+  /// File path: assets/icons/home.svg
+  SvgGenImage get home => const SvgGenImage('assets/icons/home.svg');
+
+  /// File path: assets/icons/like.svg
+  SvgGenImage get like => const SvgGenImage('assets/icons/like.svg');
+
+  /// File path: assets/icons/location.svg
+  SvgGenImage get location => const SvgGenImage('assets/icons/location.svg');
+
+  /// File path: assets/icons/map.svg
+  SvgGenImage get map => const SvgGenImage('assets/icons/map.svg');
+
+  /// File path: assets/icons/notification.svg
+  SvgGenImage get notification =>
+      const SvgGenImage('assets/icons/notification.svg');
+
+  /// File path: assets/icons/pin.svg
+  SvgGenImage get pin => const SvgGenImage('assets/icons/pin.svg');
+
+  /// File path: assets/icons/pin_png.png
+  AssetGenImage get pinPng => const AssetGenImage('assets/icons/pin_png.png');
+
+  /// File path: assets/icons/profile.svg
+  SvgGenImage get profile => const SvgGenImage('assets/icons/profile.svg');
+
+  /// File path: assets/icons/wishlist.svg
+  SvgGenImage get wishlist => const SvgGenImage('assets/icons/wishlist.svg');
+
+  /// List of all assets
+  List<dynamic> get values => [
+        booking,
+        calendar,
+        chevronDown,
+        home,
+        like,
+        location,
+        map,
+        notification,
+        pin,
+        pinPng,
+        profile,
+        wishlist
+      ];
+}
+
+class $AssetsImageGen {
+  const $AssetsImageGen();
+
+  /// File path: assets/hotels/gallery1.png
+  AssetGenImage get gallery1 =>
+      const AssetGenImage('assets/hotels/gallery1.png');
+
+  /// File path: assets/hotels/gallery2.png
+  AssetGenImage get gallery2 =>
+      const AssetGenImage('assets/hotels/gallery2.png');
+
+  /// File path: assets/hotels/gallery3.png
+  AssetGenImage get gallery3 =>
+      const AssetGenImage('assets/hotels/gallery3.png');
+
+  /// File path: assets/hotels/hotel-image.png
+  AssetGenImage get hotelImage =>
+      const AssetGenImage('assets/hotels/hotel-image.png');
+
+  /// File path: assets/hotels/photo.png
+  AssetGenImage get photo => const AssetGenImage('assets/hotels/photo.png');
+
+  /// File path: assets/hotels/sign-in.png
+  AssetGenImage get signIn => const AssetGenImage('assets/hotels/sign-in.png');
+
+  /// File path: assets/hotels/thumbnail1.png
+  AssetGenImage get thumbnail1 =>
+      const AssetGenImage('assets/hotels/thumbnail1.png');
+
+  /// File path: assets/hotels/thumbnail2.png
+  AssetGenImage get thumbnail2 =>
+      const AssetGenImage('assets/hotels/thumbnail2.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+        gallery1,
+        gallery2,
+        gallery3,
+        hotelImage,
+        photo,
+        signIn,
+        thumbnail1,
+        thumbnail2
+      ];
+}
+
+class $AssetsIconAmenitiesGen {
+  const $AssetsIconAmenitiesGen();
+
+  /// File path: assets/icon/amenities/ac.svg
+  SvgGenImage get ac => const SvgGenImage('assets/icons/amenities/ac.svg');
+
+  /// File path: assets/icons/amenities/hotel.svg
+  SvgGenImage get hotel =>
+      const SvgGenImage('assets/icons/amenities/hotel.svg');
+
+  /// File path: assets/icons/amenities/room_service.svg
+  SvgGenImage get roomService =>
+      const SvgGenImage('assets/icons/amenities/room_service.svg');
+
+  /// File path: assets/icons/amenities/swimming_pool.svg
+  SvgGenImage get swimmingPool =>
+      const SvgGenImage('assets/icons/amenities/swimming_pool.svg');
+
+  /// File path: assets/icons/amenities/transport.svg
+  SvgGenImage get transport =>
+      const SvgGenImage('assets/icons/amenities/transport.svg');
+
+  /// File path: assets/icons/amenities/wifi.svg
+  SvgGenImage get wifi => const SvgGenImage('assets/icons/amenities/wifi.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values =>
+      [ac, hotel, roomService, swimmingPool, transport, wifi];
+}
+
+class Assets {
+  Assets._();
+
+  static const $AssetsIconGen icon = $AssetsIconGen();
+  static const $AssetsImageGen image = $AssetsImageGen();
+}
+
+class AssetGenImage {
+  const AssetGenImage(this._assetName);
+
+  final String _assetName;
+
+  Image image({
+    Key? key,
+    AssetBundle? bundle,
+    ImageFrameBuilder? frameBuilder,
+    ImageErrorWidgetBuilder? errorBuilder,
+    String? semanticLabel,
+    bool excludeFromSemantics = false,
+    double? scale,
+    double? width,
+    double? height,
+    Color? color,
+    Animation<double>? opacity,
+    BlendMode? colorBlendMode,
+    BoxFit? fit,
+    AlignmentGeometry alignment = Alignment.center,
+    ImageRepeat repeat = ImageRepeat.noRepeat,
+    Rect? centerSlice,
+    bool matchTextDirection = false,
+    bool gaplessPlayback = false,
+    bool isAntiAlias = false,
+    String? package,
+    FilterQuality filterQuality = FilterQuality.low,
+    int? cacheWidth,
+    int? cacheHeight,
+  }) {
+    return Image.asset(
+      _assetName,
+      key: key,
+      bundle: bundle,
+      frameBuilder: frameBuilder,
+      errorBuilder: errorBuilder,
+      semanticLabel: semanticLabel,
+      excludeFromSemantics: excludeFromSemantics,
+      scale: scale,
+      width: width,
+      height: height,
+      color: color,
+      opacity: opacity,
+      colorBlendMode: colorBlendMode,
+      fit: fit,
+      alignment: alignment,
+      repeat: repeat,
+      centerSlice: centerSlice,
+      matchTextDirection: matchTextDirection,
+      gaplessPlayback: gaplessPlayback,
+      isAntiAlias: isAntiAlias,
+      package: package,
+      filterQuality: filterQuality,
+      cacheWidth: cacheWidth,
+      cacheHeight: cacheHeight,
+    );
+  }
+
+  ImageProvider provider() => AssetImage(_assetName);
+
+  String get path => _assetName;
+
+  String get keyName => _assetName;
+}
+
+class SvgGenImage {
+  const SvgGenImage(this._assetName);
+
+  final String _assetName;
+
+  SvgPicture svg({
+    Key? key,
+    bool matchTextDirection = false,
+    AssetBundle? bundle,
+    String? package,
+    double? width,
+    double? height,
+    BoxFit fit = BoxFit.contain,
+    AlignmentGeometry alignment = Alignment.center,
+    bool allowDrawingOutsideViewBox = false,
+    WidgetBuilder? placeholderBuilder,
+    Color? color,
+    BlendMode colorBlendMode = BlendMode.srcIn,
+    String? semanticsLabel,
+    bool excludeFromSemantics = false,
+    Clip clipBehavior = Clip.hardEdge,
+    bool cacheColorFilter = false,
+    SvgTheme? theme,
+  }) {
+    return SvgPicture.asset(
+      _assetName,
+      key: key,
+      matchTextDirection: matchTextDirection,
+      bundle: bundle,
+      package: package,
+      width: width,
+      height: height,
+      fit: fit,
+      alignment: alignment,
+      allowDrawingOutsideViewBox: allowDrawingOutsideViewBox,
+      placeholderBuilder: placeholderBuilder,
+      color: color,
+      colorBlendMode: colorBlendMode,
+      semanticsLabel: semanticsLabel,
+      excludeFromSemantics: excludeFromSemantics,
+      clipBehavior: clipBehavior,
+      cacheColorFilter: cacheColorFilter,
+      theme: theme,
+    );
+  }
+
+  String get path => _assetName;
+
+  String get keyName => _assetName;
+}

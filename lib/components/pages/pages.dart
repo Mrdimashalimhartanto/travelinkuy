@@ -2,7 +2,6 @@
 
 import 'dart:async';
 import 'dart:ui';
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
@@ -20,14 +19,18 @@ import 'package:travelinkuy/components/models/rekomendasi_model.dart';
 import 'package:travelinkuy/components/models/tab_list_model.dart';
 import 'package:travelinkuy/components/ui/ui.dart';
 import 'package:travelinkuy/components/widget/ItemCard.dart';
+import 'package:travelinkuy/components/widget/custom_detail_hote.dart';
 import 'package:travelinkuy/components/widget/nearby_place.dart';
 import 'package:travelinkuy/components/widget/recommended.dart';
 import 'package:travelinkuy/components/widget/sliding_up_panel.dart';
 import 'package:travelinkuy/components/widget/testing.dart';
+import 'package:travelinkuy/components/widget/custom_asset.dart';
 
 // component widget
 import 'package:travelinkuy/components/widget/widget.dart';
 import 'package:travelinkuy/data/data_dummy.dart';
+
+import '../widget/app_text.dart';
 
 part 'splash_screen.dart';
 part 'welcome_page.dart';

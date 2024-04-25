@@ -887,6 +887,8 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
+          // custom hotel
+          // HotelCard(hotel: null,),
         ],
       ),
     );

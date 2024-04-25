@@ -18,14 +18,14 @@ class ButtonHome extends StatelessWidget {
           margin: EdgeInsets.symmetric(vertical: 10, horizontal: 40),
           decoration: BoxDecoration(
             color: travelinkuy,
-            borderRadius: BorderRadius.all(Radius.circular(4)),
+            borderRadius: BorderRadius.all(Radius.circular(20)),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
                 child: Text(
-                  'Continue',
+                  'Explore Your Destination',
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
                     color: Colors.white,
