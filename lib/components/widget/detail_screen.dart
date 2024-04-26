@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, unused_import
+// ignore_for_file: prefer_const_constructors, unused_import, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -11,43 +11,44 @@ class DetailDestinasi extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-          icon: SvgPicture.asset("assets/icons/back.svg"),
-          onPressed: () {},
+        title: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.all(2.0), // Adjust the value as needed
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Todo Things',
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
-        actions: <Widget>[
-          IconButton(
-            icon: SvgPicture.asset(
-              "assets/icons/search.svg",
-              colorFilter: ColorFilter.mode(Colors.black, BlendMode.srcIn),
-            ),
-            onPressed: () {},
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(
+            Icons.arrow_back_ios_new_rounded,
+            size: 20,
           ),
-          IconButton(
-            icon: SvgPicture.asset(
-              "assets/icons/cart.svg",
-              colorFilter: ColorFilter.mode(Colors.black, BlendMode.srcIn),
-            ),
-            onPressed: () {},
-          ),
-          SizedBox(width: 20.0 / 2)
+        ),
+        centerTitle: false,
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.white,
+        elevation: 4,
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.notifications))
         ],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Text(
-              "Women",
-              style: Theme.of(context)
-                  .textTheme
-                  .titleLarge!
-                  .copyWith(fontWeight: FontWeight.bold),
-            ),
-          ),
+          SizedBox(height: 20),
+
           // Categories(),
           // TabBarHotel(),
           Expanded(

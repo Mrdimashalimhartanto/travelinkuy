@@ -9,7 +9,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:travelinkuy/components/menu/menu.dart';
 import 'package:travelinkuy/components/models/card_perjalanan_model.dart';
 import 'package:travelinkuy/components/ui/ui.dart';
-import 'package:travelinkuy/components/widget/recommended.dart';
 import 'package:travelinkuy/components/widget/sliding_up_panel.dart';
 import 'package:travelinkuy/data/data_dummy.dart';
 
