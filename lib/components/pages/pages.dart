@@ -21,7 +21,7 @@ import 'package:travelinkuy/components/ui/ui.dart';
 import 'package:travelinkuy/components/widget/ItemCard.dart';
 import 'package:travelinkuy/components/widget/custom_detail_hote.dart';
 import 'package:travelinkuy/components/widget/nearby_place.dart';
-import 'package:travelinkuy/components/widget/recommended.dart';
+
 import 'package:travelinkuy/components/widget/sliding_up_panel.dart';
 import 'package:travelinkuy/components/widget/testing.dart';
 import 'package:travelinkuy/components/widget/custom_asset.dart';

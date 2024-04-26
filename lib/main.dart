@@ -5,6 +5,7 @@ import 'package:flutter_config/flutter_config.dart';
 import 'package:provider/provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:travelinkuy/components/menu/menu.dart';
+import 'package:travelinkuy/components/pages/detail-hotel/detail_hotel_alana.dart';
 import 'package:travelinkuy/components/pages/pages.dart';
 import 'package:travelinkuy/components/ui/onboarding/onboarding_view.dart';
 
@@ -45,6 +46,9 @@ class MyApp extends StatelessWidget {
         "/page-todo": (context) => TodoPage(),
         "/page-kereta": (context) => KeretaPage(),
         "/page-atraksi": (context) => AtraksiPage(),
+
+        // Detail Hotel
+        "/detail-hotel-alana": (context) => HotelAlananDetail(),
       },
     );
   }

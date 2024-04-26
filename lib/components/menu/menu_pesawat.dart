@@ -435,6 +435,44 @@ class _MenuPesawatState extends State<MenuPesawat> {
       );
     }
 
+    Widget juduldestinasijogja() {
+      return Padding(
+        padding: const EdgeInsets.only(
+          left: 22,
+          right: 16,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Terbang liburan ke jogja!',
+                    style: GoogleFonts.montserrat(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 4),
+                  Text(
+                    'Cari tahu yuk destinasi liburan ke jogja yang menarik ! Cek sekarang dan pilih sesuai budgetmu ! ',
+                    style: GoogleFonts.montserrat(
+                      color: Colors.grey[800],
+                      fontSize: 12,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
     Widget judulupdate() {
       return Padding(
         padding: const EdgeInsets.only(
@@ -728,6 +766,149 @@ class _MenuPesawatState extends State<MenuPesawat> {
       );
     }
 
+    Widget cardliburanjogja() {
+      return SizedBox(
+        height: 360,
+        child: Padding(
+          padding: const EdgeInsets.only(left: 14),
+          child: Container(
+            width: 240,
+            child: Card(
+              color: Colors.white,
+              elevation: 0.4,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(12),
+                ),
+              ),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.network(
+                            'https://lh3.googleusercontent.com/p/AF1QipM-OsDTT9Wyp7s5pID-guJcw4oArGaHWrk0kBUQ=s1360-w1360-h1020',
+                            // recommendedPlaces[index].image,
+                            width: double.maxFinite,
+                            fit: BoxFit.cover,
+                            height: 150,
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Text(
+                            'The Alana Yogyakarta Hotel and Convetion Center',
+                            style: GoogleFonts.poppins(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Text(
+                            '11 April 2024',
+                            style: GoogleFonts.poppins(
+                              color: Colors.grey.shade900,
+                              fontWeight: FontWeight.normal,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        // Padding(
+                        //   padding: const EdgeInsets.all(8.0),
+                        //   child: IntrinsicHeight(
+                        //     child: Row(
+                        //       children: [
+                        //         Container(
+                        //           width: 18,
+                        //           height: 18,
+                        //           decoration: BoxDecoration(
+                        //             borderRadius: BorderRadius.circular(12),
+                        //             image: DecorationImage(
+                        //               image: NetworkImage(
+                        //                 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                        //               ),
+                        //             ),
+                        //           ),
+                        //         ),
+                        //         SizedBox(width: 6),
+                        //         Text(
+                        //           'AirAsia Indonesia',
+                        //           style: GoogleFonts.poppins(
+                        //             color: Colors.grey.shade900,
+                        //             fontWeight: FontWeight.normal,
+                        //             fontSize: 12,
+                        //           ),
+                        //         ),
+                        //       ],
+                        //     ),
+                        //   ),
+                        // ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Text(
+                            '4,5/5 (1374 Review)',
+                            style: GoogleFonts.poppins(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 40,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(1),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // Padding(
+                              //   padding: const EdgeInsets.only(left: 6),
+                              //   child: Text(
+                              //     'Mulai dari',
+                              //     style: GoogleFonts.poppins(
+                              //       color: Colors.grey.shade900,
+                              //       fontWeight: FontWeight.normal,
+                              //       // fontStyle: FontStyle.italic,
+                              //       fontSize: 12,
+                              //     ),
+                              //   ),
+                              // ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 6),
+                                child: Text(
+                                  'IDR 691.246',
+                                  style: GoogleFonts.poppins(
+                                    color: Colors.red,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      );
+    }
+
     Widget content() {
       return SingleChildScrollView(
         child: Container(
@@ -958,6 +1139,37 @@ class _MenuPesawatState extends State<MenuPesawat> {
                               judulterbang(),
                               slidercardterbang(),
                               buttonContinue(),
+                              BorderAbuAbu(),
+                              SizedBox(height: 20),
+                              juduldestinasijogja(),
+                              SizedBox(height: 20),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 1, left: 2),
+                                  child: Row(
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          Navigator.pushNamed(
+                                              context, '/detail-hotel-alana');
+                                        },
+                                        child: cardliburanjogja(),
+                                      ),
+                                      SizedBox(
+                                        width: 16,
+                                      ),
+                                      cardliburanjogja(),
+                                      SizedBox(
+                                        width: 16,
+                                      ),
+                                      cardliburanjogja(),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: 20),
                               BorderAbuAbu(),
                               SizedBox(height: 40),
                               informasipenerbangan(),
