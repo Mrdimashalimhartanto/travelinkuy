@@ -316,7 +316,7 @@ class _MenuPesawatState extends State<MenuPesawat> {
             height: 50,
             margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
             decoration: BoxDecoration(
-              color: travelincomponent,
+              color: travelinkuy,
               borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
             child: Row(
@@ -361,8 +361,46 @@ class _MenuPesawatState extends State<MenuPesawat> {
               'Lihat semua',
               style: GoogleFonts.montserrat(
                 color: travelinkuy,
-                fontSize: 13,
+                fontSize: 12,
                 fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget juduldomestik() {
+      return Padding(
+        padding: const EdgeInsets.only(
+          left: 22,
+          right: 16,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Domestik Deals',
+                    style: GoogleFonts.montserrat(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 4),
+                  Text(
+                    'Ini nih pilihan rute dalam negeri dengan harga terbaik ! Cek sekarang dan pilih sesuai budgetmu ! ',
+                    style: GoogleFonts.montserrat(
+                      color: Colors.grey[800],
+                      fontSize: 12,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
@@ -722,7 +760,7 @@ class _MenuPesawatState extends State<MenuPesawat> {
         margin: EdgeInsets.only(top: 250),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.vertical(
-            top: Radius.circular(18),
+            top: Radius.circular(12),
           ),
           gradient: LinearGradient(
             colors: [
@@ -931,12 +969,13 @@ class _MenuPesawatState extends State<MenuPesawat> {
                     ),
                   ),
                   textjaminan(),
+                  SizedBox(height: 10),
                   Container(
                     width: double.infinity,
                     margin: EdgeInsets.only(top: 320),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.vertical(
-                        top: Radius.circular(18),
+                        top: Radius.circular(12),
                       ),
                       color: Color(0xffEDEEEF),
                     ),
@@ -1110,34 +1149,17 @@ class _MenuPesawatState extends State<MenuPesawat> {
                                   ],
                                 ),
                               ),
+                              SizedBox(height: 10),
                               judulpenerbangan(),
                               SizedBox(height: 10),
-                              categorypilihan(),
-                              SingleChildScrollView(
-                                scrollDirection: Axis.horizontal,
-                                child: Padding(
-                                  padding:
-                                      const EdgeInsets.only(top: 24, left: 16),
-                                  child: Row(
-                                    children: [
-                                      CardLiburanSingapura(),
-                                      SizedBox(
-                                        width: 16,
-                                      ),
-                                      CardIdeLiburanMalaysia(),
-                                      SizedBox(
-                                        width: 16,
-                                      ),
-                                      CardIdeLiburanThailand(),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              SizedBox(height: 20),
+                              // Tab Bar
+                              TabBarPesawat(),
                               BorderAbuAbu(),
                               SizedBox(height: 20),
-                              judulterbang(),
-                              slidercardterbang(),
+                              juduldomestik(),
+                              SizedBox(height: 20),
+                              // TabBarHotel(),
+                              TabBarPenerbanganPesawat(),
                               buttonContinue(),
                               BorderAbuAbu(),
                               SizedBox(height: 20),
@@ -1421,7 +1443,7 @@ class _MenuPesawatState extends State<MenuPesawat> {
         title: Column(
           children: [
             Padding(
-              padding: EdgeInsets.all(2.0), // Adjust the value as needed
+              padding: EdgeInsets.all(0), // Adjust the value as needed
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

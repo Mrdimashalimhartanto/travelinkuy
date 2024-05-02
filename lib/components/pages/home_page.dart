@@ -211,6 +211,47 @@ class _HomePageState extends State<HomePage> {
       );
     }
 
+    Widget judulpencarianterakhir() {
+      return SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 22,
+            right: 16,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Diskon hotel luar negeri hingga 30%',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 4),
+                    Text(
+                      // overflow: TextOverflow.ellipsis,
+                      'Plus cashback 5%. Cocok buat kamu yang mau trip ke Malaysia, Singapura, hingga Hong Kong',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.grey[800],
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     Widget kontentravel() {
       return SingleChildScrollView(
         scrollDirection: Axis.horizontal,
@@ -625,7 +666,7 @@ class _HomePageState extends State<HomePage> {
 
     Widget popularmainbareng() {
       return Container(
-        margin: EdgeInsets.only(top: 16),
+        margin: EdgeInsets.only(left: 4, right: 4, top: 10, bottom: 10),
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
@@ -729,6 +770,142 @@ class _HomePageState extends State<HomePage> {
       );
     }
 
+    Widget cardakomodasipilihan() {
+      return Padding(
+        padding: const EdgeInsets.only(bottom: 10),
+        child: SizedBox(
+          height: 135,
+          width: double.maxFinite,
+          child: Card(
+            color: Colors.white,
+            elevation: 0.4,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: InkWell(
+              borderRadius: BorderRadius.circular(12),
+              onTap: () {
+                // Navigator.push(context
+                //     MaterialPageRoute(
+                //       builder: (context) => TouristDetailsPage(
+                //         image: nearbyPlaces[index].image,
+                //       ),
+                //     ),
+                //     );
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Image.network(
+                        'https://lh3.googleusercontent.com/p/AF1QipM-OsDTT9Wyp7s5pID-guJcw4oArGaHWrk0kBUQ=s1360-w1360-h1020',
+                        height: double.maxFinite,
+                        width: 130,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            "Sea of Peace",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const Text("Portic Team"),
+                          const SizedBox(height: 10),
+                          // DISTANCE WIDGET
+                          // Distance(),
+                          const Spacer(),
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow.shade700,
+                                size: 14,
+                              ),
+                              const Text(
+                                "4.5",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                ),
+                              ),
+                              const Spacer(),
+                              RichText(
+                                text: TextSpan(
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      color: Theme.of(context).primaryColor,
+                                    ),
+                                    text: "\$22",
+                                    children: const [
+                                      TextSpan(
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            color: Colors.black54,
+                                          ),
+                                          text: "/ Person")
+                                    ]),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      );
+    }
+
+    Widget judulliburan() {
+      return Padding(
+        padding: const EdgeInsets.only(
+          left: 22,
+          right: 16,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Ide liburan yang wajib dicatat',
+                    style: GoogleFonts.montserrat(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 4),
+                  Text(
+                    // overflow: TextOverflow.ellipsis,
+                    'inspirasi liburan serta rekomendasi tiket, penginapan, transportasi dan info lain untukmu',
+                    style: GoogleFonts.montserrat(
+                      color: Colors.grey[800],
+                      fontSize: 12,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
     Widget buttonlanjutkan() {
       return Padding(
         padding: const EdgeInsets.only(bottom: 20),
@@ -770,50 +947,195 @@ class _HomePageState extends State<HomePage> {
       );
     }
 
-    return SingleChildScrollView(
-      child: Column(
-        children: <Widget>[
-          Stack(
-            children: <Widget>[
-              Container(
-                width: double.infinity,
-                height: 250 + MediaQuery.of(context).viewPadding.top,
-                child: CarouselSlider(
-                  options: CarouselOptions(
-                    autoPlay: true,
-                    enableInfiniteScroll: true,
-                    height: 300 + MediaQuery.of(context).viewPadding.top,
-                    enlargeCenterPage: false,
-                    viewportFraction: 1,
-                    onPageChanged: (index, reason) {
-                      setState(() {
-                        current = index;
-                      });
-                    },
-                  ),
-                  items: imgList
-                      .map(
-                        (item) => Container(
-                          width: double.infinity,
-                          height: 400,
-                          child: Container(
-                            width: double.infinity,
-                            child: Image.network(
-                              item,
-                              fit: BoxFit.cover,
-                              width: MediaQuery.of(context).size.width,
+    Widget cardliburanjogja() {
+      return SizedBox(
+        height: 360,
+        child: Padding(
+          padding: const EdgeInsets.only(left: 14),
+          child: Container(
+            width: 240,
+            child: Card(
+              color: Colors.white,
+              elevation: 0.4,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(12),
+                ),
+              ),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.network(
+                            'https://lh3.googleusercontent.com/p/AF1QipM-OsDTT9Wyp7s5pID-guJcw4oArGaHWrk0kBUQ=s1360-w1360-h1020',
+                            // recommendedPlaces[index].image,
+                            width: double.maxFinite,
+                            fit: BoxFit.cover,
+                            height: 150,
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Text(
+                            'The Alana Yogyakarta Hotel and Convetion Center',
+                            style: GoogleFonts.poppins(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 12,
                             ),
                           ),
                         ),
-                      )
-                      .toList(),
-                ),
+                        SizedBox(height: 8),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Text(
+                            '11 April 2024',
+                            style: GoogleFonts.poppins(
+                              color: Colors.grey.shade900,
+                              fontWeight: FontWeight.normal,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        // Padding(
+                        //   padding: const EdgeInsets.all(8.0),
+                        //   child: IntrinsicHeight(
+                        //     child: Row(
+                        //       children: [
+                        //         Container(
+                        //           width: 18,
+                        //           height: 18,
+                        //           decoration: BoxDecoration(
+                        //             borderRadius: BorderRadius.circular(12),
+                        //             image: DecorationImage(
+                        //               image: NetworkImage(
+                        //                 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                        //               ),
+                        //             ),
+                        //           ),
+                        //         ),
+                        //         SizedBox(width: 6),
+                        //         Text(
+                        //           'AirAsia Indonesia',
+                        //           style: GoogleFonts.poppins(
+                        //             color: Colors.grey.shade900,
+                        //             fontWeight: FontWeight.normal,
+                        //             fontSize: 12,
+                        //           ),
+                        //         ),
+                        //       ],
+                        //     ),
+                        //   ),
+                        // ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Text(
+                            '4,5/5 (1374 Review)',
+                            style: GoogleFonts.poppins(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 40,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(1),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 6),
+                                child: Text(
+                                  'Mulai dari',
+                                  style: GoogleFonts.poppins(
+                                    color: Colors.grey.shade900,
+                                    fontWeight: FontWeight.normal,
+                                    // fontStyle: FontStyle.italic,
+                                    fontSize: 12,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 6),
+                                child: Text(
+                                  'IDR 691.246',
+                                  style: GoogleFonts.poppins(
+                                    color: Colors.red,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 12,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
-              travelinkuycard(),
-            ],
+            ),
           ),
+        ),
+      );
+    }
 
-          // Detail menu ada di widget
+    Widget stack() {
+      return Stack(
+        children: <Widget>[
+          Container(
+            width: double.infinity,
+            height: 250 + MediaQuery.of(context).viewPadding.top,
+            child: CarouselSlider(
+              options: CarouselOptions(
+                autoPlay: true,
+                enableInfiniteScroll: true,
+                height: 300 + MediaQuery.of(context).viewPadding.top,
+                enlargeCenterPage: false,
+                viewportFraction: 1,
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    current = index;
+                  });
+                },
+              ),
+              items: imgList
+                  .map(
+                    (item) => Container(
+                      width: double.infinity,
+                      height: 400,
+                      child: Container(
+                        width: double.infinity,
+                        child: Image.network(
+                          item,
+                          fit: BoxFit.cover,
+                          width: MediaQuery.of(context).size.width,
+                        ),
+                      ),
+                    ),
+                  )
+                  .toList(),
+            ),
+          ),
+          travelinkuycard(),
+        ],
+      );
+    }
+
+    return SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          stack(),
           menutravelin(),
           borderabu(),
           SizedBox(height: 20),
@@ -832,7 +1154,7 @@ class _HomePageState extends State<HomePage> {
           SizedBox(height: 20),
           borderabu(),
           SizedBox(height: 20),
-          IdeLiburan(),
+          judulliburan(),
           SizedBox(height: 20),
           TabBarIdeLiburan(),
           borderabu(),
@@ -844,16 +1166,15 @@ class _HomePageState extends State<HomePage> {
           SizedBox(height: 20),
           judulrekomendasiperjalanan(),
           SizedBox(height: 20),
-          // Padding(
-          //   padding: EdgeInsets.only(top: 4, left: 10),
-          //   child: Column(
-          //     children: [
-          //       NearbyPlaces(),
-          //     ],
-          //   ),
-          // ),
-          // SizedBox(height: 40),
-          // RecommendedPlaces(),
+          Padding(
+            padding: EdgeInsets.only(top: 4, left: 10),
+            child: Column(
+              children: [
+                NearbyPlaces(),
+              ],
+            ),
+          ),
+          SizedBox(height: 40),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -883,12 +1204,38 @@ class _HomePageState extends State<HomePage> {
             ),
             child: Column(
               children: [
-                NearbyPlaces(),
+                cardakomodasipilihan(),
+                cardakomodasipilihan(),
+                cardakomodasipilihan(),
+                cardakomodasipilihan(),
+                cardakomodasipilihan(),
+                cardakomodasipilihan(),
               ],
             ),
           ),
-          // custom hotel
-          // HotelCard(hotel: null,),
+          borderabu(),
+          SizedBox(height: 20),
+          judulpencarianterakhir(),
+          SizedBox(height: 20),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 1, left: 2),
+              child: Row(
+                children: [
+                  cardliburanjogja(),
+                  SizedBox(
+                    width: 16,
+                  ),
+                  cardliburanjogja(),
+                  SizedBox(
+                    width: 16,
+                  ),
+                  cardliburanjogja(),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );

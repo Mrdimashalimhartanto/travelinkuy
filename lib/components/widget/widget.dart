@@ -35,3 +35,5 @@ part 'popular_card.dart';
 part 'product_tile.dart';
 part 'tab_bar_ide_liburan.dart';
 part 'tab_bar_todo.dart';
+part 'tab_bar_pesawat.dart';
+part 'tab_bar_penerbangan.dart';

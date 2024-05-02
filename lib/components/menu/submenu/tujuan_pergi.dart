@@ -69,7 +69,7 @@ class _TujuanPergiState extends State<TujuanPergi>
               'Ubah',
               style: GoogleFonts.poppins(
                 color: Colors.blue,
-                fontSize: 16,
+                fontSize: 12,
                 fontWeight: FontWeight.w800,
               ),
             ),
@@ -84,6 +84,7 @@ class _TujuanPergiState extends State<TujuanPergi>
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(height: 10),
                   Text(
                     tabData.date,
                     style: GoogleFonts.poppins(
@@ -109,6 +110,9 @@ class _TujuanPergiState extends State<TujuanPergi>
       body: TabBarView(
         controller: _tabController,
         children: listTiketPerjalanan.map((tabData) {
+          SizedBox(
+            height: 10,
+          );
           return Padding(
             padding: const EdgeInsets.only(left: 16),
             child: SingleChildScrollView(

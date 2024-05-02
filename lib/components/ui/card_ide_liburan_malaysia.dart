@@ -6,6 +6,10 @@ class CardIdeLiburanMalaysia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.symmetric(
+        vertical: 10,
+        horizontal: 5,
+      ),
       width: 390,
       height: 200,
       decoration: BoxDecoration(
