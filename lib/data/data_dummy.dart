@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, prefer_const_constructors, unused_import
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, prefer_const_constructors, unused_import, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -203,10 +203,10 @@ List<Container> cardshotel = [
           scrollDirection: Axis.horizontal,
           child: Row(
             children: const [
-              CardHotelInternasional(),
-              CardHotelInternasional(),
-              CardHotelInternasional(),
-              CardHotelInternasional(),
+              // CardHotelInternasional(),
+              // CardHotelInternasional(),
+              // CardHotelInternasional(),
+              // CardHotelInternasional(),
             ],
           ),
         ),
@@ -222,6 +222,2181 @@ List<Container> cardshotel = [
   Container(),
 ];
 
+// data destinasi menggunakan pesawat
+List<Container> destinasimenggunakanpesawat = [
+  Container(
+    child: Padding(
+      padding: const EdgeInsets.only(top: 1, left: 2),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 14),
+            child: Container(
+              width: 240,
+              child: Card(
+                color: Colors.white,
+                elevation: 0.4,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              'https://lh3.googleusercontent.com/p/AF1QipM-OsDTT9Wyp7s5pID-guJcw4oArGaHWrk0kBUQ=s1360-w1360-h1020',
+                              // recommendedPlaces[index].image,
+                              width: double.maxFinite,
+                              fit: BoxFit.cover,
+                              height: 150,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              'The Alana Yogyakarta Hotel and Convetion Center',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '11 April 2024',
+                              style: GoogleFonts.poppins(
+                                color: Colors.grey.shade900,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          // Padding(
+                          //   padding: const EdgeInsets.all(8.0),
+                          //   child: IntrinsicHeight(
+                          //     child: Row(
+                          //       children: [
+                          //         Container(
+                          //           width: 18,
+                          //           height: 18,
+                          //           decoration: BoxDecoration(
+                          //             borderRadius: BorderRadius.circular(12),
+                          //             image: DecorationImage(
+                          //               image: NetworkImage(
+                          //                 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         ),
+                          //         SizedBox(width: 6),
+                          //         Text(
+                          //           'AirAsia Indonesia',
+                          //           style: GoogleFonts.poppins(
+                          //             color: Colors.grey.shade900,
+                          //             fontWeight: FontWeight.normal,
+                          //             fontSize: 12,
+                          //           ),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '4,5/5 (1374 Review)',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Padding(
+                                //   padding: const EdgeInsets.only(left: 6),
+                                //   child: Text(
+                                //     'Mulai dari',
+                                //     style: GoogleFonts.poppins(
+                                //       color: Colors.grey.shade900,
+                                //       fontWeight: FontWeight.normal,
+                                //       // fontStyle: FontStyle.italic,
+                                //       fontSize: 12,
+                                //     ),
+                                //   ),
+                                // ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 6),
+                                  child: Text(
+                                    'IDR 691.246',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 9,
+          ),
+          // cardliburanjogja(),
+          Padding(
+            padding: const EdgeInsets.only(left: 14),
+            child: Container(
+              width: 240,
+              child: Card(
+                color: Colors.white,
+                elevation: 0.4,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              'https://lh3.googleusercontent.com/p/AF1QipM-OsDTT9Wyp7s5pID-guJcw4oArGaHWrk0kBUQ=s1360-w1360-h1020',
+                              // recommendedPlaces[index].image,
+                              width: double.maxFinite,
+                              fit: BoxFit.cover,
+                              height: 150,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              'The Alana Yogyakarta Hotel and Convetion Center',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '11 April 2024',
+                              style: GoogleFonts.poppins(
+                                color: Colors.grey.shade900,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          // Padding(
+                          //   padding: const EdgeInsets.all(8.0),
+                          //   child: IntrinsicHeight(
+                          //     child: Row(
+                          //       children: [
+                          //         Container(
+                          //           width: 18,
+                          //           height: 18,
+                          //           decoration: BoxDecoration(
+                          //             borderRadius: BorderRadius.circular(12),
+                          //             image: DecorationImage(
+                          //               image: NetworkImage(
+                          //                 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         ),
+                          //         SizedBox(width: 6),
+                          //         Text(
+                          //           'AirAsia Indonesia',
+                          //           style: GoogleFonts.poppins(
+                          //             color: Colors.grey.shade900,
+                          //             fontWeight: FontWeight.normal,
+                          //             fontSize: 12,
+                          //           ),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '4,5/5 (1374 Review)',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Padding(
+                                //   padding: const EdgeInsets.only(left: 6),
+                                //   child: Text(
+                                //     'Mulai dari',
+                                //     style: GoogleFonts.poppins(
+                                //       color: Colors.grey.shade900,
+                                //       fontWeight: FontWeight.normal,
+                                //       // fontStyle: FontStyle.italic,
+                                //       fontSize: 12,
+                                //     ),
+                                //   ),
+                                // ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 6),
+                                  child: Text(
+                                    'IDR 691.246',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 9,
+          ),
+          // cardliburanjogja(),
+          Padding(
+            padding: const EdgeInsets.only(left: 14),
+            child: Container(
+              width: 240,
+              child: Card(
+                color: Colors.white,
+                elevation: 0.4,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              'https://lh3.googleusercontent.com/p/AF1QipM-OsDTT9Wyp7s5pID-guJcw4oArGaHWrk0kBUQ=s1360-w1360-h1020',
+                              // recommendedPlaces[index].image,
+                              width: double.maxFinite,
+                              fit: BoxFit.cover,
+                              height: 150,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              'The Alana Yogyakarta Hotel and Convetion Center',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '11 April 2024',
+                              style: GoogleFonts.poppins(
+                                color: Colors.grey.shade900,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          // Padding(
+                          //   padding: const EdgeInsets.all(8.0),
+                          //   child: IntrinsicHeight(
+                          //     child: Row(
+                          //       children: [
+                          //         Container(
+                          //           width: 18,
+                          //           height: 18,
+                          //           decoration: BoxDecoration(
+                          //             borderRadius: BorderRadius.circular(12),
+                          //             image: DecorationImage(
+                          //               image: NetworkImage(
+                          //                 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         ),
+                          //         SizedBox(width: 6),
+                          //         Text(
+                          //           'AirAsia Indonesia',
+                          //           style: GoogleFonts.poppins(
+                          //             color: Colors.grey.shade900,
+                          //             fontWeight: FontWeight.normal,
+                          //             fontSize: 12,
+                          //           ),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '4,5/5 (1374 Review)',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Padding(
+                                //   padding: const EdgeInsets.only(left: 6),
+                                //   child: Text(
+                                //     'Mulai dari',
+                                //     style: GoogleFonts.poppins(
+                                //       color: Colors.grey.shade900,
+                                //       fontWeight: FontWeight.normal,
+                                //       // fontStyle: FontStyle.italic,
+                                //       fontSize: 12,
+                                //     ),
+                                //   ),
+                                // ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 6),
+                                  child: Text(
+                                    'IDR 691.246',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    ),
+  ),
+  Container(
+    child: Padding(
+      padding: const EdgeInsets.only(top: 1, left: 2),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 14),
+            child: Container(
+              width: 240,
+              child: Card(
+                color: Colors.white,
+                elevation: 0.4,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              'https://lh3.googleusercontent.com/p/AF1QipM-OsDTT9Wyp7s5pID-guJcw4oArGaHWrk0kBUQ=s1360-w1360-h1020',
+                              // recommendedPlaces[index].image,
+                              width: double.maxFinite,
+                              fit: BoxFit.cover,
+                              height: 150,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              'The Alana Yogyakarta Hotel and Convetion Center',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '11 April 2024',
+                              style: GoogleFonts.poppins(
+                                color: Colors.grey.shade900,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          // Padding(
+                          //   padding: const EdgeInsets.all(8.0),
+                          //   child: IntrinsicHeight(
+                          //     child: Row(
+                          //       children: [
+                          //         Container(
+                          //           width: 18,
+                          //           height: 18,
+                          //           decoration: BoxDecoration(
+                          //             borderRadius: BorderRadius.circular(12),
+                          //             image: DecorationImage(
+                          //               image: NetworkImage(
+                          //                 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         ),
+                          //         SizedBox(width: 6),
+                          //         Text(
+                          //           'AirAsia Indonesia',
+                          //           style: GoogleFonts.poppins(
+                          //             color: Colors.grey.shade900,
+                          //             fontWeight: FontWeight.normal,
+                          //             fontSize: 12,
+                          //           ),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '4,5/5 (1374 Review)',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Padding(
+                                //   padding: const EdgeInsets.only(left: 6),
+                                //   child: Text(
+                                //     'Mulai dari',
+                                //     style: GoogleFonts.poppins(
+                                //       color: Colors.grey.shade900,
+                                //       fontWeight: FontWeight.normal,
+                                //       // fontStyle: FontStyle.italic,
+                                //       fontSize: 12,
+                                //     ),
+                                //   ),
+                                // ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 6),
+                                  child: Text(
+                                    'IDR 691.246',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 9,
+          ),
+          // cardliburanjogja(),
+          Padding(
+            padding: const EdgeInsets.only(left: 14),
+            child: Container(
+              width: 240,
+              child: Card(
+                color: Colors.white,
+                elevation: 0.4,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              'https://lh3.googleusercontent.com/p/AF1QipM-OsDTT9Wyp7s5pID-guJcw4oArGaHWrk0kBUQ=s1360-w1360-h1020',
+                              // recommendedPlaces[index].image,
+                              width: double.maxFinite,
+                              fit: BoxFit.cover,
+                              height: 150,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              'The Alana Yogyakarta Hotel and Convetion Center',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '11 April 2024',
+                              style: GoogleFonts.poppins(
+                                color: Colors.grey.shade900,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          // Padding(
+                          //   padding: const EdgeInsets.all(8.0),
+                          //   child: IntrinsicHeight(
+                          //     child: Row(
+                          //       children: [
+                          //         Container(
+                          //           width: 18,
+                          //           height: 18,
+                          //           decoration: BoxDecoration(
+                          //             borderRadius: BorderRadius.circular(12),
+                          //             image: DecorationImage(
+                          //               image: NetworkImage(
+                          //                 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         ),
+                          //         SizedBox(width: 6),
+                          //         Text(
+                          //           'AirAsia Indonesia',
+                          //           style: GoogleFonts.poppins(
+                          //             color: Colors.grey.shade900,
+                          //             fontWeight: FontWeight.normal,
+                          //             fontSize: 12,
+                          //           ),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '4,5/5 (1374 Review)',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Padding(
+                                //   padding: const EdgeInsets.only(left: 6),
+                                //   child: Text(
+                                //     'Mulai dari',
+                                //     style: GoogleFonts.poppins(
+                                //       color: Colors.grey.shade900,
+                                //       fontWeight: FontWeight.normal,
+                                //       // fontStyle: FontStyle.italic,
+                                //       fontSize: 12,
+                                //     ),
+                                //   ),
+                                // ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 6),
+                                  child: Text(
+                                    'IDR 691.246',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 9,
+          ),
+          // cardliburanjogja(),
+          Padding(
+            padding: const EdgeInsets.only(left: 14),
+            child: Container(
+              width: 240,
+              child: Card(
+                color: Colors.white,
+                elevation: 0.4,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              'https://lh3.googleusercontent.com/p/AF1QipM-OsDTT9Wyp7s5pID-guJcw4oArGaHWrk0kBUQ=s1360-w1360-h1020',
+                              // recommendedPlaces[index].image,
+                              width: double.maxFinite,
+                              fit: BoxFit.cover,
+                              height: 150,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              'The Alana Yogyakarta Hotel and Convetion Center',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '11 April 2024',
+                              style: GoogleFonts.poppins(
+                                color: Colors.grey.shade900,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          // Padding(
+                          //   padding: const EdgeInsets.all(8.0),
+                          //   child: IntrinsicHeight(
+                          //     child: Row(
+                          //       children: [
+                          //         Container(
+                          //           width: 18,
+                          //           height: 18,
+                          //           decoration: BoxDecoration(
+                          //             borderRadius: BorderRadius.circular(12),
+                          //             image: DecorationImage(
+                          //               image: NetworkImage(
+                          //                 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         ),
+                          //         SizedBox(width: 6),
+                          //         Text(
+                          //           'AirAsia Indonesia',
+                          //           style: GoogleFonts.poppins(
+                          //             color: Colors.grey.shade900,
+                          //             fontWeight: FontWeight.normal,
+                          //             fontSize: 12,
+                          //           ),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '4,5/5 (1374 Review)',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Padding(
+                                //   padding: const EdgeInsets.only(left: 6),
+                                //   child: Text(
+                                //     'Mulai dari',
+                                //     style: GoogleFonts.poppins(
+                                //       color: Colors.grey.shade900,
+                                //       fontWeight: FontWeight.normal,
+                                //       // fontStyle: FontStyle.italic,
+                                //       fontSize: 12,
+                                //     ),
+                                //   ),
+                                // ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 6),
+                                  child: Text(
+                                    'IDR 691.246',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    ),
+  ),
+  Container(
+    child: Padding(
+      padding: const EdgeInsets.only(top: 1, left: 2),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 14),
+            child: Container(
+              width: 240,
+              child: Card(
+                color: Colors.white,
+                elevation: 0.4,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              'https://lh3.googleusercontent.com/p/AF1QipM-OsDTT9Wyp7s5pID-guJcw4oArGaHWrk0kBUQ=s1360-w1360-h1020',
+                              // recommendedPlaces[index].image,
+                              width: double.maxFinite,
+                              fit: BoxFit.cover,
+                              height: 150,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              'The Alana Yogyakarta Hotel and Convetion Center',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '11 April 2024',
+                              style: GoogleFonts.poppins(
+                                color: Colors.grey.shade900,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          // Padding(
+                          //   padding: const EdgeInsets.all(8.0),
+                          //   child: IntrinsicHeight(
+                          //     child: Row(
+                          //       children: [
+                          //         Container(
+                          //           width: 18,
+                          //           height: 18,
+                          //           decoration: BoxDecoration(
+                          //             borderRadius: BorderRadius.circular(12),
+                          //             image: DecorationImage(
+                          //               image: NetworkImage(
+                          //                 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         ),
+                          //         SizedBox(width: 6),
+                          //         Text(
+                          //           'AirAsia Indonesia',
+                          //           style: GoogleFonts.poppins(
+                          //             color: Colors.grey.shade900,
+                          //             fontWeight: FontWeight.normal,
+                          //             fontSize: 12,
+                          //           ),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '4,5/5 (1374 Review)',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Padding(
+                                //   padding: const EdgeInsets.only(left: 6),
+                                //   child: Text(
+                                //     'Mulai dari',
+                                //     style: GoogleFonts.poppins(
+                                //       color: Colors.grey.shade900,
+                                //       fontWeight: FontWeight.normal,
+                                //       // fontStyle: FontStyle.italic,
+                                //       fontSize: 12,
+                                //     ),
+                                //   ),
+                                // ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 6),
+                                  child: Text(
+                                    'IDR 691.246',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 9,
+          ),
+          // cardliburanjogja(),
+          Padding(
+            padding: const EdgeInsets.only(left: 14),
+            child: Container(
+              width: 240,
+              child: Card(
+                color: Colors.white,
+                elevation: 0.4,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              'https://lh3.googleusercontent.com/p/AF1QipM-OsDTT9Wyp7s5pID-guJcw4oArGaHWrk0kBUQ=s1360-w1360-h1020',
+                              // recommendedPlaces[index].image,
+                              width: double.maxFinite,
+                              fit: BoxFit.cover,
+                              height: 150,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              'The Alana Yogyakarta Hotel and Convetion Center',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '11 April 2024',
+                              style: GoogleFonts.poppins(
+                                color: Colors.grey.shade900,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          // Padding(
+                          //   padding: const EdgeInsets.all(8.0),
+                          //   child: IntrinsicHeight(
+                          //     child: Row(
+                          //       children: [
+                          //         Container(
+                          //           width: 18,
+                          //           height: 18,
+                          //           decoration: BoxDecoration(
+                          //             borderRadius: BorderRadius.circular(12),
+                          //             image: DecorationImage(
+                          //               image: NetworkImage(
+                          //                 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         ),
+                          //         SizedBox(width: 6),
+                          //         Text(
+                          //           'AirAsia Indonesia',
+                          //           style: GoogleFonts.poppins(
+                          //             color: Colors.grey.shade900,
+                          //             fontWeight: FontWeight.normal,
+                          //             fontSize: 12,
+                          //           ),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '4,5/5 (1374 Review)',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Padding(
+                                //   padding: const EdgeInsets.only(left: 6),
+                                //   child: Text(
+                                //     'Mulai dari',
+                                //     style: GoogleFonts.poppins(
+                                //       color: Colors.grey.shade900,
+                                //       fontWeight: FontWeight.normal,
+                                //       // fontStyle: FontStyle.italic,
+                                //       fontSize: 12,
+                                //     ),
+                                //   ),
+                                // ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 6),
+                                  child: Text(
+                                    'IDR 691.246',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 9,
+          ),
+          // cardliburanjogja(),
+          Padding(
+            padding: const EdgeInsets.only(left: 14),
+            child: Container(
+              width: 240,
+              child: Card(
+                color: Colors.white,
+                elevation: 0.4,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              'https://lh3.googleusercontent.com/p/AF1QipM-OsDTT9Wyp7s5pID-guJcw4oArGaHWrk0kBUQ=s1360-w1360-h1020',
+                              // recommendedPlaces[index].image,
+                              width: double.maxFinite,
+                              fit: BoxFit.cover,
+                              height: 150,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              'The Alana Yogyakarta Hotel and Convetion Center',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '11 April 2024',
+                              style: GoogleFonts.poppins(
+                                color: Colors.grey.shade900,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          // Padding(
+                          //   padding: const EdgeInsets.all(8.0),
+                          //   child: IntrinsicHeight(
+                          //     child: Row(
+                          //       children: [
+                          //         Container(
+                          //           width: 18,
+                          //           height: 18,
+                          //           decoration: BoxDecoration(
+                          //             borderRadius: BorderRadius.circular(12),
+                          //             image: DecorationImage(
+                          //               image: NetworkImage(
+                          //                 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         ),
+                          //         SizedBox(width: 6),
+                          //         Text(
+                          //           'AirAsia Indonesia',
+                          //           style: GoogleFonts.poppins(
+                          //             color: Colors.grey.shade900,
+                          //             fontWeight: FontWeight.normal,
+                          //             fontSize: 12,
+                          //           ),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '4,5/5 (1374 Review)',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Padding(
+                                //   padding: const EdgeInsets.only(left: 6),
+                                //   child: Text(
+                                //     'Mulai dari',
+                                //     style: GoogleFonts.poppins(
+                                //       color: Colors.grey.shade900,
+                                //       fontWeight: FontWeight.normal,
+                                //       // fontStyle: FontStyle.italic,
+                                //       fontSize: 12,
+                                //     ),
+                                //   ),
+                                // ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 6),
+                                  child: Text(
+                                    'IDR 691.246',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    ),
+  ),
+  Container(
+    child: Padding(
+      padding: const EdgeInsets.only(top: 1, left: 2),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 14),
+            child: Container(
+              width: 240,
+              child: Card(
+                color: Colors.white,
+                elevation: 0.4,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              'https://lh3.googleusercontent.com/p/AF1QipM-OsDTT9Wyp7s5pID-guJcw4oArGaHWrk0kBUQ=s1360-w1360-h1020',
+                              // recommendedPlaces[index].image,
+                              width: double.maxFinite,
+                              fit: BoxFit.cover,
+                              height: 150,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              'The Alana Yogyakarta Hotel and Convetion Center',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '11 April 2024',
+                              style: GoogleFonts.poppins(
+                                color: Colors.grey.shade900,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          // Padding(
+                          //   padding: const EdgeInsets.all(8.0),
+                          //   child: IntrinsicHeight(
+                          //     child: Row(
+                          //       children: [
+                          //         Container(
+                          //           width: 18,
+                          //           height: 18,
+                          //           decoration: BoxDecoration(
+                          //             borderRadius: BorderRadius.circular(12),
+                          //             image: DecorationImage(
+                          //               image: NetworkImage(
+                          //                 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         ),
+                          //         SizedBox(width: 6),
+                          //         Text(
+                          //           'AirAsia Indonesia',
+                          //           style: GoogleFonts.poppins(
+                          //             color: Colors.grey.shade900,
+                          //             fontWeight: FontWeight.normal,
+                          //             fontSize: 12,
+                          //           ),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '4,5/5 (1374 Review)',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Padding(
+                                //   padding: const EdgeInsets.only(left: 6),
+                                //   child: Text(
+                                //     'Mulai dari',
+                                //     style: GoogleFonts.poppins(
+                                //       color: Colors.grey.shade900,
+                                //       fontWeight: FontWeight.normal,
+                                //       // fontStyle: FontStyle.italic,
+                                //       fontSize: 12,
+                                //     ),
+                                //   ),
+                                // ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 6),
+                                  child: Text(
+                                    'IDR 691.246',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 9,
+          ),
+          // cardliburanjogja(),
+          Padding(
+            padding: const EdgeInsets.only(left: 14),
+            child: Container(
+              width: 240,
+              child: Card(
+                color: Colors.white,
+                elevation: 0.4,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              'https://lh3.googleusercontent.com/p/AF1QipM-OsDTT9Wyp7s5pID-guJcw4oArGaHWrk0kBUQ=s1360-w1360-h1020',
+                              // recommendedPlaces[index].image,
+                              width: double.maxFinite,
+                              fit: BoxFit.cover,
+                              height: 150,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              'The Alana Yogyakarta Hotel and Convetion Center',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '11 April 2024',
+                              style: GoogleFonts.poppins(
+                                color: Colors.grey.shade900,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          // Padding(
+                          //   padding: const EdgeInsets.all(8.0),
+                          //   child: IntrinsicHeight(
+                          //     child: Row(
+                          //       children: [
+                          //         Container(
+                          //           width: 18,
+                          //           height: 18,
+                          //           decoration: BoxDecoration(
+                          //             borderRadius: BorderRadius.circular(12),
+                          //             image: DecorationImage(
+                          //               image: NetworkImage(
+                          //                 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         ),
+                          //         SizedBox(width: 6),
+                          //         Text(
+                          //           'AirAsia Indonesia',
+                          //           style: GoogleFonts.poppins(
+                          //             color: Colors.grey.shade900,
+                          //             fontWeight: FontWeight.normal,
+                          //             fontSize: 12,
+                          //           ),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '4,5/5 (1374 Review)',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Padding(
+                                //   padding: const EdgeInsets.only(left: 6),
+                                //   child: Text(
+                                //     'Mulai dari',
+                                //     style: GoogleFonts.poppins(
+                                //       color: Colors.grey.shade900,
+                                //       fontWeight: FontWeight.normal,
+                                //       // fontStyle: FontStyle.italic,
+                                //       fontSize: 12,
+                                //     ),
+                                //   ),
+                                // ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 6),
+                                  child: Text(
+                                    'IDR 691.246',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 9,
+          ),
+          // cardliburanjogja(),
+          Padding(
+            padding: const EdgeInsets.only(left: 14),
+            child: Container(
+              width: 240,
+              child: Card(
+                color: Colors.white,
+                elevation: 0.4,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              'https://lh3.googleusercontent.com/p/AF1QipM-OsDTT9Wyp7s5pID-guJcw4oArGaHWrk0kBUQ=s1360-w1360-h1020',
+                              // recommendedPlaces[index].image,
+                              width: double.maxFinite,
+                              fit: BoxFit.cover,
+                              height: 150,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              'The Alana Yogyakarta Hotel and Convetion Center',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '11 April 2024',
+                              style: GoogleFonts.poppins(
+                                color: Colors.grey.shade900,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          // Padding(
+                          //   padding: const EdgeInsets.all(8.0),
+                          //   child: IntrinsicHeight(
+                          //     child: Row(
+                          //       children: [
+                          //         Container(
+                          //           width: 18,
+                          //           height: 18,
+                          //           decoration: BoxDecoration(
+                          //             borderRadius: BorderRadius.circular(12),
+                          //             image: DecorationImage(
+                          //               image: NetworkImage(
+                          //                 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         ),
+                          //         SizedBox(width: 6),
+                          //         Text(
+                          //           'AirAsia Indonesia',
+                          //           style: GoogleFonts.poppins(
+                          //             color: Colors.grey.shade900,
+                          //             fontWeight: FontWeight.normal,
+                          //             fontSize: 12,
+                          //           ),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '4,5/5 (1374 Review)',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Padding(
+                                //   padding: const EdgeInsets.only(left: 6),
+                                //   child: Text(
+                                //     'Mulai dari',
+                                //     style: GoogleFonts.poppins(
+                                //       color: Colors.grey.shade900,
+                                //       fontWeight: FontWeight.normal,
+                                //       // fontStyle: FontStyle.italic,
+                                //       fontSize: 12,
+                                //     ),
+                                //   ),
+                                // ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 6),
+                                  child: Text(
+                                    'IDR 691.246',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    ),
+  ),
+  Container(
+    child: Padding(
+      padding: const EdgeInsets.only(top: 1, left: 2),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 14),
+            child: Container(
+              width: 240,
+              child: Card(
+                color: Colors.white,
+                elevation: 0.4,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              'https://lh3.googleusercontent.com/p/AF1QipM-OsDTT9Wyp7s5pID-guJcw4oArGaHWrk0kBUQ=s1360-w1360-h1020',
+                              // recommendedPlaces[index].image,
+                              width: double.maxFinite,
+                              fit: BoxFit.cover,
+                              height: 150,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              'The Alana Yogyakarta Hotel and Convetion Center',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '11 April 2024',
+                              style: GoogleFonts.poppins(
+                                color: Colors.grey.shade900,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          // Padding(
+                          //   padding: const EdgeInsets.all(8.0),
+                          //   child: IntrinsicHeight(
+                          //     child: Row(
+                          //       children: [
+                          //         Container(
+                          //           width: 18,
+                          //           height: 18,
+                          //           decoration: BoxDecoration(
+                          //             borderRadius: BorderRadius.circular(12),
+                          //             image: DecorationImage(
+                          //               image: NetworkImage(
+                          //                 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         ),
+                          //         SizedBox(width: 6),
+                          //         Text(
+                          //           'AirAsia Indonesia',
+                          //           style: GoogleFonts.poppins(
+                          //             color: Colors.grey.shade900,
+                          //             fontWeight: FontWeight.normal,
+                          //             fontSize: 12,
+                          //           ),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '4,5/5 (1374 Review)',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Padding(
+                                //   padding: const EdgeInsets.only(left: 6),
+                                //   child: Text(
+                                //     'Mulai dari',
+                                //     style: GoogleFonts.poppins(
+                                //       color: Colors.grey.shade900,
+                                //       fontWeight: FontWeight.normal,
+                                //       // fontStyle: FontStyle.italic,
+                                //       fontSize: 12,
+                                //     ),
+                                //   ),
+                                // ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 6),
+                                  child: Text(
+                                    'IDR 691.246',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 9,
+          ),
+          // cardliburanjogja(),
+          Padding(
+            padding: const EdgeInsets.only(left: 14),
+            child: Container(
+              width: 240,
+              child: Card(
+                color: Colors.white,
+                elevation: 0.4,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              'https://lh3.googleusercontent.com/p/AF1QipM-OsDTT9Wyp7s5pID-guJcw4oArGaHWrk0kBUQ=s1360-w1360-h1020',
+                              // recommendedPlaces[index].image,
+                              width: double.maxFinite,
+                              fit: BoxFit.cover,
+                              height: 150,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              'The Alana Yogyakarta Hotel and Convetion Center',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '11 April 2024',
+                              style: GoogleFonts.poppins(
+                                color: Colors.grey.shade900,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          // Padding(
+                          //   padding: const EdgeInsets.all(8.0),
+                          //   child: IntrinsicHeight(
+                          //     child: Row(
+                          //       children: [
+                          //         Container(
+                          //           width: 18,
+                          //           height: 18,
+                          //           decoration: BoxDecoration(
+                          //             borderRadius: BorderRadius.circular(12),
+                          //             image: DecorationImage(
+                          //               image: NetworkImage(
+                          //                 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         ),
+                          //         SizedBox(width: 6),
+                          //         Text(
+                          //           'AirAsia Indonesia',
+                          //           style: GoogleFonts.poppins(
+                          //             color: Colors.grey.shade900,
+                          //             fontWeight: FontWeight.normal,
+                          //             fontSize: 12,
+                          //           ),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '4,5/5 (1374 Review)',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Padding(
+                                //   padding: const EdgeInsets.only(left: 6),
+                                //   child: Text(
+                                //     'Mulai dari',
+                                //     style: GoogleFonts.poppins(
+                                //       color: Colors.grey.shade900,
+                                //       fontWeight: FontWeight.normal,
+                                //       // fontStyle: FontStyle.italic,
+                                //       fontSize: 12,
+                                //     ),
+                                //   ),
+                                // ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 6),
+                                  child: Text(
+                                    'IDR 691.246',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 9,
+          ),
+          // cardliburanjogja(),
+          Padding(
+            padding: const EdgeInsets.only(left: 14),
+            child: Container(
+              width: 240,
+              child: Card(
+                color: Colors.white,
+                elevation: 0.4,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              'https://lh3.googleusercontent.com/p/AF1QipM-OsDTT9Wyp7s5pID-guJcw4oArGaHWrk0kBUQ=s1360-w1360-h1020',
+                              // recommendedPlaces[index].image,
+                              width: double.maxFinite,
+                              fit: BoxFit.cover,
+                              height: 150,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              'The Alana Yogyakarta Hotel and Convetion Center',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '11 April 2024',
+                              style: GoogleFonts.poppins(
+                                color: Colors.grey.shade900,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          // Padding(
+                          //   padding: const EdgeInsets.all(8.0),
+                          //   child: IntrinsicHeight(
+                          //     child: Row(
+                          //       children: [
+                          //         Container(
+                          //           width: 18,
+                          //           height: 18,
+                          //           decoration: BoxDecoration(
+                          //             borderRadius: BorderRadius.circular(12),
+                          //             image: DecorationImage(
+                          //               image: NetworkImage(
+                          //                 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         ),
+                          //         SizedBox(width: 6),
+                          //         Text(
+                          //           'AirAsia Indonesia',
+                          //           style: GoogleFonts.poppins(
+                          //             color: Colors.grey.shade900,
+                          //             fontWeight: FontWeight.normal,
+                          //             fontSize: 12,
+                          //           ),
+                          //         ),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              '4,5/5 (1374 Review)',
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Padding(
+                                //   padding: const EdgeInsets.only(left: 6),
+                                //   child: Text(
+                                //     'Mulai dari',
+                                //     style: GoogleFonts.poppins(
+                                //       color: Colors.grey.shade900,
+                                //       fontWeight: FontWeight.normal,
+                                //       // fontStyle: FontStyle.italic,
+                                //       fontSize: 12,
+                                //     ),
+                                //   ),
+                                // ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 6),
+                                  child: Text(
+                                    'IDR 691.246',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    ),
+  ),
+];
+
+// data destinasi menggunakan pesawat
+List<Container> cardsdestinasipesawat = [
+  Container(
+    child: Column(
+      children: [
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: const [
+              CardLiburanSingapura(),
+              SizedBox(
+                width: 16,
+              ),
+              CardIdeLiburanMalaysia(),
+              SizedBox(
+                width: 16,
+              ),
+              CardIdeLiburanThailand(),
+              // CardHotelInternasional(),
+              // CardHotelInternasional(),
+              // CardHotelInternasional(),
+              // CardHotelInternasional(),
+            ],
+          ),
+        ),
+      ],
+    ),
+  ),
+  Container(),
+];
+
 // list nama hotel
 List<String> namahotel = [
   "Chiang Mai",
@@ -234,7 +2409,11 @@ List<String> namahotel = [
   "Orchard",
 ];
 
-// data thr
+// List nama tujuan destinasi menggunakan pesawat
+List<String> listdestinasipesawat = [
+  "Domestik",
+  "Internasional",
+];
 
 // list nama hotel
 List<String> destinasidaerah = [
@@ -246,6 +2425,15 @@ List<String> destinasidaerah = [
   "Singapura",
   "Bangkok",
   "Tokyo",
+];
+
+// List tab penerbangan
+List<String> listpenerbanganpesawat = [
+  "Sriwijaya Air",
+  "TransNusa",
+  "Pelita Air",
+  "Citilink",
+  "Garuda Indonesia",
 ];
 
 List<Container> cardsdestinasidaerah = [

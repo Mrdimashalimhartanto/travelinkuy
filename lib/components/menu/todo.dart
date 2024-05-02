@@ -1,5 +1,4 @@
-
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last, prefer_final_fields, unused_field
 
 part of 'menu.dart';
 
@@ -36,7 +35,6 @@ class _TodoPageState extends State<TodoPage> {
                 children: [
                   Text(
                     'Todo Things',
-                    
                     textAlign: TextAlign.center,
                   ),
                 ],
@@ -128,7 +126,6 @@ class _TodoPageState extends State<TodoPage> {
                 ],
               ),
             ),
-            
             Container(
               padding: const EdgeInsets.only(left: 24.0, right: 24.0),
               child: Column(

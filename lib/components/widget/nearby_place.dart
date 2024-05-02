@@ -14,6 +14,7 @@ class NearbyPlaces extends StatelessWidget {
             height: 135,
             width: double.maxFinite,
             child: Card(
+              color: Colors.white,
               elevation: 0.4,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),

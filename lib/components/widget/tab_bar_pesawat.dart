@@ -2,14 +2,14 @@
 
 part of 'widget.dart';
 
-class TabBarHotel extends StatefulWidget {
-  const TabBarHotel({super.key});
+class TabBarPesawat extends StatefulWidget {
+  const TabBarPesawat({super.key});
 
   @override
-  State<TabBarHotel> createState() => _TabBarHotelState();
+  State<TabBarPesawat> createState() => _TabBarPesawatState();
 }
 
-class _TabBarHotelState extends State<TabBarHotel> {
+class _TabBarPesawatState extends State<TabBarPesawat> {
   int current = 0;
   PageController pageController = PageController();
   @override
@@ -26,7 +26,7 @@ class _TabBarHotelState extends State<TabBarHotel> {
                 height: MediaQuery.of(context).size.height * 0.06,
                 child: ListView.builder(
                   physics: const BouncingScrollPhysics(),
-                  itemCount: items.length,
+                  itemCount: listdestinasipesawat.length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (ctx, index) {
                     return Column(
@@ -67,7 +67,7 @@ class _TabBarHotelState extends State<TabBarHotel> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    namahotel[index],
+                                    listdestinasipesawat[index],
                                     style: GoogleFonts.poppins(
                                       fontWeight: FontWeight.normal,
                                       color: current == index
@@ -86,79 +86,14 @@ class _TabBarHotelState extends State<TabBarHotel> {
                 ),
               ),
             ),
-            // Container(
-            //   child: SizedBox(
-            //     width: double.infinity,
-            //     height: MediaQuery.of(context).size.height * 0.06,
-            //     child: ListView.builder(
-            //       physics: const BouncingScrollPhysics(),
-            //       itemCount: namahotel.length,
-            //       scrollDirection: Axis.horizontal,
-            //       itemBuilder: (ctx, index) {
-            //         return Column(
-            //           children: [
-            //             GestureDetector(
-            //               onTap: () {
-            //                 setState(() {
-            //                   current = index;
-            //                 });
-            //                 pageController.animateToPage(
-            //                   current,
-            //                   duration: const Duration(milliseconds: 200),
-            //                   curve: Curves.ease,
-            //                 );
-            //               },
-            //               child: AnimatedContainer(
-            //                 duration: const Duration(milliseconds: 300),
-            //                 margin: const EdgeInsets.all(5),
-            //                 // lebar card
-            //                 width: 100,
-            //                 height: 40,
-            //                 decoration: BoxDecoration(
-            //                   color: current == index
-            //                       ? Colors.blueAccent
-            //                       : travelinbackground,
-            //                   borderRadius: BorderRadius.circular(20),
-            //                   border: current == index
-            //                       ? Border.all(
-            //                           color: Colors.blueAccent,
-            //                           width: 2.5,
-            //                         )
-            //                       : null,
-            //                 ),
-            //                 child: Center(
-            //                   child: Column(
-            //                     mainAxisAlignment: MainAxisAlignment.center,
-            //                     children: [
-            //                       Text(
-            //                         namahotel[index],
-            //                         style: GoogleFonts.poppins(
-            //                           fontWeight: FontWeight.bold,
-            //                           fontSize: 10,
-            //                           color: current == index
-            //                               ? Colors.white
-            //                               : Colors.grey[600],
-            //                         ),
-            //                       ),
-            //                     ],
-            //                   ),
-            //                 ),
-            //               ),
-            //             ),
-            //           ],
-            //         );
-            //       },
-            //     ),
-            //   ),
-            // ),
 
             /// MAIN BODY
 
             Container(
               width: double.infinity,
-              height: 390,
+              height: MediaQuery.of(context).size.height * 0.30,
               child: PageView.builder(
-                itemCount: cardshotel.length,
+                itemCount: cardsdestinasipesawat.length,
                 controller: pageController,
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
@@ -170,7 +105,7 @@ class _TabBarHotelState extends State<TabBarHotel> {
                         child: Padding(
                           padding: const EdgeInsets.only(left: 16),
                           child: Row(
-                            children: [cardshotel[current]],
+                            children: [cardsdestinasipesawat[current]],
                           ),
                         ),
                       ),
