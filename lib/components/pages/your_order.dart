@@ -110,7 +110,7 @@ class YourOrder extends StatelessWidget {
     }
 
     return Scaffold(
-      backgroundColor: travelinbackground,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Column(
           children: [
@@ -138,7 +138,14 @@ class YourOrder extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 4,
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.notifications))
+          IconButton(
+            onPressed: () {},
+            icon: Image.asset(
+              'assets/icons/icon_history_order.png', // Ganti dengan path gambar Anda
+              width: 24, // Sesuaikan ukuran gambar
+              height: 24,
+            ),
+          )
         ],
       ),
       body: SingleChildScrollView(

@@ -300,18 +300,11 @@ class _MenuPesawatState extends State<MenuPesawat> {
       );
     }
 
-    Widget buttonContinue() {
+    Widget buttonContinueDomestik() {
       return Padding(
         padding: const EdgeInsets.only(bottom: 20),
         child: GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => DetailDestinasi(),
-              ),
-            );
-          },
+          onTap: () {},
           child: Container(
             height: 50,
             margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
@@ -357,12 +350,33 @@ class _MenuPesawatState extends State<MenuPesawat> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Text(
-              'Lihat semua',
-              style: GoogleFonts.montserrat(
-                color: travelinkuy,
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
+          ],
+        ),
+      );
+    }
+
+    Widget judulrefund() {
+      return Padding(
+        padding: const EdgeInsets.only(
+          left: 22,
+          right: 16,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'tiket 100% Refund',
+                    style: GoogleFonts.montserrat(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
@@ -487,20 +501,11 @@ class _MenuPesawatState extends State<MenuPesawat> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Terbang liburan ke jogja!',
+                    'Kuy, cek promo sebelum bepergian',
                     style: GoogleFonts.montserrat(
                       color: Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  SizedBox(height: 4),
-                  Text(
-                    'Cari tahu yuk destinasi liburan ke jogja yang menarik ! Cek sekarang dan pilih sesuai budgetmu ! ',
-                    style: GoogleFonts.montserrat(
-                      color: Colors.grey[800],
-                      fontSize: 12,
-                      fontWeight: FontWeight.normal,
                     ),
                   ),
                 ],
@@ -757,48 +762,41 @@ class _MenuPesawatState extends State<MenuPesawat> {
     Widget textjaminan() {
       return Container(
         height: 90,
-        margin: EdgeInsets.only(top: 250),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.vertical(
-            top: Radius.circular(12),
+            top: Radius.circular(1),
           ),
-          gradient: LinearGradient(
-            colors: [
-              Colors.green.shade400,
-              Colors.green.shade400,
-              Colors.blue.shade400,
-              Colors.blue.shade400,
-            ],
-          ),
+          color: travelinkuy, // misalnya warna biru
         ),
         child: Row(
           children: [
+            Padding(
+              padding: EdgeInsets.only(left: 12),
+            ),
+            IconButton(
+              icon: Image.asset(
+                'assets/icons/icon_price.png',
+                height: 40,
+              ),
+              onPressed: () {},
+            ),
+            SizedBox(width: 10), // jarak antara icon dan text
             Expanded(
-              child: Row(
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 20,
-                          top: 20,
-                          right: 40,
-                        ),
-                        child: Text(
-                          "Jaminan Harga Termurah! Ada tiket domestik yang\nlebih murah ? Klaim 2x selisih harganya",
-                          style: GoogleFonts.poppins(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 12,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+              child: Text(
+                'Jaminan Harga Termurah! Ada tiket domestik yang lebih murah? Klaim 2x* selisih harga tiket domestik dan internasional',
+                style: TextStyle(
+                  fontSize: 10,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
+            // Icon(
+            //   Icons.arrow_forward_ios,
+            //   color: Colors.white,
+            //   size: 10,
+            // ),
+            SizedBox(width: 6),
           ],
         ),
       );
@@ -947,6 +945,319 @@ class _MenuPesawatState extends State<MenuPesawat> {
       );
     }
 
+    Widget buttonlihatsemua() {
+      return Padding(
+        padding: const EdgeInsets.only(bottom: 20),
+        child: GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => DetailDestinasi(),
+              ),
+            );
+          },
+          child: Container(
+            height: 50,
+            margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+            decoration: BoxDecoration(
+              color: travelinkuy,
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  child: Text(
+                    'Lihat semua',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.poppins(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+
+    Widget kontentrefund() {
+      return Container(
+        margin: EdgeInsets.symmetric(horizontal: 22, vertical: 10),
+        width: 390,
+        height: 200,
+        decoration: BoxDecoration(
+          color: Colors.black54,
+          borderRadius: BorderRadius.circular(15),
+          image: DecorationImage(
+              colorFilter: ColorFilter.mode(
+                  Colors.black.withOpacity(0.10), BlendMode.multiply),
+              image: NetworkImage(
+                  'https://images.unsplash.com/photo-1524174491029-6388265feb4d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+              fit: BoxFit.cover),
+        ),
+        child: Stack(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 22.0, left: 24),
+              child: Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Liburan belum tentu\n jadi? pesan aja dulu\n tiket 100% Refund',
+                        style: GoogleFonts.montserrat(
+                          color: Color(0xffF8F7FD),
+                          fontSize: 19,
+                          fontWeight: FontWeight.w800,
+                        ),
+                        textAlign: TextAlign
+                            .start, // Mengatur teks menjadi sejajar (center)
+                      ),
+                      SizedBox(height: 8),
+                      Text(
+                        'Tanpa biaya pembatalan',
+                        style: GoogleFonts.montserrat(
+                          color: Colors.yellow,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        textAlign: TextAlign.justify,
+                      ),
+                      SizedBox(height: 8),
+                      OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          side: BorderSide(
+                            color: Colors.white,
+                          ),
+                        ),
+                        onPressed: () {}, // Text('info selengkap singapura'),
+                        child: Text(
+                          'Lihat Detail',
+                          style: GoogleFonts.montserrat(
+                            color: travelinkuy,
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget refundtiket() {
+      return Padding(
+        padding: const EdgeInsets.only(
+          left: 22.0,
+          right: 22.0,
+        ),
+        child: GestureDetector(
+          onTap: () {
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (context) => DetailRefundTiket(),
+            //   ),
+            // );
+          },
+          child: Column(
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment
+                    .start, // Align children along the start of the cross axis
+                children: [
+                  Image.network(
+                    'https://cdn-icons-png.flaticon.com/128/3585/3585091.png',
+                    height: 40,
+                    width: 40,
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment
+                          .start, // Align children along the start of the cross axis
+                      children: [
+                        Text(
+                          'Cara Refund Tiket Pesawat',
+                          style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'Yang perlu kamu tau tentang pengembalian uang tiket.',
+                          style: GoogleFonts.poppins(
+                            color: Colors.grey.shade500,
+                            fontSize: 12,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.grey,
+                    size: 20.0,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget rescheduletiket() {
+      return Padding(
+        padding: const EdgeInsets.only(
+          left: 22.0,
+          right: 22.0,
+        ),
+        child: GestureDetector(
+          onTap: () {
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (context) => DetailRescheduletiket(),
+            //   ),
+            // );
+          },
+          child: Column(
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment
+                    .start, // Align children along the start of the cross axis
+                children: [
+                  Image.network(
+                    'https://cdn-icons-png.flaticon.com/128/9980/9980782.png',
+                    height: 40,
+                    width: 40,
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment
+                          .start, // Align children along the start of the cross axis
+                      children: [
+                        Text(
+                          'Cara Reschedule Penerbangan',
+                          style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'Cek di sini untuk mengubah jadwal penerbanganmu',
+                          style: GoogleFonts.poppins(
+                            color: Colors.grey.shade500,
+                            fontSize: 12,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.grey,
+                    size: 24.0,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget persyaratanpenerbangan() {
+      return Padding(
+        padding: const EdgeInsets.only(
+          left: 22.0,
+          right: 22.0,
+        ),
+        child: GestureDetector(
+          onTap: () {
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (context) => DetailPersyaratan(),
+            //   ),
+            // );
+          },
+          child: Column(
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment
+                    .start, // Align children along the start of the cross axis
+                children: [
+                  Image.network(
+                    'https://cdn-icons-png.flaticon.com/128/9437/9437721.png',
+                    height: 40,
+                    width: 40,
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment
+                          .start, // Align children along the start of the cross axis
+                      children: [
+                        Text(
+                          'Persyaratan Penerbangan',
+                          style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'Cek protokol dan syarat selama pandemi',
+                          style: GoogleFonts.poppins(
+                            color: Colors.grey.shade500,
+                            fontSize: 12,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.grey,
+                    size: 24.0,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     Widget content() {
       return SingleChildScrollView(
         child: Container(
@@ -958,425 +1269,303 @@ class _MenuPesawatState extends State<MenuPesawat> {
               Stack(
                 children: [
                   Container(
-                    height: 300,
+                    height: 160,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: NetworkImage(
-                          "https://images.unsplash.com/photo-1517999349371-c43520457b23?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                          "https://images.unsplash.com/photo-1520437358207-323b43b50729?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                         ),
                         fit: BoxFit.cover,
                       ),
                     ),
                   ),
-                  textjaminan(),
-                  SizedBox(height: 10),
-                  Container(
-                    width: double.infinity,
-                    margin: EdgeInsets.only(top: 320),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.vertical(
-                        top: Radius.circular(12),
-                      ),
-                      color: Color(0xffEDEEEF),
-                    ),
-                    child: Container(
-                      margin: EdgeInsets.only(
-                        top: defaultMargin,
-                      ),
-                      child: Column(
-                        children: [
-                          Column(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.all(16.0),
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      height: 120,
-                                      margin: const EdgeInsets.only(bottom: 12),
-                                      child: Stack(
-                                        children: [
-                                          Column(
-                                            children: [
-                                              Container(
-                                                height: 48,
-                                                margin: const EdgeInsets.only(
-                                                    bottom: 12),
-                                                decoration: BoxDecoration(
-                                                  border: Border.all(
-                                                    color: Colors.grey[300]!,
-                                                  ),
-                                                ),
-                                                padding:
-                                                    const EdgeInsets.symmetric(
-                                                        horizontal: 8),
-                                                child: const TextField(
-                                                  decoration: InputDecoration(
-                                                    icon: Icon(
-                                                        Icons.flight_takeoff),
-                                                    border: InputBorder.none,
-                                                  ),
-                                                ),
-                                              ),
-                                              Container(
-                                                height: 48,
-                                                margin: const EdgeInsets.only(
-                                                    bottom: 12),
-                                                decoration: BoxDecoration(
-                                                  border: Border.all(
-                                                    color: Colors.grey[300]!,
-                                                  ),
-                                                ),
-                                                padding:
-                                                    const EdgeInsets.symmetric(
-                                                        horizontal: 8),
-                                                child: const TextField(
-                                                  decoration: InputDecoration(
-                                                    hintText: 'Mau ke mana ?',
-                                                    icon:
-                                                        Icon(Icons.flight_land),
-                                                    border: InputBorder.none,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Positioned(
-                                            right: 16,
-                                            top: 0,
-                                            bottom: 0,
-                                            child: Container(
-                                              height: 48,
-                                              width: 48,
-                                              decoration: BoxDecoration(
-                                                border: Border.all(
-                                                    color: Colors.blue),
-                                                shape: BoxShape.circle,
-                                                color: Colors.blue[100],
-                                              ),
-                                              child: IconButton(
-                                                icon: const Icon(
-                                                    Icons.import_export),
-                                                onPressed: () {},
-                                              ),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                    Container(
-                                      height: 48,
-                                      margin: const EdgeInsets.only(bottom: 12),
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                          color: Colors.grey[300]!,
-                                        ),
-                                      ),
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 8),
-                                      child: const TextField(
-                                        decoration: InputDecoration(
-                                          hintText: 'Min, 24 Mar',
-                                          icon: Icon(Icons.calendar_month),
-                                          border: InputBorder.none,
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      height: 48,
-                                      margin: const EdgeInsets.only(bottom: 12),
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                          color: Colors.grey[300]!,
-                                        ),
-                                      ),
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 8),
-                                      child: Row(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          const Icon(
-                                              Icons.supervisor_account_rounded),
-                                          const SizedBox(
-                                            width: 16,
-                                          ),
-                                          Expanded(
-                                            child: DropdownButton<String>(
-                                              value: "2 Adult",
-                                              items: const [
-                                                DropdownMenuItem(
-                                                  value: '2 Adult',
-                                                  child: Text("2 Adult"),
-                                                )
-                                              ],
-                                              isExpanded: true,
-                                              onChanged: (v) {},
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    GestureDetector(
-                                      onTap: () {
-                                        Navigator.of(context).push(
-                                          MaterialPageRoute(
-                                            builder: (context) => TujuanPergi(),
-                                          ),
-                                        );
-                                      },
-                                      child: Container(
-                                        height: 48,
-                                        margin:
-                                            const EdgeInsets.only(bottom: 12),
-                                        decoration: BoxDecoration(
-                                          color: travelinkuy,
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                        ),
-                                        child: const Center(
-                                          child: Text(
-                                            "Ayo Cari",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 14,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height: 10),
-                              judulpenerbangan(),
-                              SizedBox(height: 10),
-                              // Tab Bar
-                              TabBarPesawat(),
-                              BorderAbuAbu(),
-                              SizedBox(height: 20),
-                              juduldomestik(),
-                              SizedBox(height: 20),
-                              // TabBarHotel(),
-                              TabBarPenerbanganPesawat(),
-                              buttonContinue(),
-                              BorderAbuAbu(),
-                              SizedBox(height: 20),
-                              juduldestinasijogja(),
-                              SizedBox(height: 20),
-                              SingleChildScrollView(
-                                scrollDirection: Axis.horizontal,
-                                child: Padding(
-                                  padding:
-                                      const EdgeInsets.only(top: 1, left: 2),
-                                  child: Row(
-                                    children: [
-                                      GestureDetector(
-                                        onTap: () {
-                                          Navigator.pushNamed(
-                                              context, '/detail-hotel-alana');
-                                        },
-                                        child: cardliburanjogja(),
-                                      ),
-                                      SizedBox(
-                                        width: 16,
-                                      ),
-                                      cardliburanjogja(),
-                                      SizedBox(
-                                        width: 16,
-                                      ),
-                                      cardliburanjogja(),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              SizedBox(height: 20),
-                              BorderAbuAbu(),
-                              SizedBox(height: 40),
-                              informasipenerbangan(),
-                              SizedBox(height: 20),
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                  left: 22.0,
-                                  right: 22.0,
-                                ),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      crossAxisAlignment: CrossAxisAlignment
-                                          .start, // Align children along the start of the cross axis
-                                      children: [
-                                        Image.network(
-                                          'https://cdn-icons-png.flaticon.com/128/2424/2424710.png',
-                                          height: 40,
-                                          width: 40,
-                                        ),
-                                        SizedBox(
-                                          width: 20,
-                                        ),
-                                        Expanded(
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment
-                                                .start, // Align children along the start of the cross axis
-                                            children: [
-                                              Text(
-                                                'Cara Refund Tiket Pesawat',
-                                                style: GoogleFonts.poppins(
-                                                  color: Colors.black,
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                              ),
-                                              Text(
-                                                'Yang perlu kamu tau tentang pengembalian uang tiket',
-                                                style: GoogleFonts.poppins(
-                                                  color: Colors.grey.shade500,
-                                                  fontSize: 12,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Icon(
-                                          Icons.arrow_forward_ios,
-                                          color: Colors.grey,
-                                          size: 24.0,
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const Divider(
-                                height: 40,
-                                thickness: 1,
-                                indent: 20,
-                                endIndent: 22,
-                                color: Colors.grey,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                  left: 22.0,
-                                  right: 22.0,
-                                ),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      crossAxisAlignment: CrossAxisAlignment
-                                          .start, // Align children along the start of the cross axis
-                                      children: [
-                                        Image.network(
-                                          'https://cdn-icons-png.flaticon.com/128/3652/3652191.png',
-                                          height: 40,
-                                          width: 40,
-                                        ),
-                                        SizedBox(
-                                          width: 20,
-                                        ),
-                                        Expanded(
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment
-                                                .start, // Align children along the start of the cross axis
-                                            children: [
-                                              Text(
-                                                'Cara Reschedule Penerbangan',
-                                                style: GoogleFonts.poppins(
-                                                  color: Colors.black,
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                              ),
-                                              Text(
-                                                'Cek di sini untuk mengubah jadwal penerbanganmu',
-                                                style: GoogleFonts.poppins(
-                                                  color: Colors.grey.shade500,
-                                                  fontSize: 12,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Icon(
-                                          Icons.arrow_forward_ios,
-                                          color: Colors.grey,
-                                          size: 24.0,
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const Divider(
-                                height: 40,
-                                thickness: 1,
-                                indent: 20,
-                                endIndent: 22,
-                                color: Colors.grey,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                  left: 22.0,
-                                  right: 22.0,
-                                ),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      crossAxisAlignment: CrossAxisAlignment
-                                          .start, // Align children along the start of the cross axis
-                                      children: [
-                                        Image.network(
-                                          'https://cdn-icons-png.flaticon.com/128/3652/3652191.png',
-                                          height: 40,
-                                          width: 40,
-                                        ),
-                                        SizedBox(
-                                          width: 20,
-                                        ),
-                                        Expanded(
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment
-                                                .start, // Align children along the start of the cross axis
-                                            children: [
-                                              Text(
-                                                'Persyaratan Penerbangan',
-                                                style: GoogleFonts.poppins(
-                                                  color: Colors.black,
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                              ),
-                                              Text(
-                                                'Cek protokol dan syarat selama pandemi',
-                                                style: GoogleFonts.poppins(
-                                                  color: Colors.grey.shade500,
-                                                  fontSize: 12,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Icon(
-                                          Icons.arrow_forward_ios,
-                                          color: Colors.grey,
-                                          size: 24.0,
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height: 40),
-                            ],
+                  Positioned(
+                    top: 60, // Mengatur jarak dari atas
+                    left: 20,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        IconButton(
+                          icon: Image.asset(
+                            'assets/icons/icon_arrow_back.png',
+                            height: 40,
+                            width: 40,
                           ),
-                        ],
-                      ),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                        ),
+                        SizedBox(height: 5),
+                        SizedBox(width: 5),
+                        Text(
+                          "Pesawat",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w900,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
+              ),
+              textjaminan(),
+              Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(12),
+                  ),
+                  color: Colors.white,
+                ),
+                child: Container(
+                  margin: EdgeInsets.only(
+                    top: 10,
+                  ),
+                  child: Column(
+                    children: [
+                      Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.all(16.0),
+                            child: Column(
+                              children: [
+                                Container(
+                                  height: 120,
+                                  margin: const EdgeInsets.only(bottom: 12),
+                                  child: Stack(
+                                    children: [
+                                      Column(
+                                        children: [
+                                          Container(
+                                            height: 48,
+                                            margin: const EdgeInsets.only(
+                                                bottom: 12),
+                                            decoration: BoxDecoration(
+                                              border: Border.all(
+                                                color: Colors.grey[300]!,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(8),
+                                            ),
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 8),
+                                            child: const TextField(
+                                              decoration: InputDecoration(
+                                                hintText: 'Jakarta JKTC',
+                                                hintStyle: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                                icon:
+                                                    Icon(Icons.flight_takeoff),
+                                                border: InputBorder.none,
+                                              ),
+                                            ),
+                                          ),
+                                          Container(
+                                            height: 48,
+                                            margin: const EdgeInsets.only(
+                                                bottom: 12),
+                                            decoration: BoxDecoration(
+                                              border: Border.all(
+                                                color: Colors.grey[300]!,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(8),
+                                            ),
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 8),
+                                            child: const TextField(
+                                              decoration: InputDecoration(
+                                                hintText: 'Mau ke mana ?',
+                                                hintStyle: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                                icon: Icon(Icons.flight_land),
+                                                border: InputBorder.none,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Positioned(
+                                        right: 16,
+                                        top: 0,
+                                        bottom: 0,
+                                        child: Container(
+                                          height: 48,
+                                          width: 48,
+                                          decoration: BoxDecoration(
+                                            border:
+                                                Border.all(color: Colors.blue),
+                                            shape: BoxShape.circle,
+                                            color: Colors.blue[100],
+                                          ),
+                                          child: IconButton(
+                                            icon:
+                                                const Icon(Icons.import_export),
+                                            onPressed: () {},
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  height: 48,
+                                  margin: const EdgeInsets.only(bottom: 12),
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      color: Colors.grey[300]!,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                  padding:
+                                      const EdgeInsets.symmetric(horizontal: 8),
+                                  child: const TextField(
+                                    decoration: InputDecoration(
+                                      hintText: 'Min, 24 Mar',
+                                      icon: Icon(Icons.calendar_month),
+                                      border: InputBorder.none,
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  height: 48,
+                                  margin: const EdgeInsets.only(bottom: 12),
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      color: Colors.grey[300]!,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                  padding:
+                                      const EdgeInsets.symmetric(horizontal: 8),
+                                  child: Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      const Icon(
+                                          Icons.supervisor_account_rounded),
+                                      const SizedBox(
+                                        width: 16,
+                                      ),
+                                      Expanded(
+                                        child: DropdownButton<String>(
+                                          value: "2 Adult",
+                                          items: const [
+                                            DropdownMenuItem(
+                                              value: '2 Adult',
+                                              child: Text("2 Adult"),
+                                            )
+                                          ],
+                                          isExpanded: true,
+                                          onChanged: (v) {},
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (context) => TujuanPergi(),
+                                      ),
+                                    );
+                                  },
+                                  child: Container(
+                                    height: 48,
+                                    margin: const EdgeInsets.only(bottom: 12),
+                                    decoration: BoxDecoration(
+                                      color: travelinkuy,
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: const Center(
+                                      child: Text(
+                                        "Ayo Cari",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 20),
+                          judulrefund(),
+                          SizedBox(height: 10),
+                          kontentrefund(),
+                          SizedBox(height: 20),
+                          judulpenerbangan(),
+                          SizedBox(height: 10),
+                          // Tab Bar
+                          TabBarPesawat(),
+                          BorderAbuAbu(),
+                          SizedBox(height: 20),
+                          juduldomestik(),
+                          SizedBox(height: 20),
+                          TabBarPenerbanganPesawat(),
+                          buttonContinueDomestik(),
+                          BorderAbuAbu(),
+                          SizedBox(height: 20),
+                          juduldestinasijogja(),
+                          SizedBox(height: 20),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 1, left: 2),
+                              child: Row(
+                                children: [
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                          context, '/detail-hotel-alana');
+                                    },
+                                    child: cardliburanjogja(),
+                                  ),
+                                  SizedBox(
+                                    width: 16,
+                                  ),
+                                  cardliburanjogja(),
+                                  SizedBox(
+                                    width: 16,
+                                  ),
+                                  cardliburanjogja(),
+                                ],
+                              ),
+                            ),
+                          ),
+                          buttonlihatsemua(),
+                          informasipenerbangan(),
+                          SizedBox(height: 20),
+                          refundtiket(),
+                          Divider(
+                            height: 40,
+                            // thickness: 1,
+                            indent: 20,
+                            endIndent: 22,
+                            color: Colors.grey[300],
+                          ),
+                          rescheduletiket(),
+                          Divider(
+                            height: 40,
+                            // thickness: 1,
+                            indent: 20,
+                            endIndent: 22,
+                            color: Colors.grey[300],
+                          ),
+                          persyaratanpenerbangan(),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ],
           ),
@@ -1432,52 +1621,13 @@ class _MenuPesawatState extends State<MenuPesawat> {
               index++;
               return indicator(index);
             }).toList(),
-          )
+          ),
         ],
       );
     }
 
     return Scaffold(
-      backgroundColor: travelinbackground,
-      appBar: AppBar(
-        title: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.all(0), // Adjust the value as needed
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Pesawat',
-                    style: GoogleFonts.poppins(
-                      color: travelinkuy,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            Icons.arrow_back_ios_new_rounded,
-            size: 20,
-          ),
-        ),
-        centerTitle: false,
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.white,
-        elevation: 4,
-        actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.notifications))
-        ],
-      ),
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
           SingleChildScrollView(

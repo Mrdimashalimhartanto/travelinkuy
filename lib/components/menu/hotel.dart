@@ -2,8 +2,27 @@
 
 part of 'menu.dart';
 
-class HotelPage extends StatelessWidget {
+class HotelPage extends StatefulWidget {
   const HotelPage({super.key});
+
+  @override
+  State<HotelPage> createState() => _HotelPageState();
+}
+
+class _HotelPageState extends State<HotelPage>
+    with SingleTickerProviderStateMixin {
+  int currentIndex = 0;
+  int current = 0;
+  PageController pageController = PageController();
+  TabController? _tabController;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _tabController =
+        TabController(vsync: this, length: listTiketPerjalanan.length);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +46,6 @@ class HotelPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 10),
               ],
             ),
           ],
@@ -44,15 +62,22 @@ class HotelPage extends StatelessWidget {
               height: 48,
               margin: const EdgeInsets.only(bottom: 12),
               decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey[300]!,
-                ),
-              ),
+                  border: Border.all(
+                    color: Colors.grey[300]!,
+                  ),
+                  borderRadius: BorderRadius.circular(8)),
               padding: const EdgeInsets.symmetric(horizontal: 8),
               child: const TextField(
                 decoration: InputDecoration(
                   hintText: 'Min, 24 Mar',
-                  icon: Icon(Icons.search),
+                  hintStyle: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey,
+                  ),
+                  icon: Icon(
+                    Icons.search,
+                    color: Colors.grey,
+                  ),
                   border: InputBorder.none,
                 ),
               ),
@@ -61,32 +86,28 @@ class HotelPage extends StatelessWidget {
               height: 48,
               margin: const EdgeInsets.only(bottom: 12),
               decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey[300]!,
-                ),
-              ),
-              padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const Icon(Icons.calendar_month),
-                  const SizedBox(
-                    width: 16,
+                  border: Border.all(
+                    color: Colors.grey[300]!,
                   ),
-                  Expanded(
-                    child: DropdownButton<String>(
-                      value: "2 Adult",
-                      items: const [
-                        DropdownMenuItem(
-                          value: '2 Adult',
-                          child: Text("2 Adult"),
-                        )
-                      ],
-                      isExpanded: true,
-                      onChanged: (v) {},
+                  borderRadius: BorderRadius.circular(8)),
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: '13 Mei - 14 Mei',
+                  hintStyle: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey,
+                  ),
+                  icon: Padding(
+                    padding: EdgeInsets.only(
+                        left: 2.0), // Mengatur jarak antara ikon dan teks
+                    child: Icon(
+                      Icons.date_range,
+                      color: Colors.grey,
                     ),
                   ),
-                ],
+                  border: InputBorder.none,
+                ),
               ),
             ),
             GestureDetector(
@@ -175,7 +196,7 @@ class HotelPage extends StatelessWidget {
       return SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(
-            left: 16,
+            left: 22,
             right: 16,
           ),
           child: Row(
@@ -193,7 +214,7 @@ class HotelPage extends StatelessWidget {
                           height: 40,
                         ),
                         Text(
-                          'THR Pol-polan buat Lebaran',
+                          'Kuy, cek promo sebelum bepergian',
                           style: GoogleFonts.montserrat(
                             color: Colors.black,
                             fontSize: 16,
@@ -205,7 +226,7 @@ class HotelPage extends StatelessWidget {
                     SizedBox(height: 4),
                     Text(
                       // overflow: TextOverflow.ellipsis,
-                      'Cek hotel pilihan dengan harga terbaik, hematnya dobel dengan diskon hingga 45% + cashback 5%!',
+                      'Pakai kesempatan ini untuk dapetin voucher diskon tambahan buat perjalananmu',
                       style: GoogleFonts.montserrat(
                         color: Colors.grey[800],
                         fontSize: 12,
@@ -225,19 +246,12 @@ class HotelPage extends StatelessWidget {
       return Padding(
         padding: const EdgeInsets.only(top: 10),
         child: GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => MainHotelApp(),
-              ),
-            );
-          },
+          onTap: () {},
           child: Container(
             height: 50,
             margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             decoration: BoxDecoration(
-              color: Colors.blueAccent[100],
+              color: travelinkuy,
               borderRadius: BorderRadius.all(Radius.circular(8)),
             ),
             child: Row(
@@ -261,97 +275,486 @@ class HotelPage extends StatelessWidget {
       );
     }
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Column(
+    Widget indicator(int index) {
+      return Container(
+        width: currentIndex == index ? 14 : 4,
+        height: 4,
+        margin: EdgeInsets.symmetric(horizontal: 2),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: currentIndex == index ? Colors.white : Colors.white,
+        ),
+      );
+    }
+
+    Widget textjaminan() {
+      int index = -1;
+
+      return Container(
+        height: 90,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(1),
+          ),
+          color: travelinkuy, // misalnya warna biru
+        ),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 20,
+            ),
+            CarouselSlider(
+              items: itemsjaminan.map((item) {
+                return Builder(
+                  builder: (BuildContext context) {
+                    return Row(
+                      children: [
+                        IconButton(
+                          icon: Image.asset(
+                            'assets/icons/icon_price.png',
+                            height: 40,
+                          ),
+                          onPressed: () {},
+                        ),
+                        SizedBox(width: 10), // jarak antara icon dan text
+                        Expanded(
+                          child: Text(
+                            item,
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        // Icon(
+                        //   Icons.arrow_forward_ios,
+                        //   color: Colors.white,
+                        //   size: 10,
+                        // ),
+                        SizedBox(width: 6),
+                      ],
+                    );
+                  },
+                );
+              }).toList(),
+              options: CarouselOptions(
+                  height: 40.0,
+                  autoPlay: true,
+                  initialPage: 0,
+                  onPageChanged: (index, reason) {
+                    setState(() {
+                      currentIndex = index;
+                    });
+                  }),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: itemsjaminan.map((e) {
+                index++;
+                return indicator(index);
+              }).toList(),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget judulrefund() {
+      return SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 22,
+            right: 16,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          '100 % Refund & Reschedule',
+                          style: GoogleFonts.montserrat(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget judulcekpromo() {
+      return SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 22,
+            right: 16,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          'Kuy, cek promo sebelum bepergian',
+                          style: GoogleFonts.montserrat(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget tabBarHistory() {
+      return Container(
+        color: Colors.grey[300],
+        child: Column(
+          children: [
+            SizedBox(height: 20),
+            Container(
+              // padding: EdgeInsets.all(10),
+              padding: EdgeInsets.symmetric(horizontal: 12),
+              child: SizedBox(
+                width: double.infinity,
+                height: MediaQuery.of(context).size.height * 0.06,
+                child: ListView.builder(
+                  physics: const BouncingScrollPhysics(),
+                  itemCount: listhistoryhotel.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (ctx, index) {
+                    return Column(
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              current = index;
+                            });
+                            pageController.animateToPage(
+                              current,
+                              duration: const Duration(milliseconds: 200),
+                              curve: Curves.ease,
+                            );
+                          },
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 300),
+                            margin: const EdgeInsets.all(4),
+                            // lebar card
+                            width: 170,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(6),
+                              color: current == index
+                                  ? travelinkuy
+                                  : Colors.grey[400],
+                              border: current == index
+                                  ? Border.all(
+                                      color: current == index
+                                          ? Colors.grey
+                                          : travelincomponent,
+                                    )
+                                  : null,
+                            ),
+
+                            child: Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    listhistoryhotel[index],
+                                    style: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.normal,
+                                      color: current == index
+                                          ? Colors.white
+                                          : Colors.grey[600],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    );
+                  },
+                ),
+              ),
+            ),
+
+            /// MAIN BODY
+            Container(
+              width: double.infinity,
+              height: MediaQuery.of(context).size.height * 0.29,
+              child: PageView.builder(
+                itemCount: cardsdestinasipesawat.length,
+                controller: pageController,
+                physics: const NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) {
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 16),
+                          child: Row(
+                            children: [cardsdestinasipesawat[current]],
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget kontentrefund() {
+      return Container(
+        margin: EdgeInsets.symmetric(horizontal: 22, vertical: 10),
+        width: 400,
+        height: 200,
+        decoration: BoxDecoration(
+          color: Colors.black54,
+          borderRadius: BorderRadius.circular(8),
+          image: DecorationImage(
+              colorFilter: ColorFilter.mode(
+                  Colors.black.withOpacity(0.10), BlendMode.multiply),
+              image: NetworkImage(
+                  'https://images.unsplash.com/photo-1524174491029-6388265feb4d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+              fit: BoxFit.cover),
+        ),
+        child: Stack(
           children: [
             Padding(
-              padding: EdgeInsets.all(2.0), // Adjust the value as needed
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              padding: const EdgeInsets.only(top: 22.0, left: 24),
+              child: Row(
                 children: [
-                  Text(
-                    'Hotel',
-                    style: GoogleFonts.poppins(
-                      color: travelinkuy,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
-                    textAlign: TextAlign.center,
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Liburan belum tentu\n jadi? pesan aja dulu\n tiket 100% Refund',
+                        style: GoogleFonts.montserrat(
+                          color: Color(0xffF8F7FD),
+                          fontSize: 19,
+                          fontWeight: FontWeight.w800,
+                        ),
+                        textAlign: TextAlign
+                            .start, // Mengatur teks menjadi sejajar (center)
+                      ),
+                      SizedBox(height: 8),
+                      Text(
+                        'Tanpa biaya pembatalan',
+                        style: GoogleFonts.montserrat(
+                          color: Colors.yellow,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        textAlign: TextAlign.justify,
+                      ),
+                      SizedBox(height: 8),
+                      OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          side: BorderSide(
+                            color: Colors.white,
+                          ),
+                        ),
+                        onPressed: () {}, // Text('info selengkap singapura'),
+                        child: Text(
+                          'Lihat Detail',
+                          style: GoogleFonts.montserrat(
+                            color: travelinkuy,
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
             ),
           ],
         ),
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            Icons.arrow_back_ios_new_rounded,
-            size: 20,
-          ),
-        ),
-        centerTitle: false,
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.white,
-        elevation: 4,
-        actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.notifications))
-        ],
-      ),
+      );
+    }
+
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 2.1,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(
-                    'https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            Stack(
+              children: [
+                Container(
+                  height: 160,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: NetworkImage(
+                        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                      ),
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                  fit: BoxFit.cover,
                 ),
-                // borderRadius: BorderRadius.only(
-                //   bottomLeft: Radius.circular(20),
-                //   bottomRight: Radius.circular(20),
-                // ),
-              ),
-              child: Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      Colors.black.withOpacity(0.9),
-                      Colors.black.withOpacity(0),
-                      Colors.black.withOpacity(0),
+                Positioned(
+                  top: 60, // Mengatur jarak dari atas
+                  left: 20,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      IconButton(
+                        icon: Image.asset(
+                          'assets/icons/icon_arrow_back.png',
+                          height: 40,
+                          width: 40,
+                        ),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                      ),
+                      SizedBox(height: 5),
+                      SizedBox(width: 5),
+                      Text(
+                        "Hotel",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
                     ],
-                    begin: Alignment.bottomCenter,
-                    end: Alignment.topCenter,
+                  ),
+                ),
+              ],
+            ),
+            textjaminan(),
+            // Konten
+            SizedBox(height: 10),
+            carihotel(),
+            // card tab bar
+            tabBarHistory(),
+            // judulhotel(),
+            // CardIdeLiburan(),
+            // destinasihotel(),
+            SizedBox(height: 20),
+
+            // TabBarHotel(),
+            // tab bar untuk penginapan
+            // lihatsemua(),
+            // BorderAbuAbu(),
+            judulrefund(),
+            kontentrefund(),
+            SizedBox(height: 20),
+            BorderAbuAbu(),
+            SizedBox(height: 20),
+            judulcekpromo(),
+            SizedBox(height: 10),
+            Padding(
+              padding: EdgeInsets.only(left: 12, right: 12),
+              child: Container(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 5,
+                ),
+                width: 390,
+                height: 200,
+                decoration: BoxDecoration(
+                  image: const DecorationImage(
+                    image: NetworkImage(
+                      'https://images.unsplash.com/photo-1516422641841-cd9803ab02c6?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 27.0, left: 24),
+                  child: Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Liburan Santai di\nSingapura Tiket 100% Refund',
+                            style: GoogleFonts.montserrat(
+                              color: Color(0xffF8F7FD),
+                              fontSize: 14,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          OutlinedButton(
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              side: BorderSide(
+                                color: Colors.white,
+                              ),
+                            ),
+                            onPressed:
+                                () {}, // Text('info selengkap singapura'),
+                            child: Text(
+                              'Info selengkapnya',
+                              style: GoogleFonts.montserrat(
+                                color: travelinkuy,
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
               ),
             ),
-            // Konten
-            SizedBox(height: 20),
-            carihotel(),
-            judulhotel(),
-            CardIdeLiburan(),
-            SizedBox(height: 20),
-            BorderAbuAbu(),
-            SizedBox(height: 20),
-            destinasihotel(),
             SizedBox(height: 10),
-            TabBarHotel(),
-            lihatsemua(),
             BorderAbuAbu(),
             SizedBox(height: 20),
             promohotelthr(),
             SizedBox(height: 10),
             TabBarThr(),
             lihatsemua(),
-            SizedBox(height: 40),
+            SizedBox(height: 10),
+            BorderAbuAbu(),
           ],
         ),
       ),

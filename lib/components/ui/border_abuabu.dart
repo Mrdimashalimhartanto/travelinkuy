@@ -8,7 +8,7 @@ class BorderAbuAbu extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: 8,
-      color: Colors.grey[300],
+      color: Colors.grey[200],
     );
   }
 }

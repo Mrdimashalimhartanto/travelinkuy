@@ -37,65 +37,63 @@ class _HomePageState extends State<HomePage> {
             ),
             Card(
               color: Colors.white,
+              elevation: 3,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Column(
                   children: <Widget>[
+                    // Row(
+                    //   crossAxisAlignment: CrossAxisAlignment.start,
+                    //   children: [
+                    //     Text(
+                    //       "OVO Balance",
+                    //       style: GoogleFonts.poppins(
+                    //         color: Colors.white,
+                    //         fontWeight: FontWeight.bold,
+                    //         fontSize: 14,
+                    //       ),
+                    //     ),
+                    //     Spacer(),
+                    //     Align(
+                    //       alignment: Alignment.topCenter,
+                    //       child: Text("RP",
+                    //           style: GoogleFonts.poppins(
+                    //             color: Colors.white,
+                    //             fontWeight: FontWeight.bold,
+                    //             fontSize: 10,
+                    //           )),
+                    //     ),
+                    //     Text(
+                    //       "0",
+                    //       style: GoogleFonts.poppins(
+                    //         color: Colors.white,
+                    //         fontWeight: FontWeight.bold,
+                    //         fontSize: 14,
+                    //       ),
+                    //     ),
+                    //     SizedBox(width: 10),
+                    //     ClipRRect(
+                    //       borderRadius: BorderRadius.circular(15),
+                    //       child: Container(
+                    //         padding: EdgeInsets.symmetric(
+                    //             horizontal: 5, vertical: 5),
+                    //         color: Colors.grey[300],
+                    //         child: Icon(
+                    //           Icons.arrow_forward_ios,
+                    //           size: 15,
+                    //         ),
+                    //       ),
+                    //     )
+                    //   ],
+                    // ),
+                    // Divider(
+                    //   thickness: 1,
+                    // ),
+                    SizedBox(height: 10),
                     Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Travelinkuy Point",
-                          style: GoogleFonts.poppins(
-                            color: Colors.black,
-                            fontSize: 14,
-                            fontWeight: FontWeight.normal,
-                          ),
-                        ),
-                        const Spacer(),
-                        Align(
-                          alignment: Alignment.topCenter,
-                          child: Text(
-                            "RP",
-                            style: GoogleFonts.poppins(
-                              color: Colors.black,
-                              fontSize: 14,
-                              fontWeight: FontWeight.normal,
-                            ),
-                          ),
-                        ),
-                        SizedBox(width: 6),
-                        Text(
-                          "0",
-                          style: GoogleFonts.poppins(
-                            color: Colors.black,
-                            fontSize: 14,
-                            fontWeight: FontWeight.normal,
-                          ),
-                        ),
-                        const SizedBox(width: 10),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(15),
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 5, vertical: 5),
-                            color: Colors.grey[300],
-                            child: const Icon(
-                              Icons.arrow_forward_ios,
-                              size: 15,
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    const Divider(
-                      thickness: 1,
-                    ),
-                    SizedBox(height: 20),
-                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
                         TravelinIconMenu(
@@ -415,6 +413,45 @@ class _HomePageState extends State<HomePage> {
       );
     }
 
+    Widget judulweekend() {
+      return Padding(
+        padding: const EdgeInsets.only(
+          left: 22,
+          right: 16,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Bingung long weekend ke mana?',
+                    style: GoogleFonts.montserrat(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 4),
+                  Text(
+                    // overflow: TextOverflow.ellipsis,
+                    'Cek rute penerbangan popular dengan harga spesial buat banyak long weekend di depan mata!',
+                    style: GoogleFonts.montserrat(
+                      color: Colors.grey[800],
+                      fontSize: 12,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
     Widget menutravelin() {
       return SingleChildScrollView(
         scrollDirection: Axis.horizontal,
@@ -494,9 +531,17 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: 20),
               Row(
                 children: [
-                  TravelinIconMenu(
-                    text: "Villa & Apt.",
-                    asset: "assets/icons/icon_villa_apart.png",
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => TestingAppBar()));
+                    },
+                    child: TravelinIconMenu(
+                      text: "Villa & Apt.",
+                      asset: "assets/icons/icon_villa_apart.png",
+                    ),
                   ),
                   SizedBox(width: 10),
                   TravelinIconMenu(
@@ -1095,7 +1140,7 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           Container(
             width: double.infinity,
-            height: 250 + MediaQuery.of(context).viewPadding.top,
+            height: 180 + MediaQuery.of(context).viewPadding.top,
             child: CarouselSlider(
               options: CarouselOptions(
                 autoPlay: true,
@@ -1129,6 +1174,39 @@ class _HomePageState extends State<HomePage> {
           ),
           travelinkuycard(),
         ],
+      );
+    }
+
+    Widget buttoncekroute() {
+      return Padding(
+        padding: const EdgeInsets.only(top: 10),
+        child: GestureDetector(
+          onTap: () {},
+          child: Container(
+            height: 50,
+            margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            decoration: BoxDecoration(
+              color: travelinkuy,
+              borderRadius: BorderRadius.all(Radius.circular(8)),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  child: Text(
+                    'Cek Rute Lainnya',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.poppins(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       );
     }
 
@@ -1236,6 +1314,14 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+          SizedBox(height: 20),
+          borderabu(),
+          SizedBox(height: 20),
+          judulweekend(),
+          RecommendedPlaces(),
+          buttoncekroute(),
+          SizedBox(height: 10),
+          borderabu(),
         ],
       ),
     );

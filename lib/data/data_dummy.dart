@@ -2374,8 +2374,11 @@ List<Container> cardsdestinasipesawat = [
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
-            children: const [
-              CardLiburanSingapura(),
+            children: [
+              GestureDetector(
+                onTap: () {},
+                child: CardLiburanSingapura(),
+              ),
               SizedBox(
                 width: 16,
               ),
@@ -2384,10 +2387,6 @@ List<Container> cardsdestinasipesawat = [
                 width: 16,
               ),
               CardIdeLiburanThailand(),
-              // CardHotelInternasional(),
-              // CardHotelInternasional(),
-              // CardHotelInternasional(),
-              // CardHotelInternasional(),
             ],
           ),
         ),
@@ -2415,16 +2414,21 @@ List<String> listdestinasipesawat = [
   "Internasional",
 ];
 
+List<String> listhistoryhotel = [
+  "Pencarian Terakhir",
+  "Terakhir Dilihat",
+];
+
 // list nama hotel
 List<String> destinasidaerah = [
-  "Bali",
-  "Cirebon",
-  "Surabaya",
-  "Yogyakarta",
-  "Vill & Apt",
-  "Singapura",
+  "Orchad",
+  "Phuket",
+  "Genting Highlands",
+  "Bugis",
+  "Da Nang",
+  "Kuala Lumpur",
+  "Hong Kong",
   "Bangkok",
-  "Tokyo",
 ];
 
 // List tab penerbangan
@@ -2434,6 +2438,12 @@ List<String> listpenerbanganpesawat = [
   "Pelita Air",
   "Citilink",
   "Garuda Indonesia",
+];
+
+// list carousel jaminan murah
+List<String> itemsjaminan = [
+  'ada hadiah murah! kami akan memberikan hadiah 2x* selisih harga tiket domestik dan internasional untuk anda',
+  'Jaminan kembali dengan harga murah dan terpercaya ! Ada tiket domestik yang lebih murah? Klaim 2x* selisih harga tiket domestik dan internasional',
 ];
 
 List<Container> cardsdestinasidaerah = [
