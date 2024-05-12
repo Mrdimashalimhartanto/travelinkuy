@@ -6,6 +6,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
@@ -28,6 +29,8 @@ import 'package:travelinkuy/components/widget/detail_screen.dart';
 import 'package:travelinkuy/components/widget/testing.dart';
 import 'package:travelinkuy/components/widget/widget.dart';
 import 'package:travelinkuy/data/data_dummy.dart';
+
+import '../models/model_tiket_perjalanan.dart';
 
 part 'menu_pesawat.dart';
 part 'travel.dart';

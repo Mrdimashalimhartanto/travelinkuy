@@ -24,7 +24,7 @@ class _TabBarThrState extends State<TabBarThr> {
                 height: MediaQuery.of(context).size.height * 0.06,
                 child: ListView.builder(
                   physics: const BouncingScrollPhysics(),
-                  itemCount: items.length,
+                  itemCount: destinasidaerah.length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (ctx, index) {
                     return Column(
@@ -44,10 +44,10 @@ class _TabBarThrState extends State<TabBarThr> {
                             duration: const Duration(milliseconds: 300),
                             margin: const EdgeInsets.all(5),
                             // lebar card
-                            width: 140,
+                            width: 170,
                             height: 40,
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(18),
                               color: current == index
                                   ? travelinkuy
                                   : Colors.grey[300],

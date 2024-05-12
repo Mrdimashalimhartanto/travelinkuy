@@ -21,15 +21,7 @@ class NearbyPlaces extends StatelessWidget {
               ),
               child: InkWell(
                 borderRadius: BorderRadius.circular(12),
-                onTap: () {
-                  // Navigator.push(context
-                  //     MaterialPageRoute(
-                  //       builder: (context) => TouristDetailsPage(
-                  //         image: nearbyPlaces[index].image,
-                  //       ),
-                  //     ),
-                  //     );
-                },
+                onTap: () {},
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
@@ -76,19 +68,20 @@ class NearbyPlaces extends StatelessWidget {
                                 const Spacer(),
                                 RichText(
                                   text: TextSpan(
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Theme.of(context).primaryColor,
-                                      ),
-                                      text: "\$22",
-                                      children: const [
-                                        TextSpan(
-                                            style: TextStyle(
-                                              fontSize: 12,
-                                              color: Colors.black54,
-                                            ),
-                                            text: "/ Person")
-                                      ]),
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      color: Theme.of(context).primaryColor,
+                                    ),
+                                    text: "\$22",
+                                    children: const [
+                                      TextSpan(
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            color: Colors.black54,
+                                          ),
+                                          text: "/ Person")
+                                    ],
+                                  ),
                                 )
                               ],
                             )

@@ -10,7 +10,7 @@ class CardIdeLiburan extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Padding(
-        padding: const EdgeInsets.only(top: 24, left: 16),
+        padding: const EdgeInsets.only(top: 6, left: 16),
         child: Row(
           children: [
             CardLiburanSingapura(),
