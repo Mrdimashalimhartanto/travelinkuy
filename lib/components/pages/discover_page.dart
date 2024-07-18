@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 part of 'pages.dart';
 
 class DiscoverPage extends StatelessWidget {
@@ -41,12 +43,12 @@ class DiscoverPage extends StatelessWidget {
                     ],
                   ),
                   //// [DETAIL CONTENT]
-                  const SizedBox(height: 15),
-                  const CardDestinasi(),
-                  const SizedBox(height: 10),
-                  const ButtonHome(),
-                  const Footer(),
-                  const SizedBox(height: 60),
+                  SizedBox(height: 15),
+                  CardDestinasi(),
+                  SizedBox(height: 10),
+                  ButtonHome(),
+                  Footer(),
+                  SizedBox(height: 60),
                 ],
               ),
             ),

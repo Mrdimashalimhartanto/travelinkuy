@@ -186,12 +186,14 @@ List imageDetailPenerbangan = [
 List<String> items = [
   "Semua",
   "Pesawat",
-  "Search",
-  "Feed",
-  "Posts",
-  "Activity",
-  "Setting",
-  "Profile",
+  "Hotel",
+  "Villa & Apt",
+  "To Do",
+  "Kereta Api",
+  "Bus & Travel",
+  "Sewa Mobil",
+  "Jemputan Bandara",
+  "Ferry",
 ];
 
 // data hotel
@@ -258,7 +260,7 @@ List<Container> destinasimenggunakanpesawat = [
                               height: 150,
                             ),
                           ),
-                          const SizedBox(height: 20),
+                          SizedBox(height: 8),
                           Padding(
                             padding: const EdgeInsets.only(left: 8.0),
                             child: Text(
@@ -282,37 +284,6 @@ List<Container> destinasimenggunakanpesawat = [
                               ),
                             ),
                           ),
-                          SizedBox(height: 8),
-                          // Padding(
-                          //   padding: const EdgeInsets.all(8.0),
-                          //   child: IntrinsicHeight(
-                          //     child: Row(
-                          //       children: [
-                          //         Container(
-                          //           width: 18,
-                          //           height: 18,
-                          //           decoration: BoxDecoration(
-                          //             borderRadius: BorderRadius.circular(12),
-                          //             image: DecorationImage(
-                          //               image: NetworkImage(
-                          //                 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
-                          //               ),
-                          //             ),
-                          //           ),
-                          //         ),
-                          //         SizedBox(width: 6),
-                          //         Text(
-                          //           'AirAsia Indonesia',
-                          //           style: GoogleFonts.poppins(
-                          //             color: Colors.grey.shade900,
-                          //             fontWeight: FontWeight.normal,
-                          //             fontSize: 12,
-                          //           ),
-                          //         ),
-                          //       ],
-                          //     ),
-                          //   ),
-                          // ),
                           Padding(
                             padding: const EdgeInsets.only(left: 8.0),
                             child: Text(
@@ -322,40 +293,6 @@ List<Container> destinasimenggunakanpesawat = [
                                 fontWeight: FontWeight.bold,
                                 fontSize: 12,
                               ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 40,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(1),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                // Padding(
-                                //   padding: const EdgeInsets.only(left: 6),
-                                //   child: Text(
-                                //     'Mulai dari',
-                                //     style: GoogleFonts.poppins(
-                                //       color: Colors.grey.shade900,
-                                //       fontWeight: FontWeight.normal,
-                                //       // fontStyle: FontStyle.italic,
-                                //       fontSize: 12,
-                                //     ),
-                                //   ),
-                                // ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 6),
-                                  child: Text(
-                                    'IDR 691.246',
-                                    style: GoogleFonts.poppins(
-                                      color: Colors.red,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                ),
-                              ],
                             ),
                           ),
                         ],
@@ -2431,6 +2368,168 @@ List<String> destinasidaerah = [
   "Bangkok",
 ];
 
+// list nama villa & apt
+List<String> listvillaapt = [
+  'Bali',
+  'Bandung',
+  'Bogor',
+  'Yogyakarta',
+  'Jakarta',
+  'Malang',
+  'Bekasi',
+  'Ubud',
+  'Seminyak',
+  'Surabaya',
+];
+
+List<Container> cardlistvillaapart = [
+  Container(
+    child: Column(
+      children: [
+        SingleChildScrollView(
+          child: Row(
+            children: [
+              GestureDetector(
+                onTap: () {
+                  // Tindakan yang ingin dilakukan saat card ditekan
+                  print('Card 1 ditekan');
+                },
+                child: CardHotelInternasional(),
+              ),
+              GestureDetector(
+                onTap: () {
+                  // Tindakan yang ingin dilakukan saat card ditekan
+                  print('Card 2 ditekan');
+                },
+                child: CardHotelInternasional(),
+              ),
+              GestureDetector(
+                onTap: () {
+                  // Tindakan yang ingin dilakukan saat card ditekan
+                  print('Card 3 ditekan');
+                },
+                child: CardHotelInternasional(),
+              ),
+              GestureDetector(
+                onTap: () {
+                  // Tindakan yang ingin dilakukan saat card ditekan
+                  print('Card 4 ditekan');
+                },
+                child: CardHotelInternasional(),
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  ),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+];
+
+// list pesona indonesia
+List<String> listpesonaindonesia = [
+  'Jawa Barat',
+  'Banten',
+  'Jawa Tengah',
+  'Jabodetabek',
+  'Papua',
+  'Sulawesi - Kalimantan',
+  'Bali',
+];
+
+List<Container> cardlistpesonaindonesia = [
+  Container(
+    child: Column(
+      children: [
+        SingleChildScrollView(
+          child: Row(
+            children: [
+              CardHotelInternasional(),
+              CardHotelInternasional(),
+              CardHotelInternasional(),
+              CardHotelInternasional(),
+            ],
+          ),
+        ),
+      ],
+    ),
+  ),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+];
+
+// List Staycation
+List<String> liststaycation = [
+  'Bali',
+  'Jakarta',
+  'Bandung',
+  'Yogyakarta',
+  'Lombok',
+  'Padang',
+  'Kalimantan',
+];
+
+List<Container> cardliststaycation = [
+  Container(
+    child: Column(
+      children: [
+        SingleChildScrollView(
+          child: Row(
+            children: [
+              GestureDetector(
+                onTap: () {
+                  // Tindakan yang ingin dilakukan saat card ditekan
+                  print('Card 1 ditekan');
+                },
+                child: CardHotelInternasional(),
+              ),
+              GestureDetector(
+                onTap: () {
+                  // Tindakan yang ingin dilakukan saat card ditekan
+                  print('Card 2 ditekan');
+                },
+                child: CardHotelInternasional(),
+              ),
+              GestureDetector(
+                onTap: () {
+                  // Tindakan yang ingin dilakukan saat card ditekan
+                  print('Card 3 ditekan');
+                },
+                child: CardHotelInternasional(),
+              ),
+              GestureDetector(
+                onTap: () {
+                  // Tindakan yang ingin dilakukan saat card ditekan
+                  print('Card 4 ditekan');
+                },
+                child: CardHotelInternasional(),
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  ),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+];
+
 // List tab penerbangan
 List<String> listpenerbanganpesawat = [
   "Sriwijaya Air",
@@ -2452,11 +2551,96 @@ List<Container> cardsdestinasidaerah = [
       children: [
         SingleChildScrollView(
           child: Row(
-            children: const [
-              CardHotelInternasional(),
-              CardHotelInternasional(),
-              CardHotelInternasional(),
-              CardHotelInternasional(),
+            children: [
+              GestureDetector(
+                onTap: () {
+                  // Tindakan yang ingin dilakukan saat card ditekan
+                  print('Card 1 ditekan');
+                },
+                child: CardHotelInternasional(),
+              ),
+              GestureDetector(
+                onTap: () {
+                  // Tindakan yang ingin dilakukan saat card ditekan
+                  print('Card 2 ditekan');
+                },
+                child: CardHotelInternasional(),
+              ),
+              GestureDetector(
+                onTap: () {
+                  // Tindakan yang ingin dilakukan saat card ditekan
+                  print('Card 3 ditekan');
+                },
+                child: CardHotelInternasional(),
+              ),
+              GestureDetector(
+                onTap: () {
+                  // Tindakan yang ingin dilakukan saat card ditekan
+                  print('Card 4 ditekan');
+                },
+                child: CardHotelInternasional(),
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  ),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+  Container(),
+];
+
+// list rencana perjalanan
+List<String> listrencanaperjalanan = [
+  'Atraksi',
+  'Hotel',
+  'Villa & Apt',
+  'Event',
+  'Tempat bermain',
+  'Tur',
+  'Kecantikan & Kebugaran',
+];
+
+List<Container> cardlistrencanaperjalanan = [
+  Container(
+    child: Column(
+      children: [
+        SingleChildScrollView(
+          child: Row(
+            children: [
+              GestureDetector(
+                onTap: () {
+                  // Tindakan yang ingin dilakukan saat card ditekan
+                  print('Card 1 ditekan');
+                },
+                child: CardHotelInternasional(),
+              ),
+              GestureDetector(
+                onTap: () {
+                  // Tindakan yang ingin dilakukan saat card ditekan
+                  print('Card 2 ditekan');
+                },
+                child: CardHotelInternasional(),
+              ),
+              GestureDetector(
+                onTap: () {
+                  // Tindakan yang ingin dilakukan saat card ditekan
+                  print('Card 3 ditekan');
+                },
+                child: CardHotelInternasional(),
+              ),
+              GestureDetector(
+                onTap: () {
+                  // Tindakan yang ingin dilakukan saat card ditekan
+                  print('Card 4 ditekan');
+                },
+                child: CardHotelInternasional(),
+              ),
             ],
           ),
         ),

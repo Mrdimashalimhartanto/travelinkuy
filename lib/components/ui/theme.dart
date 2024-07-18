@@ -7,6 +7,7 @@ Color splashcolor = const Color(0xffFAFAFA);
 Color travelinbackground = const Color(0xffEAEAEA);
 Color travelincomponent = const Color(0xffF29811);
 Color navigationBaru = const Color(0xffD9D9D9);
+Color birumudatravelin = Color.fromRGBO(91, 170, 255, 0.14);
 
 double defaultMargin = 30.0;
 

@@ -1,0 +1,1 @@
+ /Users/dimashalimhartanto/Documents/DEVELOPMENT\ 2024/GITHUB/travelinkuy/.dart_tool/flutter_build/69a9a022f5c5988200063503046b4d7c/native_assets.yaml: 
