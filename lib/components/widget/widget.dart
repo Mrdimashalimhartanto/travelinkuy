@@ -39,3 +39,7 @@ part 'tab_bar_todo.dart';
 part 'tab_bar_pesawat.dart';
 part 'tab_bar_penerbangan.dart';
 part 'recommended_place.dart';
+part 'tab_bar_villa_apt.dart';
+part 'tab_bar_pesona_indonesia.dart';
+part 'tab_bar_staycation.dart';
+part 'tab_bar_perjalanan.dart';

@@ -18,8 +18,8 @@ class CardSlidePencarian extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: Colors.grey.shade300,
-            blurRadius: 9,
-            offset: Offset(4, 10),
+            blurRadius: 4,
+            offset: Offset(4, 4),
           ),
         ],
         color: Colors.white,

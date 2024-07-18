@@ -8,65 +8,38 @@ class YourOrder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget cardinfopesanan() {
-      return Container(
-        width: 350,
-        height: 190,
-        decoration: BoxDecoration(
-          color: travelinkuy,
-          borderRadius: BorderRadius.circular(17),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.only(top: 27.0, left: 24),
-          child: Row(
+      return Padding(
+        padding: const EdgeInsets.only(top: 20.0),
+        child: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Pesananmu bermasalah?',
-                    style: GoogleFonts.montserrat(
-                      color: Color(0xffF8F7FD),
-                      fontSize: 19,
-                      fontWeight: FontWeight.w800,
-                    ),
-                  ),
-                  SizedBox(height: 10),
-                  Text(
-                    'Kunjungi Pusat Bantuan untuk temukan \nsolusi buat masalahmu',
-                    style: GoogleFonts.montserrat(
-                      color: Color(0xffF8F7FD),
-                      fontSize: 12,
-                      fontWeight: FontWeight.normal,
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(17),
-                      ),
-                      side: BorderSide(
-                        color: Colors.white,
-                      ),
-                    ),
-                    onPressed: () {},
-                    child: Text(
-                      'Pusat Bantuan',
-                      style: GoogleFonts.montserrat(
-                        color: Color(0xffF8F7FD),
-                        fontSize: 12,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ),
-                ],
+              Image.asset(
+                'assets/logo2.png', // Ganti URL ini dengan URL gambar yang ingin kamu gunakan
+                fit: BoxFit.cover,
+                height: 200,
+                width: 200,
               ),
-              // Padding(
-              //   padding: const EdgeInsets.only(bottom: 16.0, right: 24),
-              //   child: Image.asset(
-              //     'assets/product_one.png',
-              //   ),
-              // ),
+              SizedBox(height: 10),
+              Text(
+                'Tidak ada order aktif',
+                style: GoogleFonts.montserrat(
+                  color: Colors.black,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 10),
+              Text(
+                'Semua e-tiket milikmu akan ditampilkan di sini\nYuk, rencanakan perjalanan dengan travelin',
+                style: GoogleFonts.montserrat(
+                  color: Colors.black,
+                  fontSize: 14,
+                  fontWeight: FontWeight.normal,
+                ),
+                textAlign: TextAlign.center,
+              ),
             ],
           ),
         ),
@@ -74,37 +47,172 @@ class YourOrder extends StatelessWidget {
     }
 
     Widget judulorder() {
-      return Padding(
-        padding: const EdgeInsets.only(
-          left: 22,
-          right: 22,
+      return SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 22,
+            right: 16,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Cocok buat rencana perjalanan mu, nih!',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 4),
+                    Text(
+                      // overflow: TextOverflow.ellipsis,
+                      'Cek rekomendasi yang sesuai dengan persanan terakhirmu atau destinasi yang baru saja kamu lihat !',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.grey[800],
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      );
+    }
+
+    Widget backgroundbirumuda() {
+      return Container(
+        height: 610,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(1),
+          ),
+          color: birumudatravelin,
+        ),
+        child: Column(
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Citilink Online Travel Fair',
-                  style: GoogleFonts.montserrat(
-                    color: Colors.black,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
+            SizedBox(height: 20),
+            judulorder(),
+            SizedBox(height: 10),
+            TabBarPerjalanan(),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 20),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LihatSemuaIdePerjalanan(),
+                    ),
+                  );
+                },
+                child: Container(
+                  height: 50,
+                  margin: EdgeInsets.symmetric(horizontal: 20),
+                  decoration: BoxDecoration(
+                    color: travelinkuy,
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      // ignore: avoid_unnecessary_containers
+                      Container(
+                        child: Text(
+                          'Lihat Semua To Do',
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-                SizedBox(height: 4),
-                Text(
-                  'Serbu hargahematnya, diskon hingga IDR 1,5 Juta !',
-                  style: GoogleFonts.montserrat(
-                    color: Colors.grey[800],
-                    fontSize: 12,
-                    fontWeight: FontWeight.normal,
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget judulbepergian() {
+      return SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 22,
+            right: 16,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Kuy, cek promo sebelum bepergian',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget buttonlihatsemuapromo() {
+      return Padding(
+        padding: const EdgeInsets.only(bottom: 4),
+        child: GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => LihatSemuaIdePerjalanan(),
+              ),
+            );
+          },
+          child: Container(
+            height: 50,
+            margin: EdgeInsets.symmetric(horizontal: 18),
+            decoration: BoxDecoration(
+              color: travelinkuy,
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                // ignore: avoid_unnecessary_containers
+                Container(
+                  child: Text(
+                    'Lihat semua promo',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.poppins(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ],
             ),
-          ],
+          ),
         ),
       );
     }
@@ -153,14 +261,13 @@ class YourOrder extends StatelessWidget {
           children: <Widget>[
             SizedBox(height: 20),
             cardinfopesanan(),
+            SizedBox(height: 60),
+            backgroundbirumuda(),
             SizedBox(height: 20),
-            BorderAbuAbu(),
-            SizedBox(height: 20),
-            judulorder(),
-            SizedBox(height: 10),
+            judulbepergian(),
+            SizedBox(height: 8),
             TabbarMenuGlobal(),
-            BorderAbuAbu(),
-            // RecommendedPlaces(),
+            buttonlihatsemuapromo(),
           ],
         ),
       ),

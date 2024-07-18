@@ -49,7 +49,7 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
                             duration: const Duration(milliseconds: 300),
                             margin: const EdgeInsets.all(5),
                             // lebar card
-                            width: 80,
+                            width: 180,
                             height: 40,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
@@ -115,9 +115,6 @@ class _TabbarMenuGlobalState extends State<TabbarMenuGlobal> {
                   );
                 },
               ),
-            ),
-            SizedBox(
-              height: 20,
             ),
           ],
         ),

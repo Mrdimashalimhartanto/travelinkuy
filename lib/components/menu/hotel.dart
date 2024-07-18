@@ -415,7 +415,7 @@ class _HotelPageState extends State<HotelPage>
                     Row(
                       children: [
                         Text(
-                          'Kuy, cek promo sebelum bepergian',
+                          'liburan ke singapur lihat disini',
                           style: GoogleFonts.montserrat(
                             color: Colors.black,
                             fontSize: 16,
@@ -423,6 +423,150 @@ class _HotelPageState extends State<HotelPage>
                           ),
                         ),
                       ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget tidurnyenyak() {
+      return SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 22,
+            right: 16,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          'Tidur nyenyak di Villa & Apt.',
+                          style: GoogleFonts.montserrat(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      // overflow: TextOverflow.ellipsis,
+                      'Wujudkan staycation impianmu di villa dan apartemen ini !',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.grey[800],
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget judulpesonaindonesia() {
+      return SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 22,
+            right: 16,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Image.asset(
+                          'assets/logo_splash_screen.png',
+                          width: 40,
+                          height: 40,
+                        ),
+                        Text(
+                          'Nikmati pesona indonesia',
+                          style: GoogleFonts.montserrat(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 4),
+                    Text(
+                      // overflow: TextOverflow.ellipsis,
+                      'Dari sumatra hingga Papua, nikmati staycation di Horison dan hotel lainnya dalam grup MGM.',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.grey[800],
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget judulstaycation() {
+      return SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 22,
+            right: 16,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Image.asset(
+                          'assets/logo_splash_screen.png',
+                          width: 40,
+                          height: 40,
+                        ),
+                        Text(
+                          'Staycation favorit lebih irit',
+                          style: GoogleFonts.montserrat(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 4),
+                    Text(
+                      'Pesan hotel di kota favoritmu dengan diskon hingga 30% + cashback 3%!',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.grey[800],
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                      ),
                     ),
                   ],
                 ),
@@ -470,7 +614,7 @@ class _HotelPageState extends State<HotelPage>
                             width: 170,
                             height: 40,
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
+                              borderRadius: BorderRadius.circular(20),
                               color: current == index
                                   ? travelinkuy
                                   : Colors.grey[400],
@@ -755,6 +899,23 @@ class _HotelPageState extends State<HotelPage>
             lihatsemua(),
             SizedBox(height: 10),
             BorderAbuAbu(),
+            SizedBox(height: 20),
+            tidurnyenyak(),
+            SizedBox(height: 10),
+            TabBarVillaApt(),
+            lihatsemua(),
+            SizedBox(height: 10),
+            BorderAbuAbu(),
+            SizedBox(height: 10),
+            judulpesonaindonesia(),
+            SizedBox(height: 10),
+            TabBarPesonaIndonesia(),
+            SizedBox(height: 10),
+            BorderAbuAbu(),
+            SizedBox(height: 10),
+            judulstaycation(),
+            SizedBox(height: 10),
+            TabBarStaycation(),
           ],
         ),
       ),
