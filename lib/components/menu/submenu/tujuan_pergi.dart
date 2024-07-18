@@ -194,6 +194,7 @@ class _TujuanPergiState extends State<TujuanPergi>
                                       ),
                                     ],
                                   ),
+                                  
                                 ),
                               ],
                             ),
@@ -206,6 +207,7 @@ class _TujuanPergiState extends State<TujuanPergi>
                                     "https://cdn-icons-png.flaticon.com/128/3127/3127363.png",
                                 text: "Fery",
                               ),
+                              
                               TravelinIconMenu(
                                 asset:
                                     "https://cdn-icons-png.flaticon.com/128/3378/3378741.png",
