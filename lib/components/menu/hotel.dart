@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, unused_element, unused_field, sized_box_for_whitespace
 
 part of 'menu.dart';
 
@@ -18,7 +18,6 @@ class _HotelPageState extends State<HotelPage>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _tabController =
         TabController(vsync: this, length: listTiketPerjalanan.length);
