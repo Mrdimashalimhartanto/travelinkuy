@@ -1066,57 +1066,47 @@ class _MenuPesawatState extends State<MenuPesawat> {
           left: 22.0,
           right: 22.0,
         ),
-        child: GestureDetector(
-          onTap: () {
-            // Navigator.push(
-            //   context,
-            //   MaterialPageRoute(
-            //     builder: (context) => DetailRefundTiket(),
-            //   ),
-            // );
-          },
-          child: Column(
-            children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment
-                    .start, // Align children along the start of the cross axis
-                children: [
-                  Image.network(
-                    'https://cdn-icons-png.flaticon.com/128/3585/3585091.png',
-                    height: 40,
-                    width: 40,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment
-                          .start, // Align children along the start of the cross axis
-                      children: [
-                        Text(
-                          'Cara Refund Tiket Pesawat',
-                          style: GoogleFonts.poppins(
-                            color: Colors.black,
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                          ),
+        child: Column(
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment
+                  .start, // Align children along the start of the cross axis
+              children: [
+                Image.network(
+                  'https://cdn-icons-png.flaticon.com/128/3585/3585091.png',
+                  height: 40,
+                  width: 40,
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment
+                        .start, // Align children along the start of the cross axis
+                    children: [
+                      Text(
+                        'Cara Refund Tiket Pesawat',
+                        style: GoogleFonts.poppins(
+                          color: Colors.black,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
                         ),
-                        Text(
-                          'Yang perlu kamu tau tentang pengembalian uang tiket.',
-                          style: GoogleFonts.poppins(
-                            color: Colors.grey.shade500,
-                            fontSize: 12,
-                            fontWeight: FontWeight.normal,
-                          ),
+                      ),
+                      Text(
+                        'Yang perlu kamu tau tentang pengembalian uang tiket.',
+                        style: GoogleFonts.poppins(
+                          color: Colors.grey.shade500,
+                          fontSize: 12,
+                          fontWeight: FontWeight.normal,
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-            ],
-          ),
+                ),
+              ],
+            ),
+          ],
         ),
       );
     }
