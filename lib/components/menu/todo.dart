@@ -25,40 +25,6 @@ class _TodoPageState extends State<TodoPage> {
     _panelHeightOpen = MediaQuery.of(context).size.height * .70;
 
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Column(
-      //     children: [
-      //       Padding(
-      //         padding: EdgeInsets.all(2.0), // Adjust the value as needed
-      //         child: Column(
-      //           crossAxisAlignment: CrossAxisAlignment.start,
-      //           children: [
-      //             Text(
-      //               'Todo Things',
-      //               textAlign: TextAlign.center,
-      //             ),
-      //           ],
-      //         ),
-      //       ),
-      //     ],
-      //   ),
-      //   leading: IconButton(
-      //     onPressed: () {
-      //       Navigator.pop(context);
-      //     },
-      //     icon: Icon(
-      //       Icons.arrow_back_ios_new_rounded,
-      //       size: 20,
-      //     ),
-      //   ),
-      //   centerTitle: false,
-      //   automaticallyImplyLeading: false,
-      //   backgroundColor: Colors.white,
-      //   elevation: 4,
-      //   actions: [
-      //     IconButton(onPressed: () {}, icon: Icon(Icons.notifications))
-      //   ],
-      // ),
       body: Stack(
         alignment: Alignment.topCenter,
         children: <Widget>[

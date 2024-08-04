@@ -272,6 +272,4 @@ List<Container> cardscontainer = [
   ),
   Container(),
   Container(),
-  Container(),
-  Container(),
 ];
